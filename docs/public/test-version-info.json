@@ -5,9 +5,15 @@
       "desc": "1.0.0-alpha 测试版本"
     }
   ],
-  "urls":
+  "downloads":
   {
-    "Windows": "#",
-    "Android": "#"
+    "Windows": {
+      "url": "#",
+      "version": "1.0.0"
+    },
+    "Android": {
+      "url": "#",
+      "version": "1.0.0"
+    }
   }
 }

@@ -5,9 +5,16 @@ export default {
   name: "DownloadPage",
   data:()=>({
     logs:[],
-    urls:{}
+    downloads:{},
+    downloadElements: {
+      "Windows": MicrosoftWindows,
+      "Mac": Apple,
+      "Linux": Linux,
+      "Android":Android,
+      "IOS": AppleIos,
+    }
   }),
-  components:{
+  components: {
     MicrosoftWindows,Android,DotsHorizontal,AppleIos,Apple,Linux
   },
   created() {
@@ -15,8 +22,7 @@ export default {
     fetch(`${filePrefix}version-info.json?t=${new Date().getTime()}`).then(async res => {
       const json = await res.json()
       this.logs = json.logs
-      this.urls = json.urls
-      console.log(json)
+      this.downloads = json.downloads
     })
   }
 }
@@ -41,35 +47,19 @@ export default {
       </div>
     </div>
     <div class="flex justify-center gap-8 mt-10 flex-wrap">
-      <div class="platform" v-if="urls['Windows']">
-        <a :href="urls['Windows']" target="_blank">
-          <microsoft-windows class="text-[3rem]"/>
-        </a>
-      </div>
-      <div class="platform" v-if="urls['Mac']">
-        <a :href="urls['Mac']" target="_blank">
-          <apple class="text-[3rem]"/>
-        </a>
-      </div>
-      <div class="platform" v-if="urls['Linux']">
-        <a :href="urls['Linux']" target="_blank">
-          <linux class="text-[3rem]"/>
-        </a>
-      </div>
-      <div class="platform" v-if="urls['Android']">
-        <a :href="urls['Android']" target="_blank">
-          <android class="text-[3rem]"/>
-        </a>
-      </div>
-      <div class="platform" v-if="urls['IOS']">
-        <a :href="urls['IOS']" target="_blank">
-          <apple-ios class="text-[3rem]"/>
-        </a>
-      </div>
+      <template v-for="(component,key) in downloadElements">
+        <div class="platform" v-if="downloads[key]?.url">
+          <a :href="downloads[key]?.url" target="_blank">
+            <component :is="component" class="text-[3rem]" />
+          </a>
+          <div class="version">{{downloads[key]?.version}}</div>
+        </div>
+      </template>
       <div class="platform">
         <a href="https://github.com/aa2013/ClipShare/releases" target="_blank">
           <dots-horizontal class="text-[3rem]"/>
         </a>
+        <div class="version">more</div>
       </div>
     </div>
   </div>
@@ -82,8 +72,8 @@ export default {
     background-clip: text;
   }
   .platform{
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,10 +81,22 @@ export default {
     color: white;
     transition: all 0.2s linear;
     border-radius: 1.5rem;
+    flex-direction: column;
     background: var(--vp-button-alt-bg);
+  }
+  .version{
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.2s linear;
   }
   .platform:hover{
     transform: scale(1.1);
     background: var(--vp-button-alt-hover-bg);
+  }
+  .platform:hover .version{
+    height: 1.5rem;
+    overflow: hidden;
   }
 </style>

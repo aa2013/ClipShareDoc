@@ -4,7 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import './tailwind.postcss'
-
+declare const _hmt: any;
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -13,6 +13,10 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
-  }
+    router.onBeforeRouteChange = (to) => {
+      if (typeof _hmt !== 'undefined') {
+        _hmt.push(['_trackPageview', to]);
+      }
+    };
+  },
 } satisfies Theme

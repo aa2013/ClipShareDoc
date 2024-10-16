@@ -2,12 +2,11 @@
 layout: page
 ---
 <script setup>
-// import DownloadPage from './pages/DownloadPage.vue'
-import { defineClientComponent } from 'vitepress'
+import { defineClientComponent } from 'vitepress';
 
-const ClientComp = defineClientComponent(() => {
+const DownloadPage = defineClientComponent(() => {
   return import('./pages/DownloadPage.vue')
 })
 </script>
 
-<ClientComp/>
+<DownloadPage/>

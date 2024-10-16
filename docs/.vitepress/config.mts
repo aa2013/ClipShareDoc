@@ -1,6 +1,5 @@
 import {defineConfig} from 'vitepress'
 import mdItCustomAttrs from "markdown-it-custom-attrs";
-import * as mdue from  "mdue"
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "ClipShare",
@@ -9,6 +8,15 @@ export default defineConfig({
         ['link', {rel: 'icon', href: '/favicon.ico'}],
         ["link", {rel: "stylesheet",href: "/css/fancybox.css",},],
         ["script", {src: "/js/fancybox.umd.js",},],
+        ["script", {},`
+                window._hmt = window._hmt || [];
+                (function() {
+                  var hm = document.createElement("script");
+                  hm.src = "https://hm.baidu.com/hm.js?cf455f59f0bd661daf0e167091205d00";
+                  var s = document.getElementsByTagName("script")[0]; 
+                  s.parentNode.insertBefore(hm, s);
+                })();
+        `],
     ],
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
@@ -54,4 +62,5 @@ export default defineConfig({
             });
         },
     },
+
 })

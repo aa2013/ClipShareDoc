@@ -5,8 +5,7 @@
       "desc": "1.0.0-alpha 测试版本"
     }
   ],
-  "downloads":
-  {
+  "downloads": {
     "Windows": {
       "url": "#",
       "version": "1.0.0"
@@ -15,5 +14,51 @@
       "url": "#",
       "version": "1.0.0"
     }
+  },
+  "images": {
+    "Windows": [
+      {
+        "name": "device",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/device.png"
+      },
+      {
+        "name": "history",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/history.png"
+      },
+      {
+        "name": "search",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/search.png"
+      },
+      {
+        "name": "setting",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/setting.png"
+      }
+    ],
+    "Android": [
+      {
+        "name": "device",
+        "url": "https://download.clipshare.coclyun.top/images/Android/device.png"
+      },
+      {
+        "name": "history",
+        "url": "https://download.clipshare.coclyun.top/images/Android/history.png"
+      },
+      {
+        "name": "statistic",
+        "url": "https://download.clipshare.coclyun.top/images/Android/statistic.png"
+      },
+      {
+        "name": "setting",
+        "url": "https://download.clipshare.coclyun.top/images/Android/setting.png"
+      },
+      {
+        "name": "transmission",
+        "url": "https://download.clipshare.coclyun.top/images/Android/transmission.png"
+      }
+    ]
   }
 }

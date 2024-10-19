@@ -34,6 +34,7 @@ import {
   watch,
   watchEffect
 } from "./chunk-RY5ODQAQ.js";
+import "./chunk-TDUMLE5V.js";
 
 // node_modules/vitepress/lib/vue-demi.mjs
 var isVue2 = false;

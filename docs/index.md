@@ -23,7 +23,7 @@ features:
       width: 32
       height: 32
     title: 剪贴板同步
-    details: 自动获知剪贴板变化并同步到其他设备，一台设备复制，另一台设备直接粘贴。<br/>Android 10+ 支持后台同步
+    details: 自动获知剪贴板变化并同步到其他设备。<br/>支持跨设备复制粘贴，一台设备复制，另一台设备直接粘贴。<br/>Android 10+ 支持后台同步
   - icon:
       src: /images/icons/devices.svg
       width: 32

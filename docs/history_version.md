@@ -5,7 +5,7 @@ aside: "left"
 
 ## 1.0.0-beta(3)
 
-[Android](http://localhost)
+[Github](https://github.com/aa2013/ClipShare/releases)
 
 <script>
 // import 

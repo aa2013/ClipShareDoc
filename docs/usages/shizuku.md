@@ -9,7 +9,7 @@
 ## 安装
 若还未安装 Shizuku，可以前往 [Github](https://github.com/RikkaApps/Shizuku/releases) 或 [Google Play](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api) 下载最新版本
 
-鉴于国内特殊网络环境，若无法访问 Github 和 Google Play，可通过本站提供的 [下载地址](https://download.clipshare.coclyun.top/shizuku-v13.5.4.r1049.0e53409-release.apk) 安装，但无法保证是最新版本
+鉴于国内特殊网络环境，若无法访问 Github 和 Google Play，可通过本站提供的 [下载地址](https://download.clipshare.coclyun.top/others/shizuku-v13.5.4.r1049.0e53409-release.apk) 安装，但无法保证是最新版本
 
 ## 启动
 ::: tip 提示

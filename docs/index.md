@@ -35,13 +35,13 @@ features:
       width: 32
       height: 32
     title: 多类型支持
-    details: 不限于文本，同时支持图片、文件、短信同步。<br/>从此小文件同步摆脱QQ、微信。
+    details: 不限于文本，同时支持图片、文件、短信同步。
   - icon:
       src: /images/icons/encrypt.svg
       width: 32
       height: 32
     title: 安全传输
-    details: 基于 Diffie–Hellman 密钥交换算法与 DES 对称加密算法加密数据同步
+    details: 基于 Diffie–Hellman 密钥交换算法与 AES 对称加密算法加密数据同步
   - icon:
       src: /images/icons/network.svg
       width: 32
@@ -53,5 +53,5 @@ features:
       width: 32
       height: 32
     title: 自定义标签
-    details: 设定规则，自动对符合规则的记录打上标签，查找记录不在盲目。
+    details: 设定规则，自动对符合规则的记录打上标签。
 ---

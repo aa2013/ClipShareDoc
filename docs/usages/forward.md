@@ -8,6 +8,7 @@
 
 成功建立双向连接后除文件同步外数据均为加密传输
 :::
+
 ## 1. 部署
 
 ### 1.1 二进制部署
@@ -16,30 +17,74 @@
 
 #### 1.1.1 中转程序下载
 
-
-| 平台      | 版本  | 下载                                      |
-|---------|-----|-----------------------------------------|
-| Windows | 1.0 | [敬请期待](http://clipshare.coclyun.top/)   |
-| Linux   | 1.0 | [敬请期待](http://clipshare.coclyun.top/)   |
-| 历史版本    | -   | [Github](http://clipshare.coclyun.top/) |
+| 平台      | 架构    | 版本  | 下载                                                                                                                                      |
+|---------|-------|-----|-----------------------------------------------------------------------------------------------------------------------------------------|
+| Windows | amd64 | 1.0 | [forward_server_windows_amd64.exe](https://download.clipshare.coclyun.top/releases/forward-server/1.0/forward_server_windows_amd64.exe) |
+| Linux   | amd64 | 1.0 | [forward_server_linux_amd64](https://download.clipshare.coclyun.top/releases/forward-server/1.0/forward_server_linux_amd64)             |
+| 历史版本    | -     | -   | [Github](https://github.com/aa2013/ClipShareForwardServerWeb/releases)                                                                  |
 
 #### 1.1.2 Web后台管理页面
-该项目是前后端分离架构，Web页面需要单独部署，可根据自己需求进行开发 [Github](http://clipshare.coclyun.top/)。
+
+该项目是前后端分离架构，Web页面需要单独部署，可根据自己需求进行开发 [Github](https://github.com/aa2013/ClipShareForwardServerWeb)。
 
 该管理页面主要提供以下功能：
+
 + 简单的网络速度/流量/连接数的实时查看
 + `config.yaml` 配置文件修改
 + 私有模式下的`套餐` 和 `密钥` 的管理
 + 运行日志查看
-::: tip 提示
-文档尚未完成
-:::
+
+![connections](https://download.clipshare.coclyun.top/images/forward-server-web/connection.png)
+
+![login](https://download.clipshare.coclyun.top/images/forward-server-web/login.png)
+
+![plan](https://download.clipshare.coclyun.top/images/forward-server-web/plan.png)
+
+![settings](https://download.clipshare.coclyun.top/images/forward-server-web/settings.png)
+
+![logs](https://download.clipshare.coclyun.top/images/forward-server-web/logs.png)
 
 ### 1.2 Docker部署
 
-::: tip 提示
-文档尚未完成
-:::
+> 容器内部数据存储路径
+
+| 描述        | 容器内路径                 |
+|-----------|-----------------------|
+| 中转程序数据    | /data                 |
+| 后台 Web 页面 | /usr/share/nginx/html |
+
+> 容器内部端口
+
+| 描述        | 容器内端口 |
+|-----------|-------|
+| 中转程序      | 9283  |
+| 后台 Web 页面 | 80    |
+
+#### 1.2.1 Docker run
+
+```yaml
+docker run -d --name clipshare-forward-server \
+-p 8180:80 \
+-p 9283:9283 \
+coclyun/clipshare-forward-server:1.0
+```
+
+#### 1.2.2 docker-compose
+
+```yaml
+version: "3"
+services:
+  clipshare-forward-server:
+    image: coclyun/clipshare-forward-server:1.0
+    container_name: clipshare-forward-server
+    restart: always
+    ports:
+      - "8180:80"
+      - "9283:9283"
+    volumes:
+      - ./data:/data
+
+```
 
 ## 2. 相关文件说明
 
@@ -51,6 +96,7 @@
 ::: tip 注意
 注释中带有 * 的表示修改该设置后会立即生效!
 :::
+
 ```yaml
 # *是否为公开模式，公开模式所有人都可以连接。同时，从公开模式修改为私有模式后会断开所有除白名单以外的连接！
 public-mode: true

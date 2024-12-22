@@ -19,8 +19,8 @@
 
 | 平台      | 架构    | 版本  | 下载                                                                                                                                      |
 |---------|-------|-----|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Windows | amd64 | 1.0 | [forward_server_windows_amd64.exe](https://download.clipshare.coclyun.top/releases/forward-server/1.0/forward_server_windows_amd64.exe) |
-| Linux   | amd64 | 1.0 | [forward_server_linux_amd64](https://download.clipshare.coclyun.top/releases/forward-server/1.0/forward_server_linux_amd64)             |
+| Windows | amd64 | 1.1 | [forward_server_windows_amd64.exe](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_windows_amd64.exe) |
+| Linux   | amd64 | 1.1 | [forward_server_linux_amd64](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_linux_amd64)             |
 | 历史版本    | -     | -   | [Github](https://github.com/aa2013/ClipShareForwardServerWeb/releases)                                                                  |
 
 #### 1.1.2 Web后台管理页面
@@ -60,27 +60,40 @@
 | 中转程序      | 9283  |
 | 后台 Web 页面 | 80    |
 
-#### 1.2.1 Docker run
+#### 1.2.1 docker run
+
+:::tip 提示
+请将命令中的 `<version>` 替换为最新的镜像版本
+:::
 
 ```yaml
-docker run -d --name clipshare-forward-server \
+docker run -d \
+--name clipshare-forward-server \
+--restart always \
 -p 8180:80 \
 -p 9283:9283 \
-coclyun/clipshare-forward-server:1.0
+-e TZ=Asia/Shanghai \
+coclyun/clipshare-forward-server:<version>
 ```
 
 #### 1.2.2 docker-compose
+
+:::tip 提示
+请将命令中的 `<version>` 替换为最新的镜像版本
+:::
 
 ```yaml
 version: "3"
 services:
   clipshare-forward-server:
-    image: coclyun/clipshare-forward-server:1.0
+    image: coclyun/clipshare-forward-server:<version>
     container_name: clipshare-forward-server
     restart: always
     ports:
       - "8180:80"
       - "9283:9283"
+    environment:
+      - TZ=Asia/Shanghai
     volumes:
       - ./data:/data
 

@@ -1,14 +1,13 @@
 {
-  "logs": [
-    {
-      "platform":"Android",
-      "date": "2024-10-15",
-      "version":{
-        "name":"1.0.0-beta",
-        "code":"3"
-      },
-      "desc": "1.0.0-beta 测试版本"
-    }
+  "logs": [{
+    "platform":"all",
+    "date": "2024-10-15",
+    "version":{
+      "name":"1.0.0-beta",
+      "code":"3"
+    },
+    "desc": "1.0.0-beta 测试版本"
+  }
   ],
   "downloads": {
     "Windows": {

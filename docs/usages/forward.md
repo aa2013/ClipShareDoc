@@ -46,25 +46,14 @@
 
 ### 1.2 Docker部署
 
-> 容器内部数据存储路径
+> 容器映射相关
 
-| 描述        | 容器内路径                 |
-|-----------|-----------------------|
-| 中转程序数据    | /data                 |
-| 后台 Web 页面 | /usr/share/nginx/html |
-
-> 容器内部端口
-
-| 描述        | 容器内端口 |
-|-----------|-------|
-| 中转程序      | 9283  |
-| 后台 Web 页面 | 80    |
+| 描述        | 容器内路径                 | 容器内端口 |
+|-----------|-----------------------|-------|
+| 中转程序      | /data                 | 9283  |
+| 后台 Web 页面 | /usr/share/nginx/html | 80    |
 
 #### 1.2.1 docker run
-
-:::tip 提示
-请将命令中的 `<version>` 替换为最新的镜像版本
-:::
 
 ```yaml
 docker run -d \
@@ -73,20 +62,16 @@ docker run -d \
 -p 8180:80 \
 -p 9283:9283 \
 -e TZ=Asia/Shanghai \
-coclyun/clipshare-forward-server:<version>
+coclyun/clipshare-forward-server:latest
 ```
 
 #### 1.2.2 docker-compose
-
-:::tip 提示
-请将命令中的 `<version>` 替换为最新的镜像版本
-:::
 
 ```yaml
 version: "3"
 services:
   clipshare-forward-server:
-    image: coclyun/clipshare-forward-server:<version>
+    image: coclyun/clipshare-forward-server:latest
     container_name: clipshare-forward-server
     restart: always
     ports:
@@ -156,3 +141,50 @@ log:
 ### 2.2 数据库文件
 
 数据库文件位于 `./data/app.db`，是一个 `sqlite3` 数据库文件，只有当使用私有模式时才会使用到数据库，用于存储配置的套餐以及对应的密钥相关信息
+
+## 3. 搭建教程
+
+### 3.1 飞牛 nas
+
+#### 3.1.1 添加加速镜像
+
+::: tip
+如果你的网络环境可以直接下载docker镜像则可以跳过该步骤
+:::
+
+在桌面上点击 `docker`，然后选择 `镜像仓库`，然后右上角点击 `仓库设置`
+![添加加速镜像](http://download.clipshare.coclyun.top/images/usages/feiniu/img0.png)
+
+点击 `添加`
+
+![添加弹窗1](http://download.clipshare.coclyun.top/images/usages/feiniu/img1.png)
+
+输入名称和加速地址后点击确认保存并点击 `启用` 按钮来启用该加速地址
+
+镜像仓库有很多，可以自行在网上搜索，本处使用了 [轩辕镜像](https://docker.xuanyuan.me/)
+
+```
+https://docker.xuanyuan.me/
+```
+
+![添加弹窗2](http://download.clipshare.coclyun.top/images/usages/feiniu/img2.png)
+
+#### 3.1.2 创建项目
+
+点击docker左侧导航栏的 `Compose`，然后右上角点击 `新增项目`
+
+![compose页](http://download.clipshare.coclyun.top/images/usages/feiniu/img3.png)
+
+创建一个文件夹用于存储容器允许产生的数据并选择它
+
+![选择文件夹路径](http://download.clipshare.coclyun.top/images/usages/feiniu/img4.png)
+
+在 `来源` 中选择 `创建docker-compose.yml`，同时复制本文档的 `1.2.2` 处的 docker-compose 配置并粘贴
+
+![compose配置](http://download.clipshare.coclyun.top/images/usages/feiniu/img5.png)
+
+然后勾选 `创建项目后立即启动`，最后点击确定开始构建！
+
+![构建进度](http://download.clipshare.coclyun.top/images/usages/feiniu/img6.png)
+
+构建完成后，访问 `ip:8180` 即可访问，默认用户名：`admin`，密码：`1234567`

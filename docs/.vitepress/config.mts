@@ -57,7 +57,7 @@ export default defineConfig({
         ],
 
         footer: {
-            copyright: 'Copyright © 2024 ClipShare. All Rights Reserved.'
+            copyright: `Copyright © ${new Date().getFullYear()} ClipShare. All Rights Reserved.`
         }
     },
     markdown: {

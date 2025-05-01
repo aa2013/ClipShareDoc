@@ -25,7 +25,7 @@
 
 #### 1.1.2 Web后台管理页面
 
-该项目是前后端分离架构，Web页面需要单独部署，可根据自己需求进行开发 [Github](https://github.com/aa2013/ClipShareForwardServerWeb)。
+该项目是前后端分离架构，Web页面需要单独部署 [Github](https://github.com/aa2013/ClipShareForwardServerWeb)。
 
 该管理页面主要提供以下功能：
 
@@ -115,7 +115,7 @@ web:
 # 中转程序配置
 forward:
   # 中转程序端口
-  port: 9999
+  port: 9283
   # *白名单设备，位于此名单的设备中转程序不会做任何资源限制，此项若没有可去除，id 和 name 不能为空，有多项请以 - 号开头
   unlimited-devices:
     - id: aaa # 设备id，即应用中的 “设置” 中的设备id，此项不能为空
@@ -148,8 +148,8 @@ log:
 
 #### 3.1.1 添加加速镜像
 
-::: tip
-如果你的网络环境可以直接下载docker镜像则可以跳过该步骤
+::: tip 提示
+如果你的网络环境可以直接拉取docker镜像则可以跳过该步骤
 :::
 
 在桌面上点击 `docker`，然后选择 `镜像仓库`，然后右上角点击 `仓库设置`
@@ -175,7 +175,7 @@ https://docker.xuanyuan.me/
 
 ![compose页](http://download.clipshare.coclyun.top/images/usages/feiniu/img3.png)
 
-创建一个文件夹用于存储容器允许产生的数据并选择它
+创建一个文件夹用于存储容器运行产生的数据并选择它
 
 ![选择文件夹路径](http://download.clipshare.coclyun.top/images/usages/feiniu/img4.png)
 
@@ -188,3 +188,49 @@ https://docker.xuanyuan.me/
 ![构建进度](http://download.clipshare.coclyun.top/images/usages/feiniu/img6.png)
 
 构建完成后，访问 `ip:8180` 即可访问，默认用户名：`admin`，密码：`1234567`
+
+
+### 3.2 ClawCloud
+
+::: tip 提示
+如果你拥有 Github 账户，且注册时间超过180天则可以在 [Claw Cloud](https://console.run.claw.cloud/signin?link=N02FJIL1286E) 免费获得 5$/月 的额度，可以使用它来构建 中转程序，限制是 10G存储/月 和 10G流量/月
+:::
+
+#### 3.2.1 构建
+
+注册后点击 `App Launchpad`
+![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_app_launchpad.png)
+
+点击 `Create App`
+
+![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_create_app.png)
+
+弹出的窗口中如图填写相关信息，镜像是 `coclyun/clipshare-forward-server`，左侧的 `Total` 是每天的消耗
+
+![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_create_app_image_info.png)
+
+
+滑到底部，找到存储配置，点击添加，新增一个存储配置用于保存配置信息，否则重启就没有了
+
+![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_create_app_image_add_storage.png)
+
+点击右上角的 `Deploy Application` 发布应用
+
+::: tip 提示
+如果信息填好了发布的时候但是提示 `Internal error occurred: failed to allocate a nodePort`
+则表示 TCP 端口可能在当前区域被分配完了，可以在主页左上角切换区域再次尝试
+:::
+
+#### 3.2.2 测试访问
+
+在应用页面可以看到应用的访问地址, web端口的https协议直接点击即可访问
+
+![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_access_address.png)
+
+tcp协议的是中转地址，复制它的域名（不要前缀tcp://）到 ClipShare 中测试
+
+![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_access_address_forward_test.png)
+
+成功访问
+
+![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_access_address_forward_test_result.png)

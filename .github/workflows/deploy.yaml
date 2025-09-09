@@ -1,0 +1,72 @@
+name: Build and Deploy Vitepress to Nginx
+
+on:
+  push:
+    branches: [master]  # 监听 main 分支推送
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤1：检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整提交历史
+
+      # 步骤2：设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # 使用 Vitepress 兼容的 LTS 版本
+          cache: 'npm'       # 缓存依赖加速构建
+
+      # 步骤3：安装依赖
+      - name: Install dependencies
+        run: npm ci  # 使用 clean install 保证依赖一致性
+
+      # 步骤4：构建 Vitepress
+      - name: Build project
+        run: npm run docs:build
+        env:
+          NODE_ENV: production  # 生产环境构建
+
+      # 步骤5：验证构建产物
+      - name: Verify build output
+        run: |
+          [ -f docs/.vitepress/dist/index.html ] || exit 1
+          echo "构建成功，生成文件："
+          ls -lh docs/.vitepress/dist
+
+      # 步骤6：上传构建产物
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitepress-dist                  # 自定义产物名称
+          path: docs/.vitepress/dist            # 上传整个 dist 目录
+          retention-days: 3                     # 保留3天（按需调整）
+
+  deploy:
+    needs: build  # 依赖 build 任务完成
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤1：下载构建产物
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: vitepress-dist  # 必须与上传名称一致
+          path: .               # 解压到当前目录
+
+      # 步骤2：部署到 Nginx 服务器
+      - name: Deploy via SSH
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}      # 服务器IP/域名
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}   # SSH用户名（建议用非root账户）
+          key: ${{ secrets.SSH_PRIVATE_KEY }} # Base64编码的SSH私钥
+          source: "./*"                   # 要上传的文件
+          target: ${{ secrets.DEPLOY_PATH }}  # 服务器目标路径如 /var/www/vitepress
+          rm: true                           # 上传前清空目标目录
+          overwrite: true                    # 强制覆盖现有文件

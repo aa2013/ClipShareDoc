@@ -1,0 +1,223 @@
+{
+  "downloads":{
+    "Windows": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.2.1/clipshare-1.2.1+19-windows-setup.exe",
+      "version": "1.2.1"
+    },
+    "Android": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.2.0/app-arm64-v8a-release-v1.2.0.apk",
+      "version": "1.2.0"
+    }
+  },
+  "logs": [
+      {
+       "platform":"Windows",
+       "date": "2025-09-05",
+       "version":{
+           "name":"1.2.1",
+           "code":"19"
+       },
+       "desc": "🛠️ 修复 含默认值的快捷键清除后重启导致恢复为默认值的问题\n🛠️ 修复 记录窗体大小后重启会错误的问题"
+      },
+
+      {
+       "platform":"Windows",
+       "date": "2025-09-01",
+       "version":{
+           "name":"1.2.0",
+           "code":"18"
+       },
+       "desc": "✨ 新增 黑名单功能，桌面端暂时只支持内容\n✨ 新增 备份和恢复功能\n🛠️ 修复 部分 Windows 设备启动获取设备信息失败的问题\n⚡ 优化 一些其他不起眼的UI\n⚡ 优化 若启动初始化失败显示错误信息"
+      },
+      {
+       "platform":"Android",
+       "date": "2025-07-25",
+       "version":{
+           "name":"1.2.0",
+           "code":"18"
+       },
+       "desc": "✨ 新增 黑名单功能，支持内容和剪贴板来源\n✨ 新增 备份和恢复功能\n🛠️ 修复 悬浮窗中复制图片无法粘贴的问题\n⚡ 优化 一些其他不起眼的UI\n⚡ 优化 若启动初始化失败显示错误信息"
+      },
+      {
+       "platform":"Windows",
+       "date": "2025-07-25",
+       "version":{
+           "name":"1.1.2",
+           "code":"17"
+       },
+       "desc": "✨ 新增 设备连接通知\n✨ 新增 桌面端新增显示主窗体和退出程序的快捷键设置\n🛠️ 修复 当自定义快捷键含有数字键时显示为 Unknown 的问题\n🛠️ 修复 在某些极少数特殊情况下，开启自启会无法自动连接中转的问题\n🛠️ 修复 设备信息同步报错的问题\n🛠️ 修复 桌面端若选择相同快捷键关闭弹窗，第二次会无法打开的问题\n🛠️ 修复 剪贴板来源信息的可能不会同步的问题\n🛠️ 修复 导出Excel功能有可能导出数量不完整的问题\n🛠️ 修复 新增标签后搜索过滤器中不更新的问题\n⚡ 优化 桌面端对截图和接收的文件分别存储（Screenshots/files）\n⚡ 优化 允许在设备连接后不同步断连期间的数据，同时在设备操作弹窗中新增手动同步\n⚡ 优化 搜索/数据清理过滤器中的来源信息的筛选操作\n⚡ 优化 一些其他不起眼的UI"
+      },
+      {
+       "platform":"Android",
+       "date": "2025-07-25",
+       "version":{
+           "name":"1.1.2",
+           "code":"17"
+       },
+       "desc": "\n✨ 新增 设备连接通知\n🛠️ 修复 设备信息同步报错的问题\n🛠️ 修复 移动端若未选择将图片保存到相册，会保存至下载目录的问题\n🛠️ 修复 Android端双击记录无法复制图片的问题\n🛠️ 修复 剪贴板来源信息的可能不会同步的问题\n🛠️ 修复 导出Excel功能有可能导出数量不完整的问题\n🛠️ 修复 新增标签后搜索过滤器中不更新的问题\n⚡ 优化 允许在设备连接后不同步断连期间的数据，同时在设备操作弹窗中新增手动同步\n⚡ 优化 搜索/数据清理过滤器中的来源信息的筛选操作\n⚡ 优化 一些其他不起眼的UI"
+      },
+      {
+       "platform":"Android",
+       "date": "2025-06-17",
+       "version":{
+           "name":"1.1.1",
+           "code":"16"
+       },
+       "desc": "🛠️ 修复 剪贴板来源功能在某些情况下的空指针闪退问题"
+      },
+      {
+       "platform":"Android",
+       "date": "2025-06-15",
+       "version":{
+           "name":"1.1.0",
+           "code":"15"
+       },
+       "desc": "✨ 新增 剪贴板来源\n✨ 新增 设备断连通知选项\n⚡ 优化 Android 端启用应用锁后禁止截屏\n"
+      },
+      {
+       "platform":"Windows",
+       "date": "2025-06-15",
+       "version":{
+           "name":"1.1.0",
+           "code":"15"
+       },
+       "desc": "✨ 新增 Windows端应用锁\n✨ 新增 剪贴板来源\n✨ 新增 设备断连通知选项\n🛠️ 修复 Windows端包含某些 emoji 会复制失败的问题"
+      },
+      {
+       "platform":"Android",
+       "date": "2025-06-09",
+       "version":{
+           "name":"1.0.0-beta",
+           "code":"14"
+       },
+       "desc": "🛠️ 修复 中转状态下亮起屏幕后连接断开的问题\n⚡ 优化 仅在设备异常断开时弹出断连通知\n✨ 优化  移动设备在数据网络下不扫描网络和广播发现\n✨ 优化 有更新时发起系统通知"
+      },
+      {
+       "platform":"all",
+       "date": "2025-06-07",
+       "version":{
+           "name":"1.0.0-beta",
+           "code":"13"
+       },
+       "desc": "✨ 新增 导出 Excel 功能（搜索页面）\n✨ 新增 数据编辑功能，可修改历史数据（时间不会变化）\n✨ 新增 设备连接断开后通知提示\n🛠️ 修复 搜索过滤器的一些问题\n🛠️ 修复 标签管理中无法搜索的问题\n🛠️ 修复 Windows 端通过更新程序更新后重复快捷方式导致的开启启动无法最小化的问题\n🛠️ 修复 移动端从WiFi切换到数据网络后中转重连可能失败的问题（网络状态变化过快）\n🛠️ 修复 Windows 端通过托盘退出缓慢的问题\n⚡ 优化 有更新时可以直接下载文件并打开\n⚡ 优化 清理数据时若该设备已无数据且未配对则自动移除设备信息\n⚡ 优化 优化一些 UI显示"
+     },
+     {
+      "platform":"all",
+      "date": "2025-05-10",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"12"
+      },
+      "desc": "✨ 新增 Android剪贴板隐藏api监听模式，解决OriginOS等系统的监听问题\n🛠️ 修复 主题切换不完全的问题\n🛠️ 修复 中转断开无法自动重连的问题\n🛠️ 修复 Android 端Shizuku服务进程不退出的问题\n⚡ 优化 Windows弹窗允许以相同快捷键关闭\n⚡ 优化 文件传输历史记录可以全选\n⚡ 优化 设备连接逻辑\n⚡ 优化 Android端允许在屏幕从关闭到亮起时不进行设备扫描\n⚡ 优化一些 UI 显示\n⚡ 优化一些操作逻辑"
+    },
+     {
+      "platform":"all",
+      "date": "2025-04-09",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"11"
+      },
+      "desc": "✨ 新增 桌面端历史弹窗搜索\n✨ 新增 文件拖拽同步\n⚡ 优化一些 UI 显示\n⚡ 优化一些操作逻辑"
+    },
+    {
+      "platform":"all",
+      "date": "2025-03-09",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"10"
+      },
+      "desc": "✨ 新增 二维码扫码连接（手动添加时）\n✨ 新增 Windows端历史记录弹窗记录上次位置\n✨ 新增 Android端支持截屏检测自动复制\n✨ 新增 数据清理功能\n⚡ 优化一些 UI 显示"
+    },
+    {
+      "platform":"all",
+      "date": "2025-01-19",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"9"
+      },
+      "desc": "✨ 新增 Android端最近任务显示/隐藏选项\n✨ 修复 Windows端弹窗中未应用多语言翻译的问题\n🛠️ 修复 Windows端弹窗中无法预览图片的问题\n⚡ 优化一些 UI 显示"
+    },
+    {
+      "platform":"all",
+      "date": "2025-01-14",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"8"
+      },
+      "desc": "✨新增语言选项\n🛠️修复Android下同步图片后自动跳转app的问题"
+    },
+    {
+      "platform":"all",
+      "date": "2025-01-05",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"7"
+      },
+      "desc": "✨新增断连重连机制"
+    },
+    {
+      "platform":"all",
+      "date": "2024-12-24",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"6"
+      },
+      "desc": "🛠️修复息屏断连问题\n⚡️️优化Android13 存储权限请求"
+    },
+    {
+      "platform":"all",
+      "date": "2024-12-22",
+      "version":{
+          "name":"1.0.0-beta",
+          "code":"5"
+      },
+      "desc": "1.0.0-beta 测试版本"
+    }
+  ],
+  "images": {
+    "Windows": [
+      {
+        "name": "device",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/device.png"
+      },
+      {
+        "name": "history",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/history.png"
+      },
+      {
+        "name": "search",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/search.png"
+      },
+      {
+        "name": "setting",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/setting.png"
+      }
+    ],
+    "Android": [
+      {
+        "name": "device",
+        "url": "https://download.clipshare.coclyun.top/images/Android/device.png"
+      },
+      {
+        "name": "history",
+        "url": "https://download.clipshare.coclyun.top/images/Android/history.png"
+      },
+      {
+        "name": "statistic",
+        "url": "https://download.clipshare.coclyun.top/images/Android/statistic.png"
+      },
+      {
+        "name": "setting",
+        "url": "https://download.clipshare.coclyun.top/images/Android/setting.png"
+      },
+      {
+        "name": "transmission",
+        "url": "https://download.clipshare.coclyun.top/images/Android/transmission.png"
+      }
+    ]
+  }
+}

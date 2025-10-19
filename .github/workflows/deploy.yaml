@@ -57,7 +57,15 @@ jobs:
         with:
           name: vitepress-dist  # 必须与上传名称一致
           path: .               # 解压到当前目录
-
+      - name: Clean deploy directory
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          port: ${{ secrets.SSH_PORT }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            rm -rf ${{ secrets.DEPLOY_PATH }}/*
       # 步骤2：部署到 Nginx 服务器
       - name: Deploy via SSH
         uses: appleboy/scp-action@v1
@@ -68,6 +76,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }} # SSH私钥
           source: "./*"                   # 要上传的文件
           target: ${{ secrets.DEPLOY_PATH }}  # 服务器目标路径如
-          rm: true                           # 上传前清空目标目录
+          rm: false                           # 上传前清空目标目录
           overwrite: true                    # 强制覆盖现有文件
-          debug: true

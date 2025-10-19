@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: 使用说明
       link: /usages/android
+    - theme: alt
+      text: 常见问题
+      link: /faq
 
 features:
   - icon:

@@ -11,7 +11,7 @@ aside: "left"
 | Android | armeabi-v7a | apk  | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.2.0/app-armeabi-v7a-release-v1.2.0.apk) | 1.2.0 | 要求`Android 7.0`及以上系统版本。 |
 | Android | x86_64      | apk  | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.2.0/app-x86_64-release-v1.2.0.apk) | 1.2.0 | 要求`Android 7.0`及以上系统版本。 |
 
-> 更多历史版本请前往 [Github](https://example.com/releases) 下载。
+> 更多历史版本请前往 [Github](https://github.com/aa2013/ClipShare) 下载。
 
 ## 📌 更新日志
 

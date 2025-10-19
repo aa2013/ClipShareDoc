@@ -64,9 +64,9 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}      # 服务器IP/域名
           port: ${{ secrets.SSH_PORT }}
-          username: ${{ secrets.SSH_USER }}   # SSH用户名（建议用非root账户）
-          key: ${{ secrets.SSH_PRIVATE_KEY }} # Base64编码的SSH私钥
-          source: "./*"                   # 要上传的文件
-          target: ${{ secrets.DEPLOY_PATH }}  # 服务器目标路径如 /var/www/vitepress
+          username: ${{ secrets.SSH_USER }}   # SSH用户名
+          key: ${{ secrets.SSH_PRIVATE_KEY }} # SSH私钥
+          source: ".*"                   # 要上传的文件
+          target: ${{ secrets.DEPLOY_PATH }}  # 服务器目标路径如
           rm: true                           # 上传前清空目标目录
           overwrite: true                    # 强制覆盖现有文件

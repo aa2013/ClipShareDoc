@@ -1,15 +1,33 @@
 {
   "downloads":{
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.2.1/clipshare-1.2.1+19-windows-setup.exe",
-      "version": "1.2.1"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/clipshare-1.3.0+20-windows-setup.exe",
+      "version": "1.3.0"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.2.0/app-arm64-v8a-release-v1.2.0.apk",
-      "version": "1.2.0"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/app-arm64-v8a-release-v1.3.0.apk",
+      "version": "1.3.0"
     }
   },
   "logs": [
+      {
+       "platform":"Windows",
+       "date": "2025-11-09",
+       "version":{
+           "name":"1.3.0",
+           "code":"20"
+       },
+       "desc": "✨ 新增 支持以Webdav/S3对象存储作为中转方式（实验性）  \n✨ 新增 本地数据库查询编辑页面（关于页中）  \n🛠️ 修复 安装程序在安装时无法停止正在运行中的程序的问题\n🛠️ 修复 有时弹窗无法正常关闭的问题  \n🛠️ 修复 文件发送可能出现的路径解码错误导致实际成功但显示失败的问题  \n🛠️ 修复 当 A->B,B->C 手动同步单条数据会丢失来源信息和标签信息的问题  \n🛠️ 修复 在某些条件下因文件夹不存在导致的无法图片同步的问题  \n⚡ 优化 允许按模块单独进行备份恢复处理  \n⚡ 优化 删除数据时可能时间很久的问题  \n⚡ 优化 中转配置支持扫码导入  \n⚡ 优化 优化 中转服务状态增加【连接中】  \n⚡ 优化 日志输出"
+      },
+      {
+       "platform":"Android",
+       "date": "2025-11-09",
+       "version":{
+           "name":"1.3.0",
+           "code":"20"
+       },
+       "desc": "✨ 新增 支持以Webdav/S3对象存储作为中转方式（实验性）\n✨ 新增 本地数据库查询编辑页面（关于页中）\n🛠️ 修复 有时弹窗无法正常关闭的问题\n🛠️ 修复 文件发送可能出现的路径解码错误导致实际成功但显示失败的问题\n🛠️ 修复 当 A->B,B->C 手动同步单条数据会丢失来源信息和标签信息的问题\n🛠️ 修复 在某些条件下因文件夹不存在导致的无法图片同步的问题\n🛠️ 修复 部分设备在初始化时因未取得存储权限导致的异常问题  \n🛠️ 修复 可能导致闪退的异常的问题  \n⚡ 优化 文件选择显示本地相册等选择器  \n⚡ 优化 对新安装设备使用新的id获得方式避免同型号重复  \n⚡ 优化 更新依赖，优化已安装app获取逻辑\n⚡ 优化 允许按模块单独进行备份恢复处理\n⚡ 优化 删除数据时可能时间很久的问题\n⚡ 优化 中转配置支持扫码导入\n⚡ 优化 优化 中转服务状态增加【连接中】\n⚡ 优化 日志输出"
+      },
       {
        "platform":"Windows",
        "date": "2025-09-05",

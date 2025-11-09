@@ -45,8 +45,7 @@ export default {
     if (Object.keys(this.downloadElements).includes(platformParam)) {
       this.showPlatform = platformParam
     }
-    const filePrefix = process.env.NODE_ENV === 'production' ? '' : 'test-'
-    fetch(`${filePrefix}version-info.json?t=${new Date().getTime()}`).then(async res => {
+    fetch(`version-info.json?t=${new Date().getTime()}`).then(async res => {
       const json = await res.json()
       this.logs = json.logs.filter(v => v.platform === this.showPlatform || v.platform.toLowerCase() === 'all').slice(0, 5)
       this.downloads = json.downloads

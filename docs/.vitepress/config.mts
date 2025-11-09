@@ -40,7 +40,8 @@ export default defineConfig({
                         {text: '1. Android', link: '/usages/android.md'},
                         {text: '2. Shizuku 授权', link: '/usages/shizuku.md'},
                         {text: '3. 中转模式', link: '/usages/forward.md'},
-                        {text: '4. Others', link: '/usages/others.md'},
+                        {text: '4. 通知服务', link: '/usages/notify-server.md'},
+                        {text: '5. Others', link: '/usages/others.md'},
                     ]
                 }
             ]

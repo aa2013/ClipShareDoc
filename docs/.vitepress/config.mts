@@ -38,9 +38,10 @@ export default defineConfig({
                     text: '使用说明',
                     items: [
                         {text: '1. Android', link: '/usages/android.md'},
-                        {text: '2. Shizuku 授权', link: '/usages/shizuku.md'},
-                        {text: '3. 中转模式', link: '/usages/forward.md'},
-                        {text: '4. 通知服务', link: '/usages/notify-server.md'},
+                        {text: '2. MacOS', link: '/usages/macos.md'},
+                        {text: '3. Shizuku 授权', link: '/usages/shizuku.md'},
+                        {text: '4. 中转模式', link: '/usages/forward.md'},
+                        {text: '5. 通知服务', link: '/usages/notify-server.md'},
                         {text: '5. Others', link: '/usages/others.md'},
                     ]
                 }

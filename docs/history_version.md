@@ -11,8 +11,9 @@ aside: "left"
 | Android | arm64-v8a   | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/app-arm64-v8a-release-v1.3.0.apk)     | 1.3.0 | 要求`Android 7.0`及以上系统版本。 |
 | Android | armeabi-v7a | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/app-armeabi-v7a-release-v1.3.0.apk)   | 1.3.0 | 要求`Android 7.0`及以上系统版本。 |
 | Android | x86_64      | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/app-x86_64-release-v1.3.0.apk)        | 1.3.0 | 要求`Android 7.0`及以上系统版本。 |
+| MacOS   | 通用架构        | dmg | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/clipshare-1.3.0+20-macos.dmg)        | 1.3.0 | 要求 `MacOS 10.15+`版本     |
 
-> 更多历史版本请前往 [Github](https://github.com/aa2013/ClipShare) 下载。
+> 更多历史版本请前往 [Github Releases](https://github.com/aa2013/ClipShare/releases) 下载。
 
 ## 📌 更新日志
 
@@ -45,6 +46,10 @@ aside: "left"
 ⚡ 优化 更新依赖，优化已安装app获取逻辑  
 
 ---
+
+#### MacOS
+
+✨ MacOS 适配初始版本（2025-11-14）
 
 ### 🏷️ v1.2.1 - 2025-09-05
 

@@ -127,12 +127,6 @@ export default {
               <div :class="key!==showPlatform?'version':''">{{ downloads[key]?.version }}</div>
             </div>
           </template>
-          <div class="platform">
-            <a href="https://github.com/aa2013/ClipShare/releases" target="_blank">
-              <dots-horizontal class="text-[3rem]"/>
-            </a>
-            <div class="version">more</div>
-          </div>
         </div>
         <a class="download-btn block" :href="downloads[showPlatform]?.url" target="_blank">
           立即下载（{{ showPlatform }}）{{ downloads[showPlatform]?.version }}

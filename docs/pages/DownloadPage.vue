@@ -55,10 +55,8 @@ export default {
       const parser = new UAParser();
       const result = parser.getResult();
       for (let osName of OS_LIST) {
-        console.log(osName)
         if (osName.toLowerCase().includes(result.os.name.toLowerCase().toString())) {
           this.showPlatform = osName
-          console.log(66666)
           break
         }
       }

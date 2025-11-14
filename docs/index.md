@@ -32,7 +32,7 @@ features:
       width: 32
       height: 32
     title: 跨平台支持
-    details: 基于Flutter开发，支持 Android、Windows。<br/>其余平台开发中...
+    details: 基于Flutter开发，支持 Android、Windows、MacOS。<br/>其余平台开发中...
   - icon:
       src: /images/icons/category.svg
       width: 32

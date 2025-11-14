@@ -3,7 +3,14 @@
 import {Android, MicrosoftWindows, DotsHorizontal, AppleIos, Apple, Linux} from "mdue";
 import {zIndex} from "@tailwindcss/postcss7-compat/lib/plugins";
 import {useData} from 'vitepress'
+import {UAParser} from 'ua-parser-js';
 
+const OS_Windows = "Windows";
+const OS_Linux = "Linux";
+const OS_Android = "Android";
+const OS_MacOS = "MacOS";
+const OS_IOS = "IOS";
+const OS_LIST = [OS_Windows, OS_Linux, OS_Android, OS_MacOS, OS_IOS];
 export default {
   name: "DownloadPage",
   methods: {
@@ -28,22 +35,33 @@ export default {
       downloads: {},
       platforms: [],
       downloadElements: {
-        "Windows": MicrosoftWindows,
-        "Mac": Apple,
-        "Linux": Linux,
-        "Android": Android,
-        "IOS": AppleIos,
+        [OS_Windows]: MicrosoftWindows,
+        [OS_MacOS]: Apple,
+        [OS_Linux]: Linux,
+        [OS_Android]: Android,
+        [OS_IOS]: AppleIos,
       }
     }
   },
   components: {
     MicrosoftWindows, Android, DotsHorizontal, AppleIos, Apple, Linux
   },
-  created() {
+  async created() {
     const queryParams = new URLSearchParams(window.location.search);
     const platformParam = queryParams.get('platform');
     if (Object.keys(this.downloadElements).includes(platformParam)) {
       this.showPlatform = platformParam
+    } else {
+      const parser = new UAParser();
+      const result = parser.getResult();
+      for (let osName of OS_LIST) {
+        console.log(osName)
+        if (osName.toLowerCase().includes(result.os.name.toLowerCase().toString())) {
+          this.showPlatform = osName
+          console.log(66666)
+          break
+        }
+      }
     }
     fetch(`version-info.json?t=${new Date().getTime()}`).then(async res => {
       const json = await res.json()

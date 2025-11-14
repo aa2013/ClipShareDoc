@@ -7,9 +7,22 @@
     "Android": {
       "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/app-arm64-v8a-release-v1.3.0.apk",
       "version": "1.3.0"
+    },
+    "MacOS": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.3.0/clipshare-1.3.0+20-macos.dmg",
+      "version": "1.3.0"
     }
   },
   "logs": [
+      {
+       "platform":"MacOS",
+       "date": "2025-11-14",
+       "version":{
+           "name":"1.3.0",
+           "code":"20"
+       },
+       "desc": "✨ Mac适配初始版本"
+      },
       {
        "platform":"Windows",
        "date": "2025-11-09",
@@ -235,6 +248,28 @@
       {
         "name": "transmission",
         "url": "https://download.clipshare.coclyun.top/images/Android/transmission.png"
+      }
+    ],
+    "MacOS": [
+      {
+        "name": "device",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/device.png"
+      },
+      {
+        "name": "history",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/history.png"
+      },
+      {
+        "name": "search",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/search.png"
+      },
+      {
+        "name": "setting",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/setting.png"
       }
     ]
   }

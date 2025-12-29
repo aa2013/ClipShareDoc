@@ -6,16 +6,51 @@ aside: "left"
 
 | 平台      | 架构          | 格式  | 下载                                                                                                         | 版本    | 备注                      |
 |---------|-------------|-----|------------------------------------------------------------------------------------------------------------|-------|-------------------------|
-| Windows | x86_64      | exe | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/clipshare-1.3.1+21-windows-setup.exe) | 1.3.1 | 安装版，仅支持 Windows10+      |
-| Windows | x86_64      | zip | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/clipshare-1.3.1+21-windows.zip)       | 1.3.1 | 便携版，仅支持 Windows10+      |
-| Android | arm64-v8a   | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/app-arm64-v8a-release-v1.3.1.apk)     | 1.3.1 | 要求`Android 7.0`及以上系统版本。 |
-| Android | armeabi-v7a | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/app-armeabi-v7a-release-v1.3.1.apk)   | 1.3.1 | 要求`Android 7.0`及以上系统版本。 |
-| Android | x86_64      | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/app-x86_64-release-v1.3.1.apk)        | 1.3.1 | 要求`Android 7.0`及以上系统版本。 |
-| MacOS   | 通用架构        | dmg | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/clipshare-1.3.1+21-macos.dmg)         | 1.3.1 | 要求 `MacOS 10.15+`版本     |
+| Windows | x86_64      | exe | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/clipshare-1.4.0+22-windows-setup.exe) | 1.4.0 | 安装版，仅支持 Windows10+      |
+| Windows | x86_64      | zip | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/clipshare-1.4.0+22-windows.zip)       | 1.4.0 | 便携版，仅支持 Windows10+      |
+| Android | arm64-v8a   | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/app-arm64-v8a-release-v1.4.0.apk)     | 1.4.0 | 要求`Android 7.0`及以上系统版本。 |
+| Android | armeabi-v7a | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/app-armeabi-v7a-release-v1.4.0.apk)   | 1.4.0 | 要求`Android 7.0`及以上系统版本。 |
+| Android | x86_64      | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/app-x86_64-release-v1.4.0.apk)        | 1.4.0 | 要求`Android 7.0`及以上系统版本。 |
+| MacOS   | 通用架构        | dmg | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/clipshare-1.4.0+22-macos.dmg)         | 1.4.0 | 要求 `MacOS 10.15+`版本     |
 
 > 更多历史版本请前往 [Github Releases](https://github.com/aa2013/ClipShare/releases) 下载。
 
 ## 📌 更新日志
+
+### 🏷️ v1.4.0 - 2025-12-29
+
+#### 通用
+
+✨ 新增 Android端通知转发, 桌面端显示  
+✨ 新增 文本分词  
+✨ 新增 支持对设备连接过程中的参数加密  
+✨ 新增 可配置同步数据范围  
+🛠️ 修复 增加索引以解决当数据量多了后删除数据慢的问题  
+⚡ 优化 增加设置以解决部分系统在锁屏状态下无法自动复制的问题  
+⚡ 优化 更新后自动删除更新包文件  
+⚡ 优化 设备发现流程，支持仅手动子网扫描和排除指定网卡  
+⚡ 优化 标签管理显示排序  
+
+#### Windows
+
+🛠️ 修复 更新 Windows 托盘依赖，修复某些场景下的托盘消失问题  
+🛠️ 修复 去除 Windows 安装器中的开机启动选项避免冲突导致最小化失效  
+
+#### Android
+
+✨ 新增 可配置熄屏后停止监听以节省电量  
+✨ 新增 可在同步/新增数据后通过广播将数据共享给其他app
+🛠️ 修复 部分系统在创建悬浮窗后系统底层崩溃导致软重启的问题  
+🛠️ 修复 工作模式选择弹窗无权限时无法关闭的问题  
+🛠️ 修复 隐藏后台无法保活的问题  
+⚡ 优化 极大提高 Android 端后台保活能力  
+⚡ 优化 日志支持生成当天的 Android 原生日志，增加手动清除按钮  
+
+#### MacOS
+
+\-
+
+---
 
 ### 🏷️ v1.3.1 - 2025-11-24
 
@@ -37,7 +72,7 @@ aside: "left"
 
 🛠️ 修复 root模式选择弹窗未自动关闭的问题  
 ⚡ 优化 用户引导完成页添加结束按钮到中央  
-⚡ 优化 设备连接、配对通知自动取消，避免堆积到状态栏  
+⚡ 优化 设备连接、配对通知自动取消，避免堆积到状态栏
 
 #### MacOS
 
@@ -63,7 +98,7 @@ aside: "left"
 
 #### Windows
 
-🛠️ 修复 安装程序在安装时无法停止正在运行中的程序的问题  
+🛠️ 修复 安装程序在安装时无法停止正在运行中的程序的问题
 
 #### Android
 
@@ -71,7 +106,7 @@ aside: "left"
 🛠️ 修复 可能导致闪退的异常的问题  
 ⚡ 优化 文件选择显示本地相册等选择器  
 ⚡ 优化 对新安装设备使用新的id获得方式避免同型号重复  
-⚡ 优化 更新依赖，优化已安装app获取逻辑  
+⚡ 优化 更新依赖，优化已安装app获取逻辑
 
 #### MacOS
 

@@ -42,7 +42,7 @@ export default defineConfig({
                         {text: '3. Shizuku 授权', link: '/usages/shizuku.md'},
                         {text: '4. 中转模式', link: '/usages/forward.md'},
                         {text: '5. 通知服务', link: '/usages/notify-server.md'},
-                        {text: '6. Others', link: '/usages/others.md'},
+                        {text: '6. 数据广播', link: '/usages/broadcast.md'},
                     ]
                 }
             ]

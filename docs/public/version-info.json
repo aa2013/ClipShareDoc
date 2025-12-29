@@ -1,19 +1,47 @@
 {
   "downloads":{
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/clipshare-1.3.1+21-windows-setup.exe",
-      "version": "1.3.1"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/clipshare-1.4.0+22-windows-setup.exe",
+      "version": "1.4.0"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/app-arm64-v8a-release-v1.3.1.apk",
-      "version": "1.3.1"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/app-arm64-v8a-release-v1.4.0.apk",
+      "version": "1.4.0"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.3.1/clipshare-1.3.1+21-macos.dmg",
-      "version": "1.3.1"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.0/clipshare-1.4.0+22-macos.dmg",
+      "version": "1.4.0"
     }
   },
   "logs": [
+      {
+       "platform":"MacOS",
+       "date": "2025-12-29",
+       "version":{
+           "name":"1.4.0",
+           "code":"22"
+       },
+       "desc": "✨ 新增 Android端通知转发, 桌面端显示\n✨ 新增 文本分词\n✨ 新增 支持对设备连接过程中的参数加密\n✨ 新增 可配置同步数据范围\n🛠️ 修复 增加索引以解决当数据量多了后删除数据慢的问题\n⚡ 优化 更新后自动删除更新包文件\n⚡ 优化 设备发现流程，支持仅手动子网扫描和排除指定网卡\n⚡ 优化 标签管理显示排序"
+      },
+      {
+       "platform":"Windows",
+        "date": "2025-12-29",
+        "version":{
+          "name":"1.4.0",
+          "code":"22"
+        },
+       "desc": "✨ 新增 Android端通知转发, 桌面端显示\n✨ 新增 文本分词\n✨ 新增 支持对设备连接过程中的参数加密\n✨ 新增 可配置同步数据范围\n🛠️ 修复 更新 Windows 托盘依赖，修复某些场景下的托盘消失问题\n🛠️ 修复 增加索引以解决当数据量多了后删除数据慢的问题\n🛠️ 修复 去除 Windows 安装器中的开机启动选项避免冲突导致最小化失效\n⚡ 优化 更新后自动删除更新包文件\n⚡ 优化 设备发现流程，支持仅手动子网扫描和排除指定网卡\n⚡ 优化 标签管理显示排序"
+      },
+      {
+       "platform":"Android",
+        "date": "2025-12-29",
+        "version":{
+          "name":"1.4.0",
+          "code":"22"
+        },
+       "desc": "✨ 新增 Android端通知转发, 桌面端显示\n✨ 新增 文本分词\n✨ 新增 支持对设备连接过程中的参数加密\n✨ 新增 可配置熄屏后停止监听以节省电量\n✨ 新增 可在同步/新增数据后通过广播将数据共享给其他app\n✨ 新增 可配置同步数据范围\n🛠️ 修复 增加索引以解决当数据量多了后删除数据慢的问题\n🛠️ 修复 工作模式选择弹窗无权限时无法关闭的问题\n🛠️ 修复 部分系统在创建悬浮窗后系统底层崩溃导致软重启的问题\n🛠️ 修复 隐藏后台无法保活的问题\n⚡ 优化 极大提高 Android 端后台保活能力\n⚡ 优化 增加设置以解决部分系统在锁屏状态下无法自动复制的问题\n⚡ 优化 设备发现流程，支持仅手动子网扫描和排除指定网卡\n⚡ 优化 日志支持生成当天的 Android 原生日志，增加手动清除按钮\n⚡ 优化 标签管理显示排序"
+
+      },
       {
        "platform":"MacOS",
        "date": "2025-11-24",

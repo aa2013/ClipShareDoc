@@ -7,7 +7,7 @@ aside: "left"
 后台保活主要是依赖 `电池优化` 设置为无限制，还有后台任务卡片中加锁。
 
 ::: tip 提示
-1.4.0 版本极大增强了保活能力，再此前版本的请升级尝试
+1.4.0 版本开始极大增强了保活能力，在此前版本的请升级尝试
 :::
 
 ### 关于自启和开机启动
@@ -68,6 +68,7 @@ where key = 'mobileDevIdGenerateWay'
 步骤：
 
 ### 5.1 飞牛商店安装 1Panel
+
 安装的时候记住账号密码和安全入口，然后打开 1Panel，注意使用安全入口访问
 
 <img src="/images/faq/fn_webdav_1.png" alt="fn_os_webdav_1panel_address" width="300" data-fancybox="faq">
@@ -97,3 +98,15 @@ mkdir -p $clipshare_path/$today/files
 # 创建第二天的文件夹
 mkdir -p $clipshare_path/$tomorrow/files
 ```
+
+## 6. Android 同步后未自动复制
+
+通常是未授予剪贴板写入权限，或部分系统默认是使用时允许，请检查权限设置手动授予，若系统中无该设置，请下载 `App Ops` 后进行授权
+
+> 系统设置
+
+<img src="/images/faq/write_clipboard_permission1.png" alt="write_clipboard_permission1" data-fancybox="faq" width="300">
+
+> App Ops
+
+<img src="/images/faq/write_clipboard_permission2.png" alt="write_clipboard_permission2" data-fancybox="faq" width="300">

@@ -110,3 +110,40 @@ mkdir -p $clipshare_path/$tomorrow/files
 > App Ops
 
 <img src="/images/faq/write_clipboard_permission2.png" alt="write_clipboard_permission2" data-fancybox="faq" width="300">
+
+## 7. 修改设备Id后的数据迁移
+
+当修改设备Id后，会出现本机自身的记录的设备显示变为 Unknown，并且设备需要重新配对的情况（会导致同步大量数据），需要手动更新数据库中对应记录的设备id
+
+在各个设备中的 `关于` -> `数据库版本`, 右侧图标点击进入数据库编辑页面，执行以下SQL：
+
+```sql
+-- 本机执行：本机查找不在设备表中的设备id（旧设备id）
+select distinct devId from History
+where devId not in (select guid from Device);
+```
+
+```sql
+-- 所有设备都执行：更新历史记录设备id
+update History set devId = '新设备id' where devId = '旧设备id';
+```
+
+```sql
+-- 所有设备都执行：更新操作记录设备id
+update OperationRecord set devId = '新设备id' where devId = '旧设备id';
+```
+
+```sql
+-- 所有设备都执行：更新同步记录设备id
+update OperationSync set devId = '新设备id' where devId = '旧设备id';
+```
+
+```sql
+-- 所有设备都执行：更新来源信息的设备id（这个需要重启app生效）
+update AppInfo set devId = '新设备id' where devId = '旧设备id';
+```
+
+```sql
+-- 非本机设备执行：更新设备表的设备id（需要重启app生效）
+update Device set guid = '新设备id' where guid = '旧设备id';
+```

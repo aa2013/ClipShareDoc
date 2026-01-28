@@ -40,9 +40,10 @@ export default defineConfig({
                         {text: '1. Android', link: '/usages/android.md'},
                         {text: '2. MacOS', link: '/usages/macos.md'},
                         {text: '3. Shizuku 授权', link: '/usages/shizuku.md'},
-                        {text: '4. 中转模式', link: '/usages/forward.md'},
-                        {text: '5. 通知服务', link: '/usages/notify-server.md'},
-                        {text: '6. 数据广播', link: '/usages/broadcast.md'},
+                        {text: '4. Shizuku 保活', link: '/usages/shizuku-background-alive.md'},
+                        {text: '5. 中转模式', link: '/usages/forward.md'},
+                        {text: '6. 通知服务', link: '/usages/notify-server.md'},
+                        {text: '7. 数据广播', link: '/usages/broadcast.md'},
                     ]
                 }
             ]

@@ -11,6 +11,10 @@
 
 鉴于国内特殊网络环境，若无法访问 Github 和 Google Play，可通过本站提供的 [下载地址](https://download.clipshare.coclyun.top/others/shizuku-v13.5.4.r1049.0e53409-release.apk) 安装，但无法保证是最新版本
 
+::: tip
+若Shizuku后台保活困难[查看此处](/usages/shizuku-background-alive.md)
+:::
+
 ## 启动
 ::: tip 提示
 在继续之前，请先确保手机已启用 `开发者选项`，若未启用请先根据您的手机品牌搜索相关教程

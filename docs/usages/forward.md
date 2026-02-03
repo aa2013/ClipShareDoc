@@ -23,6 +23,7 @@
 |---------|-------|-----|-----------------------------------------------------------------------------------------------------------------------------------------|
 | Windows | amd64 | 1.1 | [forward_server_windows_amd64.exe](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_windows_amd64.exe) |
 | Linux   | amd64 | 1.1 | [forward_server_linux_amd64](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_linux_amd64)             |
+| Linux   | arm64 | 1.1 | [forward_server_linux_arm64](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_linux_arm64)             |
 | 历史版本    | -     | -   | [Github](https://github.com/aa2013/ClipShareForwardServerWeb/releases)                                                                  |
 
 #### 1.1.2 Web后台管理页面
@@ -191,11 +192,11 @@ https://docker.xuanyuan.me/
 
 构建完成后，访问 `ip:8180` 即可访问，默认用户名：`admin`，密码：`1234567`
 
-
 ### 3.2 ClawCloud
 
 ::: tip 提示
-如果你拥有 Github 账户，且注册时间超过180天则可以在 [Claw Cloud](https://console.run.claw.cloud/signin?link=N02FJIL1286E) 免费获得 5$/月 的额度，可以使用它来构建 中转程序，限制是 10G存储/月 和 10G流量/月
+如果你拥有 Github 账户，且注册时间超过180天则可以在 [Claw Cloud](https://console.run.claw.cloud/signin?link=N02FJIL1286E)
+免费获得 5$/月 的额度，可以使用它来构建 中转程序，限制是 10G存储/月 和 10G流量/月
 :::
 
 #### 3.2.1 构建
@@ -210,7 +211,6 @@ https://docker.xuanyuan.me/
 弹出的窗口中如图填写相关信息，镜像是 `coclyun/clipshare-forward-server`，左侧的 `Total` 是每天的消耗
 
 ![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_create_app_image_info.png)
-
 
 滑到底部，找到存储配置，点击添加，新增一个存储配置用于保存配置信息，否则重启就没有了
 

@@ -11,7 +11,7 @@ hero:
     alt: ClipShare
   actions:
     - theme: brand
-      text: 立即下载 V1.4.1
+      text: 立即下载 V1.4.2
       link: /download
     - theme: alt
       text: 使用说明
@@ -32,7 +32,7 @@ features:
       width: 32
       height: 32
     title: 跨平台支持
-    details: 基于Flutter开发，支持 Android、Windows、MacOS。<br/>其余平台开发中...
+    details: 基于Flutter开发，支持 Android、Windows、Linux、MacOS。<br/>其余平台开发中...
   - icon:
       src: /images/icons/category.svg
       width: 32

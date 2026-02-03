@@ -4,33 +4,66 @@ aside: "left"
 
 ## 📥 最新版本下载
 
-| 平台      | 架构          | 格式  | 下载                                                                                                         | 版本    | 备注                      |
-|---------|-------------|-----|------------------------------------------------------------------------------------------------------------|-------|-------------------------|
-| Windows | x86_64      | exe | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.1/clipshare-1.4.1+23-windows-setup.exe) | 1.4.1 | 安装版，仅支持 Windows10+      |
-| Windows | x86_64      | zip | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.1/clipshare-1.4.1+23-windows.zip)       | 1.4.1 | 便携版，仅支持 Windows10+      |
-| Android | arm64-v8a   | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.1/app-arm64-v8a-release-v1.4.1.apk)     | 1.4.1 | 要求`Android 7.0`及以上系统版本。 |
-| Android | armeabi-v7a | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.1/app-armeabi-v7a-release-v1.4.1.apk)   | 1.4.1 | 要求`Android 7.0`及以上系统版本。 |
-| Android | x86_64      | apk | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.1/app-x86_64-release-v1.4.1.apk)        | 1.4.1 | 要求`Android 7.0`及以上系统版本。 |
-| MacOS   | 通用架构        | dmg | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.1/clipshare-1.4.1+23-macos.dmg)         | 1.4.1 | 要求 `MacOS 10.15+`版本     |
+| 平台      | 架构          | 格式       | 下载                                                                                                         | 版本    | 备注             |
+|---------|-------------|----------|------------------------------------------------------------------------------------------------------------|-------|----------------|
+| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-windows-setup.exe) | 1.4.2 | Windows10+，安装版 |
+| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-windows.zip)       | 1.4.2 | Windows10+，便携版 |
+| Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/app-arm64-v8a-release-v1.4.2.apk)     | 1.4.2 | Android 7.0    |
+| Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/app-armeabi-v7a-release-v1.4.2.apk)   | 1.4.2 | Android 7.0    |
+| Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/app-x86_64-release-v1.4.2.apk)        | 1.4.2 | Android 7.0    |
+| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-linux.AppImage)    | 1.4.2 | -              |
+| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-linux.deb)         | 1.4.2 | -              |
+| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-linux.rpm)         | 1.4.2 | -              |
+| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-macos.dmg)         | 1.4.2 | MacOS 10.15+   |
 
 > 更多历史版本请前往 [Github Releases](https://github.com/aa2013/ClipShare/releases) 下载。
 
 ## 📌 更新日志
+
+### 🏷️ v1.4.2 - 2026-02-03
+
+#### 通用
+
+⚡ 优化 优化一些UI显示
+
+#### Windows
+
+🛠️ 修复 开放 Windows 下排除格式选项开关（默认关闭），此前该功能默认打开，打开后在某些环境下可能导致监听不到剪贴板数据  
+⚡ 优化 桌面端文件发送弹窗中支持回车键触发发送  
+⚡ 优化 桌面端启动后如果是最小化状态不要直接触发安全认证页面
+
+#### Android
+
+🛠️ 修复 尝试修复极少数情况下的悬浮窗未关闭成功导致的输入法无法弹出的问题  
+🛠️ 修复 在某些极少数情况下因第三方库导致的可能的闪退问题  
+⚡ 优化 历史记录悬浮窗可通过双击竖条左侧边缘处打开  
+⚡ 优化 备份恢复时暂停截图复制避免误识别  
+⚡ 优化 Android 全面屏设备下底部遮挡问题
+
+#### Linux
+
+✨ 初始版本
+
+#### MacOS
+
+⚡ 优化 MacOS关闭窗体后自动从程序坞中移除  
+⚡ 优化 桌面端文件发送弹窗中支持回车键触发发送  
+⚡ 优化 桌面端启动后如果是最小化状态不要直接触发安全认证页面
 
 ### 🏷️ v1.4.1 - 2026-01-05
 
 #### 通用
 
 🛠️ 修复 更新无法直接下载的问题  
-🛠️ 修复 回退版本再升级导致的重复执行数据库迁移代码的冲突问题  
+🛠️ 修复 回退版本再升级导致的重复执行数据库迁移代码的冲突问题
 
 #### Windows
 
-🛠️ 修复 剪贴板中包含特殊格式时未释放剪贴板导致其他进程无法操作剪贴板的问题  
+🛠️ 修复 剪贴板中包含特殊格式时未释放剪贴板导致其他进程无法操作剪贴板的问题
 
 #### Android
 
-⚡ 优化 隐藏后台时可能导致的初始化问题  
+⚡ 优化 隐藏后台时可能导致的初始化问题
 
 #### MacOS
 
@@ -48,12 +81,12 @@ aside: "left"
 ⚡ 优化 增加设置以解决部分系统在锁屏状态下无法自动复制的问题  
 ⚡ 优化 更新后自动删除更新包文件  
 ⚡ 优化 设备发现流程，支持仅手动子网扫描和排除指定网卡  
-⚡ 优化 标签管理显示排序  
+⚡ 优化 标签管理显示排序
 
 #### Windows
 
 🛠️ 修复 更新 Windows 托盘依赖，修复某些场景下的托盘消失问题  
-🛠️ 修复 去除 Windows 安装器中的开机启动选项避免冲突导致最小化失效  
+🛠️ 修复 去除 Windows 安装器中的开机启动选项避免冲突导致最小化失效
 
 #### Android
 
@@ -63,7 +96,7 @@ aside: "left"
 🛠️ 修复 工作模式选择弹窗无权限时无法关闭的问题  
 🛠️ 修复 隐藏后台无法保活的问题  
 ⚡ 优化 极大提高 Android 端后台保活能力  
-⚡ 优化 日志支持生成当天的 Android 原生日志，增加手动清除按钮  
+⚡ 优化 日志支持生成当天的 Android 原生日志，增加手动清除按钮
 
 #### MacOS
 

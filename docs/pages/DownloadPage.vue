@@ -55,7 +55,11 @@ export default {
       const parser = new UAParser();
       const result = parser.getResult();
       for (let osName of OS_LIST) {
-        if (osName.toLowerCase().includes(result.os.name.toLowerCase().toString())) {
+        const lowerOsName = osName.toLowerCase();
+        const lowerUa = result.ua.toLowerCase();
+        const uaLowerOsName = result.os.name.toLowerCase().toString();
+        console.log('ua: ', lowerUa, 'os: ', uaLowerOsName);
+        if (lowerOsName.includes(uaLowerOsName) || uaLowerOsName.includes(lowerOsName) || lowerUa.includes(lowerOsName)) {
           this.showPlatform = osName
           break
         }
@@ -129,7 +133,9 @@ export default {
           </template>
         </div>
         <a class="download-btn block" :href="downloads[showPlatform]?.url" target="_blank">
-          立即下载（{{ showPlatform }}）{{ downloads[showPlatform]?.version }}
+          立即下载（{{ showPlatform }}）{{
+            downloads[showPlatform]?.version
+          }}{{ showPlatform === 'Linux' ? ' .deb' : '' }}
         </a>
       </div>
     </transition>

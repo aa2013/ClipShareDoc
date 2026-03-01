@@ -9,6 +9,8 @@
 :::
 
 本中转程序基于Go语言开发，并配有 Web 后台管理页面，支持设置密钥模式和公开模式，公开模式下可以对文件同步进行限速限制，而密钥功能支持对设备连接数、同步速度进行限制。
+
+查看源代码：[Github](https://github.com/aa2013/ClipShareForwardServer)
 :::tip 提示
 中转程序不会保留传输的任何数据，仅做数据转发
 
@@ -23,42 +25,29 @@
 
 #### 1.1.1 中转程序下载
 
-| 平台      | 架构    | 版本  | 下载                                                                                                                                      |
-|---------|-------|-----|-----------------------------------------------------------------------------------------------------------------------------------------|
-| Windows | amd64 | 1.1 | [forward_server_windows_amd64.exe](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_windows_amd64.exe) |
-| Linux   | amd64 | 1.1 | [forward_server_linux_amd64](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_linux_amd64)             |
-| Linux   | arm64 | 1.1 | [forward_server_linux_arm64](https://download.clipshare.coclyun.top/releases/forward-server/1.1/forward_server_linux_arm64)             |
-| 历史版本    | -     | -   | [Github](https://github.com/aa2013/ClipShareForwardServerWeb/releases)                                                                  |
+::: tip 提示
+从 1.1.1 版本开始，已将web程序嵌入到中转程序中，web页面无需手动部署
+:::
 
-#### 1.1.2 Web后台管理页面
-
-该项目是前后端分离架构，Web页面需要单独部署 [Github](https://github.com/aa2013/ClipShareForwardServerWeb)。
-
-该管理页面主要提供以下功能：
-
-+ 简单的网络速度/流量/连接数的实时查看
-+ `config.yaml` 配置文件修改
-+ 私有模式下的`套餐` 和 `密钥` 的管理
-+ 运行日志查看
-
-![connections](https://download.clipshare.coclyun.top/images/forward-server-web/connection.png)
-
-![login](https://download.clipshare.coclyun.top/images/forward-server-web/login.png)
-
-![plan](https://download.clipshare.coclyun.top/images/forward-server-web/plan.png)
-
-![settings](https://download.clipshare.coclyun.top/images/forward-server-web/settings.png)
-
-![logs](https://download.clipshare.coclyun.top/images/forward-server-web/logs.png)
+| 平台      | 架构    | 版本    | 下载                                                                                                                                                    |
+|---------|-------|-------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Windows | amd64 | 1.1.1 | [forward_server_windows_amd64_1.1.1.exe](https://download.clipshare.coclyun.top/releases/forward-server/1.1.1/forward_server_windows_amd64_1.1.1.exe) |
+| Linux   | amd64 | 1.1.1 | [forward_server_linux_amd64_1.1.1](https://download.clipshare.coclyun.top/releases/forward-server/1.1.1/forward_server_linux_amd64_1.1.1)             |
+| Linux   | arm64 | 1.1.1 | [forward_server_linux_arm64_1.1.1](https://download.clipshare.coclyun.top/releases/forward-server/1.1.1/forward_server_linux_arm64_1.1.1)             |
+| 历史版本    | -     | -     | [Github](https://github.com/aa2013/ClipShareForwardServer/releases)                                                                                   |
 
 ### 1.2 Docker部署
 
 > 容器映射相关
 
-| 描述        | 容器内路径                 | 容器内端口 |
-|-----------|-----------------------|-------|
-| 中转程序      | /data                 | 9283  |
-| 后台 Web 页面 | /usr/share/nginx/html | 80    |
+::: tip 提示
+从 1.1.1 版本开始，中转程序在容器内的路径从 `/data` 变为 `/app/data`
+:::
+
+| 描述        | 容器内路径     | 容器内端口 |
+|-----------|-----------|-------|
+| 中转程序      | /app/data | 9283  |
+| 后台 Web 页面 | -         | 80    |
 
 #### 1.2.1 docker run
 
@@ -87,15 +76,36 @@ services:
     environment:
       - TZ=Asia/Shanghai
     volumes:
-      - ./data:/data
+      - ./data:/app/data
 
 ```
 
-## 2. 相关文件说明
+### 2 Web后台管理页面
+
+该项目是前后端分离架构，Web页面需要单独部署 [Github](https://github.com/aa2013/ClipShareForwardServer)。
+
+该管理页面主要提供以下功能：
+
++ 简单的网络速度/流量/连接数的实时查看
++ `config.yaml` 配置文件修改
++ 私有模式下的`套餐` 和 `密钥` 的管理
++ 运行日志查看
+
+![connections](https://download.clipshare.coclyun.top/images/forward-server-web/connection.png)
+
+![login](https://download.clipshare.coclyun.top/images/forward-server-web/login.png)
+
+![plan](https://download.clipshare.coclyun.top/images/forward-server-web/plan.png)
+
+![settings](https://download.clipshare.coclyun.top/images/forward-server-web/settings.png)
+
+![logs](https://download.clipshare.coclyun.top/images/forward-server-web/logs.png)
+
+## 3. 相关文件说明
 
 中转程序的所有文件都位于程序所在位置的 `./data` 文件夹下，主要是配置文件、数据库文件、日志文件等
 
-### 2.1 配置文件 config.yaml
+### 3.1 配置文件 config.yaml
 
 配置文件存储了中转程序的一些基本配置信息
 ::: tip 注意
@@ -109,7 +119,7 @@ public-mode: true
 # Web管理页面的后台接口配置
 web:
   # 后台接口的端口
-  port: 8282
+  port: 80
   # *管理员登录有效期（单位为秒），若不进行操作，将会在该时间后登录失效
   login-expired-seconds: 1800
   # 管理员登录账号
@@ -145,15 +155,15 @@ log:
 
 ```
 
-### 2.2 数据库文件
+### 3.2 数据库文件
 
 数据库文件位于 `./data/app.db`，是一个 `sqlite3` 数据库文件，只有当使用私有模式时才会使用到数据库，用于存储配置的套餐以及对应的密钥相关信息
 
-## 3. 搭建教程
+## 4. 搭建教程
 
-### 3.1 飞牛 nas
+### 4.1 飞牛 nas
 
-#### 3.1.1 添加加速镜像
+#### 4.1.1 添加加速镜像
 
 ::: tip 提示
 如果你的网络环境可以直接拉取docker镜像则可以跳过该步骤
@@ -176,7 +186,7 @@ https://docker.xuanyuan.me/
 
 ![添加弹窗2](http://download.clipshare.coclyun.top/images/usages/feiniu/img2.png)
 
-#### 3.1.2 创建项目
+#### 4.1.2 创建项目
 
 点击docker左侧导航栏的 `Compose`，然后右上角点击 `新增项目`
 
@@ -196,14 +206,14 @@ https://docker.xuanyuan.me/
 
 构建完成后，访问 `ip:8180` 即可访问，默认用户名：`admin`，密码：`1234567`
 
-### 3.2 ClawCloud
+### 4.2 ClawCloud
 
 ::: tip 提示
 如果你拥有 Github 账户，且注册时间超过180天则可以在 [Claw Cloud](https://console.run.claw.cloud/signin?link=N02FJIL1286E)
 免费获得 5$/月 的额度，可以使用它来构建 中转程序，限制是 10G存储/月 和 10G流量/月
 :::
 
-#### 3.2.1 构建
+#### 4.2.1 构建
 
 注册后点击 `App Launchpad`
 ![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_app_launchpad.png)
@@ -227,7 +237,7 @@ https://docker.xuanyuan.me/
 则表示 TCP 端口可能在当前区域被分配完了，可以在主页左上角切换区域再次尝试
 :::
 
-#### 3.2.2 测试访问
+#### 4.2.2 测试访问
 
 在应用页面可以看到应用的访问地址, web端口的https协议直接点击即可访问
 

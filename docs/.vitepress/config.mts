@@ -3,7 +3,7 @@ import mdItCustomAttrs from "markdown-it-custom-attrs";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "ClipShare",
-    titleTemplate: '跨平台剪贴板历史记录与同步工具'
+    titleTemplate: '跨平台剪贴板历史记录与同步工具',
     description: "跨平台剪贴板历史记录与同步工具",
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}],

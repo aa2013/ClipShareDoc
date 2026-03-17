@@ -10,7 +10,7 @@ const OS_Linux = "Linux";
 const OS_Android = "Android";
 const OS_MacOS = "MacOS";
 const OS_IOS = "IOS";
-const OS_LIST = [OS_Windows, OS_Linux, OS_Android, OS_MacOS, OS_IOS];
+const OS_LIST = [OS_Windows, OS_Android, OS_Linux, OS_MacOS, OS_IOS];
 export default {
   name: "DownloadPage",
   methods: {

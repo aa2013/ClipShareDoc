@@ -6,19 +6,68 @@ aside: "left"
 
 | 平台      | 架构          | 格式       | 下载                                                                                                         | 版本    | 备注             |
 |---------|-------------|----------|------------------------------------------------------------------------------------------------------------|-------|----------------|
-| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-windows-setup.exe) | 1.4.2 | Windows10+，安装版 |
-| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-windows.zip)       | 1.4.2 | Windows10+，便携版 |
-| Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/app-arm64-v8a-release-v1.4.2.apk)     | 1.4.2 | Android 7.0    |
-| Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/app-armeabi-v7a-release-v1.4.2.apk)   | 1.4.2 | Android 7.0    |
-| Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/app-x86_64-release-v1.4.2.apk)        | 1.4.2 | Android 7.0    |
-| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-linux.AppImage)    | 1.4.2 | -              |
-| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-linux.deb)         | 1.4.2 | -              |
-| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-linux.rpm)         | 1.4.2 | -              |
-| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.2/clipshare-1.4.2+24-macos.dmg)         | 1.4.2 | MacOS 10.15+   |
+| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows-setup.exe) | 1.4.3 | Windows10+，安装版 |
+| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows.zip)       | 1.4.3 | Windows10+，便携版 |
+| Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-arm64-v8a-release-v1.4.3.apk)     | 1.4.3 | Android 7.0    |
+| Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-armeabi-v7a-release-v1.4.3.apk)   | 1.4.3 | Android 7.0    |
+| Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-x86_64-release-v1.4.3.apk)        | 1.4.3 | Android 7.0    |
+| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.AppImage)    | 1.4.3 | -              |
+| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.deb)         | 1.4.3 | -              |
+| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.rpm)         | 1.4.3 | -              |
+| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-macos.dmg)         | 1.4.3 | MacOS 10.15+   |
 
 > 更多历史版本请前往 [Github Releases](https://github.com/aa2013/ClipShare/releases) 下载。
 
 ## 📌 更新日志
+
+### 🏷️ v1.4.3 - 2026-03-20
+
+#### 通用
+
+✨ 新增 多选批量合并复制、多选导出功能  
+✨ 新增 支持备份到 WebDAV/S3  
+🛠️ 修复 当以深色默认启动时主题切换不完全的问题  
+🛠️ 修复 同步通知后不要复制通知内容  
+🛠️ 修复 当非最新版本时，WebDAV/S3 下会提示版本不兼容  
+🛠️ 修复 因S3配置未带入 Region 和 PathStyle 参数导致部分S3服务无法连接的问题  
+⚡ 优化 后续版本更新弹窗将支持选择下载安装包类型  
+⚡ 优化 增加滑动多选和滑动区间多选功能  
+⚡ 优化 增加左滑更多操作按钮  
+⚡ 优化 历史记录卡片显示增加复制按钮  
+⚡ 优化 设备发现逻辑  
+⚡ 优化 中转支持 IPv6 地址  
+⚡ 优化 数据清理允许保留指定天数清理  
+⚡ 优化 删除数据时允许只删除本地而不是所有设备都删除  
+⚡ 优化 断连重连逻辑  
+
+#### Android
+
+🛠️ 修复 部分设备截图因权限问题无法获取，尝试使用特权命令  
+⚡ 优化 悬浮窗中不显示通知内容  
+
+#### Windows
+
+✨ 新增 弹窗支持记住大小，可改变弹窗尺寸  
+🛠️ 修复 通知左上角图标有时候不显示的问题  
+🛠️ 修复 抽屉背景模糊掉标题栏的问题  
+⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制  
+⚡ 优化 后续版本更新弹窗 zip 便携版支持自动更新  
+
+#### Linux
+
+✨ 新增 弹窗支持记住大小，可改变弹窗尺寸  
+🛠️ 修复 抽屉背景模糊掉标题栏的问题  
+⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制    
+
+
+#### MacOS
+
+> 注意，若是从 1.4.2 版本更新会导致数据丢失
+
+✨ 新增 弹窗支持记住大小，可改变弹窗尺寸  
+🛠️ 修复 数据库和存储路径不正确的原因（误定向到app自身下，导致更新版本后数据丢失）  
+⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制  
+
 
 ### 🏷️ v1.4.2 - 2026-02-03
 
@@ -45,6 +94,8 @@ aside: "left"
 ✨ 初始版本
 
 #### MacOS
+
+> 注意，该版本因路径错误改动可能丢失数据，不建议MacOS使用1.4.2版本
 
 ⚡ 优化 MacOS关闭窗体后自动从程序坞中移除  
 ⚡ 优化 桌面端文件发送弹窗中支持回车键触发发送  

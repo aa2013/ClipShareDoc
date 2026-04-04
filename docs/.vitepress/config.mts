@@ -45,6 +45,7 @@ export default defineConfig({
                         {text: '5. 中转模式', link: '/usages/forward.md'},
                         {text: '6. 通知服务', link: '/usages/notify-server.md'},
                         {text: '7. 数据广播', link: '/usages/broadcast.md'},
+                        {text: '8. 规则脚本指南', link: '/usages/rule/guide.md'},
                     ]
                 }
             ]

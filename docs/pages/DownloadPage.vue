@@ -139,7 +139,7 @@ export default {
         </a>
       </div>
     </transition>
-    <div class="stack-container">
+    <div class="stack-container" v-if="false">
       <div v-for="platform in Object.keys(images)" class="stack-item">
         <transition name="fade">
           <div class="flex justify-center gap-8 mt-10 flex-wrap relative" v-if="platform===showPlatform"

@@ -1,7 +1,7 @@
-﻿# ClipShare 规则 Lua 脚本指南 (Beta)
+﻿# ClipShare 规则 Lua 脚本指南
 
 :::tip 提示
-本文的适用于 1.5.0+(暂未发布) 的 ClipShare 版本
+本文档适用于 1.5.0+ 的 ClipShare 版本
 :::
 
 本文档用于说明 ClipShare 规则管理中的 Lua 脚本怎么写、能用什么、不能用什么，以及脚本的输入输出格式。
@@ -458,11 +458,13 @@ regex.matchGroups(content, pattern, caseSensitive, multiLines, dotAll)
 
 示例内容：
 
+> 这个示例使用正则规则也可完成提取，此处仅作为脚本示例
+
 ```text
 【某服务】您的验证码是 123456，5 分钟内有效，请勿泄露给他人。
 ```
 
-<details>
+<details class="details custom-block">
 <summary>点击展开示例脚本</summary>
 
 <!-- @include: ./example_lua.md -->
@@ -478,7 +480,7 @@ regex.matchGroups(content, pattern, caseSensitive, multiLines, dotAll)
 #####  ClipShare 规则 Lua 脚本生成 Prompt：
 
 
-<details>
+<details class="details custom-block">
 <summary>点击展开查看内容</summary>
 
 <<< ./prompt.md

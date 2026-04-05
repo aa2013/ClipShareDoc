@@ -1,4 +1,4 @@
-# MacOS系统使用说明
+﻿# MacOS系统使用说明
 
 现已支持MacOS！可通过本站或Github 下载 `未签名` 的 MacOS 系统对应的dmg安装包！
 
@@ -30,3 +30,5 @@ sudo xattr -r -d com.apple.quarantine /Applications/clipshare.app
 ```
 
 4. 然后重新尝试打开 app
+
+

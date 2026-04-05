@@ -1,4 +1,4 @@
-# Shizuku 授权
+﻿# Shizuku 授权
 
 ## Shizuku 是什么？
 [Shizuku](https://shizuku.rikka.app/zh-hans/introduction/) 是一个用于 Android 系统的开源工具，它允许应用程序在无需 Root 权限的情况下调用系统 API。
@@ -12,7 +12,7 @@
 鉴于国内特殊网络环境，若无法访问 Github 和 Google Play，可通过本站提供的 [下载地址](https://download.clipshare.coclyun.top/others/shizuku-v13.5.4.r1049.0e53409-release.apk) 安装，但无法保证是最新版本
 
 ::: tip
-若Shizuku后台保活困难[查看此处](/usages/shizuku-background-alive.md)
+若Shizuku后台保活困难[查看此处](./shizuku-background-alive)
 :::
 
 ## 启动
@@ -111,3 +111,6 @@ adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.s
 ::: tip 提示
 为保证后续正常授权和使用应用，请将 Shizuku 的 `电池优化` 设置为 `不受限制`，并允许 `后台运行`
 :::
+
+
+

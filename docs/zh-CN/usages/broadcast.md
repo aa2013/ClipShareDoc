@@ -1,4 +1,4 @@
-# 数据广播
+﻿# 数据广播
 
 ::: tip 提示
 非 Android 系统可忽略该文档
@@ -24,3 +24,5 @@ top.coclyun.clipshare.ACTION_ON_HISTORY_CHANGED
 | `from_dev_name` | 来源设备名称  | 发送数据的设备名称                                                          |
 
 在 Tasker 中可使用 `%` 前缀引用这些参数，例如：`%type`、`%content`
+
+

@@ -1,0 +1,270 @@
+﻿{
+  "downloads": {
+    "Windows": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows-setup.exe",
+      "version": "1.4.3"
+    },
+    "Android": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-arm64-v8a-release-v1.4.3.apk",
+      "version": "1.4.3"
+    },
+    "Linux": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.deb",
+      "version": "1.4.3"
+    },
+    "MacOS": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-macos.dmg",
+      "version": "1.4.3"
+    }
+  },
+  "logs": [
+    {
+      "platform": "MacOS",
+      "date": "2026-03-21",
+      "version": {
+        "name": "1.4.3",
+        "code": "25"
+      },
+      "desc": "Note: upgrading from 1.4.2 on MacOS will cause data loss\n✨ Added batch merge copy and multi-export for multi-selection\n✨ Added popup windows that remember their size and can be resized\n✨ Added backup support for WebDAV/S3\n🛠️ Fixed incomplete theme switching when starting with dark theme by default\n🛠️ Fixed notification content being copied after sync notifications\n🛠️ Fixed version incompatibility prompts under WebDAV/S3 when not on the latest version\n🛠️ Fixed some S3 services failing to connect because Region and PathStyle parameters were not passed in\n🛠️ Fixed incorrect database and storage paths that could cause data loss after upgrading\n⚡ Improved desktop history cards so they can be copied by right-click double-click\n⚡ Improved future update dialogs to support choosing the installer package type\n⚡ Improved swipe multi-select and range multi-select\n⚡ Improved the additional left-swipe action buttons\n⚡ Improved history cards by adding a copy button\n⚡ Improved device discovery logic\n⚡ Improved relay mode support for IPv6 addresses\n⚡ Improved data cleanup by allowing cleanup while retaining a specified number of days\n⚡ Improved delete behavior so data can be removed locally only instead of from all devices\n⚡ Improved reconnect logic"
+    },
+    {
+      "platform": "Linux",
+      "date": "2026-03-21",
+      "version": {
+        "name": "1.4.3",
+        "code": "25"
+      },
+      "desc": "✨ Added batch merge copy and multi-export for multi-selection\n✨ Added popup windows that remember their size and can be resized\n✨ Added backup support for WebDAV/S3\n🛠️ Fixed incomplete theme switching when starting with dark theme by default\n🛠️ Fixed notification content being copied after sync notifications\n🛠️ Fixed version incompatibility prompts under WebDAV/S3 when not on the latest version\n🛠️ Fixed some S3 services failing to connect because Region and PathStyle parameters were not passed in\n🛠️ Fixed the blurred drawer background affecting the title bar\n⚡ Improved desktop history cards so they can be copied by right-click double-click\n⚡ Improved future update dialogs to support choosing the installer package type\n⚡ Improved swipe multi-select and range multi-select\n⚡ Improved the additional left-swipe action buttons\n⚡ Improved history cards by adding a copy button\n⚡ Improved device discovery logic\n⚡ Improved relay mode support for IPv6 addresses\n⚡ Improved data cleanup by allowing cleanup while retaining a specified number of days\n⚡ Improved delete behavior so data can be removed locally only instead of from all devices\n⚡ Improved reconnect logic"
+    },
+    {
+      "platform": "Windows",
+      "date": "2026-03-21",
+      "version": {
+        "name": "1.4.3",
+        "code": "25"
+      },
+      "desc": "✨ Added batch merge copy and multi-export for multi-selection\n✨ Added popup windows that remember their size and can be resized\n✨ Added backup support for WebDAV/S3\n🛠️ Fixed incomplete theme switching when starting with dark theme by default\n🛠️ Fixed notification content being copied after sync notifications\n🛠️ Fixed version incompatibility prompts under WebDAV/S3 when not on the latest version\n🛠️ Fixed some S3 services failing to connect because Region and PathStyle parameters were not passed in\n🛠️ Fixed the notification icon in the upper-left corner sometimes not being displayed\n🛠️ Fixed the blurred drawer background affecting the title bar\n⚡ Improved desktop history cards so they can be copied by right-click double-click\n⚡ Improved future update dialogs so the zip portable package can support automatic updates\n⚡ Improved future update dialogs to support choosing the installer package type\n⚡ Improved swipe multi-select and range multi-select\n⚡ Improved the additional left-swipe action buttons\n⚡ Improved history cards by adding a copy button\n⚡ Improved device discovery logic\n⚡ Improved relay mode support for IPv6 addresses\n⚡ Improved data cleanup by allowing cleanup while retaining a specified number of days\n⚡ Improved delete behavior so data can be removed locally only instead of from all devices\n⚡ Improved reconnect logic"
+    },
+    {
+      "platform": "Android",
+      "date": "2026-03-21",
+      "version": {
+        "name": "1.4.3",
+        "code": "25"
+      },
+      "desc": "✨ Added batch merge copy and multi-export for multi-selection\n✨ Added backup support for WebDAV/S3\n🛠️ Fixed incomplete theme switching when starting with dark theme by default\n🛠️ Fixed notification content being copied after sync notifications\n🛠️ Fixed version incompatibility prompts under WebDAV/S3 when not on the latest version\n🛠️ Fixed some S3 services failing to connect because Region and PathStyle parameters were not passed in\n🛠️ Fixed screenshot capture failing on some devices due to permission issues by trying privileged commands\n🛠️ Fixed cases where pasted content could not be pasted into QQ, WeChat, and similar apps after copying\n⚡ Improved floating windows so notification content is no longer displayed\n⚡ Improved future update dialogs to support choosing the installer package type\n⚡ Improved swipe multi-select and range multi-select\n⚡ Improved the additional left-swipe action buttons\n⚡ Improved history cards by adding a copy button\n⚡ Improved device discovery logic\n⚡ Improved relay mode support for IPv6 addresses\n⚡ Improved data cleanup by allowing cleanup while retaining a specified number of days\n⚡ Improved delete behavior so data can be removed locally only instead of from all devices\n⚡ Improved reconnect logic"
+    },
+    {
+      "platform": "MacOS",
+      "date": "2026-02-03",
+      "version": {
+        "name": "1.4.2",
+        "code": "24"
+      },
+      "desc": "⚡ Improved MacOS so closing the window automatically removes the app from the Dock\n⚡ Improved the desktop file-send popup to support pressing Enter to send\n⚡ Improved startup behavior so the security authentication page is not triggered directly when the app starts minimized\n⚡ Improved some UI details"
+    },
+    {
+      "platform": "Linux",
+      "date": "2026-02-03",
+      "version": {
+        "name": "1.4.2",
+        "code": "24"
+      },
+      "desc": "✨ Initial release"
+    },
+    {
+      "platform": "Windows",
+      "date": "2026-02-03",
+      "version": {
+        "name": "1.4.2",
+        "code": "24"
+      },
+      "desc": "🛠️ Fixed the Windows exclude-format option switch. It is now available but disabled by default. It used to be enabled by default and could prevent clipboard listening in some environments\n⚡ Improved the desktop file-send popup to support pressing Enter to send\n⚡ Improved startup behavior so the security authentication page is not triggered directly when the app starts minimized\n⚡ Improved some UI details"
+    },
+    {
+      "platform": "Android",
+      "date": "2026-02-03",
+      "version": {
+        "name": "1.4.2",
+        "code": "24"
+      },
+      "desc": "🛠️ Fixed rare cases where the floating window failed to close and prevented the input method from appearing\n🛠️ Fixed possible crashes caused by third-party libraries in very rare scenarios\n⚡ Improved the history floating window so it can be opened by double-clicking the left edge of the vertical bar\n⚡ Improved backup restore by pausing screenshot copying to avoid false recognition\n⚡ Improved bottom occlusion issues on full-screen Android devices\n⚡ Improved some UI details"
+    },
+    {
+      "platform": "MacOS",
+      "date": "2026-01-05",
+      "version": {
+        "name": "1.4.1",
+        "code": "23"
+      },
+      "desc": "🛠️ Fixed updates that could not be downloaded directly"
+    },
+    {
+      "platform": "Windows",
+      "date": "2026-01-05",
+      "version": {
+        "name": "1.4.1",
+        "code": "23"
+      },
+      "desc": "🛠️ Fixed updates that could not be downloaded directly\n🛠️ Fixed the conflict caused by running database migration code repeatedly after downgrading and then upgrading again\n🛠️ Fixed clipboard data with special formats not releasing the clipboard, which prevented other processes from using it"
+    },
+    {
+      "platform": "Android",
+      "date": "2026-01-05",
+      "version": {
+        "name": "1.4.1",
+        "code": "23"
+      },
+      "desc": "🛠️ Fixed updates that could not be downloaded directly\n⚡ Improved initialization issues that could occur after hiding the app to the background"
+    },
+    {
+      "platform": "MacOS",
+      "date": "2025-12-29",
+      "version": {
+        "name": "1.4.0",
+        "code": "22"
+      },
+      "desc": "✨ Added Android notification forwarding with desktop display\n✨ Added text tokenization\n✨ Added encryption for parameters used during device connection\n✨ Added configurable sync data scope\n🛠️ Fixed slow deletion with large amounts of data by adding indexes\n⚡ Improved the updater to automatically delete update package files after updating\n⚡ Improved the device discovery flow with support for manual subnet scan only and excluding specific network adapters\n⚡ Improved tag management sort order"
+    },
+    {
+      "platform": "Windows",
+      "date": "2025-12-29",
+      "version": {
+        "name": "1.4.0",
+        "code": "22"
+      },
+      "desc": "✨ Added Android notification forwarding with desktop display\n✨ Added text tokenization\n✨ Added encryption for parameters used during device connection\n✨ Added configurable sync data scope\n🛠️ Fixed Windows tray dependency updates and resolved tray disappearing in some scenarios\n🛠️ Fixed slow deletion with large amounts of data by adding indexes\n🛠️ Fixed minimize-at-start issues by removing the startup option from the Windows installer to avoid conflicts\n⚡ Improved the updater to automatically delete update package files after updating\n⚡ Improved the device discovery flow with support for manual subnet scan only and excluding specific network adapters\n⚡ Improved tag management sort order"
+    },
+    {
+      "platform": "Android",
+      "date": "2025-12-29",
+      "version": {
+        "name": "1.4.0",
+        "code": "22"
+      },
+      "desc": "✨ Added Android notification forwarding with desktop display\n✨ Added text tokenization\n✨ Added encryption for parameters used during device connection\n✨ Added an option to stop listening after the screen turns off to save power\n✨ Added support for sharing synced/new data with other apps via broadcasts\n✨ Added configurable sync data scope\n🛠️ Fixed slow deletion with large amounts of data by adding indexes\n🛠️ Fixed the work mode selection dialog not being closable when permission was missing\n🛠️ Fixed some systems soft rebooting because the system layer crashed after creating a floating window\n🛠️ Fixed the app not being able to stay alive after being hidden to the background\n⚡ Greatly improved Android background keepalive capability\n⚡ Improved settings for lock-screen auto-copy issues on some systems\n⚡ Improved the device discovery flow with support for manual subnet scan only and excluding specific network adapters\n⚡ Improved logs by supporting generation of native Android logs for the current day and adding a manual clear button\n⚡ Improved tag management sort order"
+    },
+    {
+      "platform": "MacOS",
+      "date": "2025-11-24",
+      "version": {
+        "name": "1.3.1",
+        "code": "21"
+      },
+      "desc": "🛠️ Fixed the file-send page popup occasionally closing in a way that caused the main route to be popped\n🛠️ Fixed update check failures on MacOS\n🛠️ Fixed canceling on the security authentication page causing later popups to fail\n⚡ Improved the device list to support filtering online status and sorting by device name\n⚡ Improved the About page so update popups can still be checked manually even after skipping the current version\n⚡ Improved blacklist support by adding category conditions"
+    },
+    {
+      "platform": "Windows",
+      "date": "2025-11-24",
+      "version": {
+        "name": "1.3.1",
+        "code": "21"
+      },
+      "desc": "🛠️ Fixed the system app list appearing incorrectly under user apps when selecting blacklist app sources\n🛠️ Fixed the file-send page popup occasionally closing in a way that caused the main route to be popped\n🛠️ Fixed canceling on the security authentication page causing later popups to fail\n⚡ Improved the device list to support filtering online status and sorting by device name\n⚡ Improved the About page so update popups can still be checked manually even after skipping the current version\n⚡ Improved the text in the update dialog to avoid being auto-clicked by Li Tiaotiao\n⚡ Improved blacklist support by adding category conditions"
+    },
+    {
+      "platform": "Android",
+      "date": "2025-11-24",
+      "version": {
+        "name": "1.3.1",
+        "code": "21"
+      },
+      "desc": "🛠️ Fixed the root mode selection dialog not closing automatically\n🛠️ Fixed the system app list appearing incorrectly under user apps when selecting blacklist app sources\n🛠️ Fixed the file-send page popup occasionally closing in a way that caused the main route to be popped\n🛠️ Fixed canceling on the security authentication page causing later popups to fail\n⚡ Improved the device list to support filtering online status and sorting by device name\n⚡ Improved the About page so update popups can still be checked manually even after skipping the current version\n⚡ Improved the text in the update dialog to avoid being auto-clicked by Li Tiaotiao\n⚡ Improved the onboarding completion page by moving the finish button to the center\n⚡ Improved device connection and pairing notifications to auto-dismiss and avoid piling up in the status bar\n⚡ Improved blacklist support by adding category conditions"
+    },
+    {
+      "platform": "all",
+      "date": "2025-06-07",
+      "version": {
+        "name": "1.0.0-beta",
+        "code": "13"
+      },
+      "desc": "✨ Added Excel export on the search page\n✨ Added data editing so historical data can be modified without changing its timestamp\n✨ Added notifications after device disconnection\n🛠️ Fixed some search filter issues\n🛠️ Fixed tag management search not working\n⚡ Improved updates so files can be downloaded directly and opened\n⚡ Improved cleanup so device info is automatically removed if the device has no data and is no longer paired\n⚡ Improved some UI details"
+    },
+    {
+      "platform": "all",
+      "date": "2025-05-10",
+      "version": {
+        "name": "1.0.0-beta",
+        "code": "12"
+      },
+      "desc": "✨ Added Android hidden-API clipboard listening mode to solve clipboard monitoring issues on systems such as OriginOS\n🛠️ Fixed incomplete theme switching\n🛠️ Fixed relay disconnection not reconnecting automatically\n🛠️ Fixed the Android Shizuku service process not exiting\n⚡ Improved Windows popups so they can be closed with the same hotkey\n⚡ Improved file transfer history so all items can be selected\n⚡ Improved device connection logic\n⚡ Improved Android so device scanning can be skipped when the screen turns from off to on\n⚡ Improved some UI details\n⚡ Improved some interaction logic"
+    },
+    {
+      "platform": "all",
+      "date": "2025-04-09",
+      "version": {
+        "name": "1.0.0-beta",
+        "code": "11"
+      },
+      "desc": "✨ Added desktop history popup search\n✨ Added drag-and-drop file sync\n⚡ Improved some UI details\n⚡ Improved some interaction logic"
+    }
+  ],
+  "images": {
+    "Windows": [
+      {
+        "name": "device",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/device.png"
+      },
+      {
+        "name": "history",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/history.png"
+      },
+      {
+        "name": "search",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/search.png"
+      },
+      {
+        "name": "setting",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/Windows/setting.png"
+      }
+    ],
+    "Android": [
+      {
+        "name": "device",
+        "url": "https://download.clipshare.coclyun.top/images/Android/device.png"
+      },
+      {
+        "name": "history",
+        "url": "https://download.clipshare.coclyun.top/images/Android/history.png"
+      },
+      {
+        "name": "statistic",
+        "url": "https://download.clipshare.coclyun.top/images/Android/statistic.png"
+      },
+      {
+        "name": "setting",
+        "url": "https://download.clipshare.coclyun.top/images/Android/setting.png"
+      },
+      {
+        "name": "transmission",
+        "url": "https://download.clipshare.coclyun.top/images/Android/transmission.png"
+      }
+    ],
+    "MacOS": [
+      {
+        "name": "device",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/device.png"
+      },
+      {
+        "name": "history",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/history.png"
+      },
+      {
+        "name": "search",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/search.png"
+      },
+      {
+        "name": "setting",
+        "width": 500,
+        "url": "https://download.clipshare.coclyun.top/images/MacOS/setting.png"
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-# 中转模式使用说明
+﻿# 中转模式使用说明
 
 默认情况下应用只支持局域网内数据同步，若要在公网中使用需要借助中转程序转发数据 或 使用 Webdav/S3对象存储作为中转方式（更推荐使用S3对象存储）。
 
@@ -250,3 +250,6 @@ tcp协议的是中转地址，复制它的域名（不要前缀tcp://）到 Clip
 成功访问
 
 ![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_access_address_forward_test_result.png)
+
+
+

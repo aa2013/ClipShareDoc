@@ -1,4 +1,4 @@
-```lua
+﻿```lua
 -- 读取原始内容
 local content = params.content or ""
 
@@ -46,3 +46,4 @@ isDropped = false,
 isFinalRule = false,
 }
 ```
+

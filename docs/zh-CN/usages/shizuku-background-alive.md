@@ -1,4 +1,4 @@
-## Shizuku后台保活优化
+﻿## Shizuku后台保活优化
 
 自 1.4.0 版本起 Android 系统上已经极大增强了后台保活能力，理论上前台服务存在则不会被杀后台，但是受限于当前的一个 BUG，当 Shizuku 被杀后台以后，ClipShare 也会因为底层错误无反馈崩溃
 
@@ -10,3 +10,4 @@
 4. Shizuku 开启 Watchdog
 
 如果无法访问 Github 下载 thedjchi/Shizuku 分支版本，可使用本站提供的 [thedjchi/Shizuku](https://download.clipshare.coclyun.top/others/shizuku-v13.6.0.r1290-thedjchi.apk)，更新于 2026-01
+

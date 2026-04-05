@@ -1,9 +1,22 @@
-<script>
+﻿<script setup>
+import { Android, MicrosoftWindows, AppleIos, Apple, Linux } from "mdue";
+import { computed, onMounted, ref, watch } from "vue";
+import { useData, useRoute } from "vitepress";
+import { UAParser } from "ua-parser-js";
 
-import {Android, MicrosoftWindows, DotsHorizontal, AppleIos, Apple, Linux} from "mdue";
-import {zIndex} from "@tailwindcss/postcss7-compat/lib/plugins";
-import {useData} from 'vitepress'
-import {UAParser} from 'ua-parser-js';
+const ZH_TEXT = {
+  subtitle: "跨平台剪贴板历史记录与同步",
+  updateLogTitle: "更新日志",
+  moreLogs: "更多日志 >",
+  downloadNow: "立即下载",
+};
+
+const EN_TEXT = {
+  subtitle: "Cross-platform clipboard history and sync",
+  updateLogTitle: "Release Notes",
+  moreLogs: "More logs >",
+  downloadNow: "Download now",
+};
 
 const OS_Windows = "Windows";
 const OS_Linux = "Linux";
@@ -11,88 +24,103 @@ const OS_Android = "Android";
 const OS_MacOS = "MacOS";
 const OS_IOS = "IOS";
 const OS_LIST = [OS_Windows, OS_Android, OS_Linux, OS_MacOS, OS_IOS];
-export default {
-  name: "DownloadPage",
-  methods: {
-    zIndex() {
-      return zIndex
-    },
-    switchShowPlatform(platform) {
-      const url = new URL(window.location.href);
-      url.searchParams.set('platform', platform);
-      window.location.href = url.toString();
-    },
-  },
-  data: () => {
-    const params = useData();
-    return {
-      params,
-      isDark: params.isDark,
-      images: {},
-      showPlatform: "Windows",
-      logs: [],
-      logsLoading: true,
-      downloads: {},
-      platforms: [],
-      downloadElements: {
-        [OS_Windows]: MicrosoftWindows,
-        [OS_MacOS]: Apple,
-        [OS_Linux]: Linux,
-        [OS_Android]: Android,
-        [OS_IOS]: AppleIos,
-      }
-    }
-  },
-  components: {
-    MicrosoftWindows, Android, DotsHorizontal, AppleIos, Apple, Linux
-  },
-  async created() {
-    const queryParams = new URLSearchParams(window.location.search);
-    const platformParam = queryParams.get('platform');
-    if (Object.keys(this.downloadElements).includes(platformParam)) {
-      this.showPlatform = platformParam
-    } else {
-      const parser = new UAParser();
-      const result = parser.getResult();
-      for (let osName of OS_LIST) {
-        const lowerOsName = osName.toLowerCase();
-        const lowerUa = result.ua.toLowerCase();
-        const uaLowerOsName = result.os.name.toLowerCase().toString();
-        console.log('ua: ', lowerUa, 'os: ', uaLowerOsName);
-        if (lowerOsName.includes(uaLowerOsName) || uaLowerOsName.includes(lowerOsName) || lowerUa.includes(lowerOsName)) {
-          this.showPlatform = osName
-          break
-        }
-      }
-    }
-    fetch(`version-info.json?t=${new Date().getTime()}`).then(async res => {
-      const json = await res.json()
-      this.logs = json.logs.filter(v => v.platform === this.showPlatform || v.platform.toLowerCase() === 'all').slice(0, 5)
-      this.downloads = json.downloads
-      this.images = json.images
-    }).finally(() => {
-      // this.logsLoading = false
-      setTimeout(() => this.logsLoading = false, 300)
-    })
-  },
-  watch: {
-    "$route"(newV, oldV) {
-      console.log(newV)
-    },
-    "params.isDark"(newV, oldV) {
-      this.isDark = newV
+
+const downloadElements = {
+  [OS_Windows]: MicrosoftWindows,
+  [OS_MacOS]: Apple,
+  [OS_Linux]: Linux,
+  [OS_Android]: Android,
+  [OS_IOS]: AppleIos,
+};
+
+const { isDark, lang } = useData();
+const route = useRoute();
+
+const images = ref({});
+const showPlatform = ref(OS_Windows);
+const logs = ref([]);
+const logsLoading = ref(true);
+const downloads = ref({});
+
+const isEnglish = computed(() => lang.value?.toLowerCase().startsWith("en"));
+const messages = computed(() => (isEnglish.value ? EN_TEXT : ZH_TEXT));
+const pageBgClass = computed(() => (isDark.value ? "download-page-bg-dark" : "download-page-bg-light"));
+const moreLogsHref = computed(() => (isEnglish.value ? "/en-US/history_version" : "/zh-CN/history_version"));
+const versionInfoPath = computed(() => (isEnglish.value ? "/version-info.en.json" : "/version-info.json"));
+
+function switchShowPlatform(platform) {
+  const url = new URL(window.location.href);
+  url.searchParams.set("platform", platform);
+  window.location.href = url.toString();
+}
+
+function detectPlatform() {
+  const queryParams = new URLSearchParams(window.location.search);
+  const platformParam = queryParams.get("platform");
+  if (platformParam && Object.keys(downloadElements).includes(platformParam)) {
+    showPlatform.value = platformParam;
+    return;
+  }
+
+  const parser = new UAParser();
+  const result = parser.getResult();
+  const lowerUa = (result.ua || "").toLowerCase();
+  const uaLowerOsName = (result.os.name || "").toLowerCase();
+
+  for (const osName of OS_LIST) {
+    const lowerOsName = osName.toLowerCase();
+    if (
+      lowerOsName.includes(uaLowerOsName) ||
+      uaLowerOsName.includes(lowerOsName) ||
+      lowerUa.includes(lowerOsName)
+    ) {
+      showPlatform.value = osName;
+      break;
     }
   }
 }
+
+async function loadVersionInfo() {
+  logsLoading.value = true;
+  try {
+    const response = await fetch(`${versionInfoPath.value}?t=${Date.now()}`);
+    const json = await response.json();
+    logs.value = (json.logs || [])
+      .filter((item) => item.platform === showPlatform.value || item.platform.toLowerCase() === "all")
+      .slice(0, 5);
+    downloads.value = json.downloads || {};
+    images.value = json.images || {};
+  } finally {
+    setTimeout(() => {
+      logsLoading.value = false;
+    }, 300);
+  }
+}
+
+async function refreshPage() {
+  detectPlatform();
+  await loadVersionInfo();
+}
+
+onMounted(async () => {
+  await refreshPage();
+});
+
+watch(
+  () => route.path,
+  async () => {
+    await refreshPage();
+  }
+);
 </script>
 
 <template>
-  <div class="p-6" :class="isDark?'download-page-bg-dark':''">
+  <div class="p-6">
     <div class="text-4xl font-bold text-center text-[transparent] hero-text">
       ClipShare
     </div>
     <div class="text-xl my-6 text-center tracking-[3px]">
-      跨平台剪贴板历史记录与同步
+      {{ messages.subtitle }}
     </div>
     <transition name="fade" mode="out-in">
       <div v-if="logsLoading" class="max-w-[400px] mx-auto">
@@ -109,7 +137,7 @@ export default {
       <div v-else>
         <div class="max-w-[400px] mx-auto" v-show="logs.length">
           <div class="font-bold text-xl my-4">
-            更新日志
+            {{ messages.updateLogTitle }}
           </div>
           <div class="max-h-[200px] overflow-auto">
             <div class="flex mb-[5px]" v-for="item in logs">
@@ -118,11 +146,11 @@ export default {
             </div>
           </div>
           <div class="mt-6 cursor-pointer hover:text-[var(--vp-button-alt-bg)] transition-all duration-200 ease-linear">
-            <a href="/history_version.html" target="_blank">更多日志 ></a>
+            <a :href="moreLogsHref" target="_blank">{{ messages.moreLogs }}</a>
           </div>
         </div>
         <div class="flex justify-center gap-8 mt-10 flex-wrap">
-          <template v-for="(iconComponent,key) in downloadElements">
+          <template v-for="(iconComponent, key) in downloadElements" :key="key">
             <div class="platform" v-if="downloads[key]?.url" @click="()=>switchShowPlatform(key)"
                  :style="key===showPlatform?'background: var(--vp-button-brand-bg)':''">
               <div>
@@ -133,7 +161,7 @@ export default {
           </template>
         </div>
         <a class="download-btn block" :href="downloads[showPlatform]?.url" target="_blank">
-          立即下载（{{ showPlatform }}）{{
+          {{ messages.downloadNow }}（{{ showPlatform }}）{{
             downloads[showPlatform]?.version
           }}{{ showPlatform === 'Linux' ? ' .deb' : '' }}
         </a>
@@ -232,3 +260,4 @@ export default {
   grid-row: 1 / 2; /* 所有子元素放在同一行 */
 }
 </style>
+

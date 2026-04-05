@@ -1,4 +1,4 @@
----
+﻿---
 aside: "left"
 ---
 
@@ -10,7 +10,7 @@ aside: "left"
 1.4.0 版本开始极大增强了保活能力，在此前版本的请升级尝试
 :::
 
-若仍然无法保留后台，[查看此处](/usages/shizuku-background-alive.md)
+若仍然无法保留后台，[查看此处](./usages/shizuku-background-alive)
 
 ### 关于自启和开机启动
 
@@ -149,3 +149,8 @@ update AppInfo set devId = '新设备id' where devId = '旧设备id';
 -- 非本机设备执行：更新设备表的设备id（需要重启app生效）
 update Device set guid = '新设备id' where guid = '旧设备id';
 ```
+
+
+
+
+

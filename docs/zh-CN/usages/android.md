@@ -1,4 +1,4 @@
-# Android系统使用说明
+﻿# Android系统使用说明
 
 为使用应用完整功能，特制定以下激活操作指南。请根据您的 Android 版本及设备权限配置进行相应操作。
 
@@ -32,7 +32,7 @@ Android 10 以下版本系统无需激活操作，可以使用应用完整功能
 
 - **Shizuku 权限**
   ::: tip 提示
-  Shizuku 在重启手机后需要重新进行授权，该部分请查看 [Shizuku 授权](/usages/shizuku.html)
+  Shizuku 在重启手机后需要重新进行授权，该部分请查看 [Shizuku 授权](/zh-CN/usages/shizuku)
   :::
 
 - **Root 权限**：
@@ -52,3 +52,8 @@ Android 10 以下版本系统无需激活操作，可以使用应用完整功能
 3. 找到您的应用，并将电池优化设置为 **不优化** 或 **不受限制**。
 
 <img src="/images/usages/android/battery_optimization_settings_android.jpg" alt="电池优化设置" width="300" data-fancybox="android">
+
+
+
+
+

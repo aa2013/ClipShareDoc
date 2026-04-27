@@ -89,6 +89,16 @@
     --vp-button-brand-active-text: var(--vp-c-white);
     --vp-button-brand-active-bg: var(--vp-c-brand-1);
 
+    --vp-button-warning-border: transparent;
+    --vp-button-warning-text: var(--vp-c-white);
+    --vp-button-warning-bg: var(--vp-c-warning-3);
+    --vp-button-warning-hover-border: transparent;
+    --vp-button-warning-hover-text: var(--vp-c-white);
+    --vp-button-warning-hover-bg: var(--vp-c-warning-2);
+    --vp-button-warning-active-border: transparent;
+    --vp-button-warning-active-text: var(--vp-c-white);
+    --vp-button-warning-active-bg: var(--vp-c-warning-1);
+
 
     --vp-button-alt-border: transparent;
     --vp-button-alt-text: var(--vp-c-white);
@@ -156,4 +166,11 @@
 .DocSearch {
     --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+.VPButton.warning {
+    background-color: var(--vp-c-warning-3);
+    color: white;
+}
 
+.VPButton.warning:hover {
+    background-color: var(--vp-c-warning-2);
+}

@@ -2,16 +2,13 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+import Home from './Home.vue'
 import './style.css'
 import './tailwind.postcss'
 declare const _hmt: any;
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
+  Layout: Home,
   enhanceApp({ app, router, siteData }) {
     router.onBeforeRouteChange = (to) => {
       if (typeof _hmt !== 'undefined') {

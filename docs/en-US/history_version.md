@@ -4,21 +4,58 @@ aside: "left"
 
 ## 📥 Latest Downloads
 
-| Platform | Architecture | Format | Download | Version | Notes |
-|---------|-------------|--------|----------|---------|-------|
-| Windows | x86_64 | exe | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows-setup.exe) | 1.4.3 | Windows 10+, Installer |
-| Windows | x86_64 | zip | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows.zip) | 1.4.3 | Windows 10+, Portable |
-| Android | arm64-v8a | apk | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-arm64-v8a-release-v1.4.3.apk) | 1.4.3 | Android 7.0 |
-| Android | armeabi-v7a | apk | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-armeabi-v7a-release-v1.4.3.apk) | 1.4.3 | Android 7.0 |
-| Android | x86_64 | apk | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-x86_64-release-v1.4.3.apk) | 1.4.3 | Android 7.0 |
-| Linux | x86_64 | AppImage | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.AppImage) | 1.4.3 | - |
-| Linux | x86_64 | deb | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.deb) | 1.4.3 | - |
-| Linux | x86_64 | rpm | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.rpm) | 1.4.3 | - |
-| MacOS | Universal | dmg | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-macos.dmg) | 1.4.3 | MacOS 10.15+ |
+| Platform | Architecture | Format   | Download                                                                                                         | Version | Notes                  |
+|----------|--------------|----------|------------------------------------------------------------------------------------------------------------------|---------|------------------------|
+| Windows  | x86_64       | exe      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows-setup.exe) | 1.4.4   | Windows 10+, Installer |
+| Windows  | x86_64       | zip      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows.zip)       | 1.4.4   | Windows 10+, Portable  |
+| Android  | arm64-v8a    | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-arm64-v8a-release-v1.4.4.apk)     | 1.4.4   | Android 7.0            |
+| Android  | armeabi-v7a  | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-armeabi-v7a-release-v1.4.4.apk)   | 1.4.4   | Android 7.0            |
+| Android  | x86_64       | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-x86_64-release-v1.4.4.apk)        | 1.4.4   | Android 7.0            |
+| Linux    | x86_64       | AppImage | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.AppImage)    | 1.4.4   | -                      |
+| Linux    | x86_64       | deb      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.deb)         | 1.4.4   | -                      |
+| Linux    | x86_64       | rpm      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.rpm)         | 1.4.4   | -                      |
+| MacOS    | Universal    | dmg      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-macos.dmg)         | 1.4.4   | MacOS 10.15+           |
 
 > For more historical versions, please visit [Github Releases](https://github.com/aa2013/ClipShare/releases).
 
 ## 📌 Release Notes
+
+### 🏷️ v1.4.4 - 2026-05-16
+
+#### General
+
+🛠️ Fixed system theme toggle did not follow  
+🛠️ Fixed global exceptions before initialization completion were not displayed on startup  
+🛠️ Fixed ports were not released in some environments due to incomplete connection destruction  
+🛠️ Fixed manual disconnect and reconnect of devices was ineffective  
+🛠️ Fixed the popup window could not be closed after local backup completion  
+⚡ Improved device discovery scanning to use a specified network card  
+⚡ Improved relay connection to display version number (no display indicates an older version)  
+⚡ Improved image preview to show/hide path and other information on click
+
+#### Android
+
+🛠️ Fixed issue where saving to the photo album failed due to a missing path  
+🛠️ Fixed issue where some systems lacked permissions for public folders during initialization, causing startup failure  
+🛠️ Fixed process leak issue  
+⚡ Improved to significantly reduce Android installation package size
+
+#### Windows
+
+✨ Added right-click menu options (copy/delete/pin to top) in the history popup window  
+🛠️ Fixed issue where modifying the monitoring logic conflicted with other clipboard software, causing monitoring
+failure  
+⚡ Improved tray icon to show a warning color when no paired devices are connected on desktop
+
+#### Linux
+
+✨ Added right-click menu options (copy/delete/pin to top) in the history popup window  
+⚡ Improved tray icon to show a warning color when no paired devices are connected on desktop
+
+#### MacOS
+
+✨ Added right-click menu options (copy/delete/pin to top) in the history popup window  
+⚡ Improved tray icon to show a warning color when no paired devices are connected on desktop
 
 ### 🏷️ v1.4.3 - 2026-03-21
 
@@ -38,13 +75,13 @@ aside: "left"
 ⚡ Improved relay mode support for IPv6 addresses  
 ⚡ Improved data cleanup by allowing cleanup while retaining a specified number of days  
 ⚡ Improved delete behavior so data can be removed locally only instead of from all devices  
-⚡ Improved reconnect logic  
+⚡ Improved reconnect logic
 
 #### Android
 
 🛠️ Fixed screenshot capture failing on some devices due to permission issues by trying privileged commands  
 🛠️ Fixed cases where pasted content could not be pasted into QQ, WeChat, and similar apps after copying  
-⚡ Improved floating windows so notification content is no longer displayed  
+⚡ Improved floating windows so notification content is no longer displayed
 
 #### Windows
 
@@ -52,21 +89,22 @@ aside: "left"
 🛠️ Fixed the notification icon in the upper-left corner sometimes not being displayed  
 🛠️ Fixed the blurred drawer background affecting the title bar  
 ⚡ Improved desktop history cards so they can be copied by right-click double-click  
-⚡ Improved future update dialogs so the zip portable package can support automatic updates  
+⚡ Improved future update dialogs so the zip portable package can support automatic updates
 
 #### Linux
 
 ✨ Added popup windows that remember their size and can be resized  
 🛠️ Fixed the blurred drawer background affecting the title bar  
-⚡ Improved desktop history cards so they can be copied by right-click double-click  
+⚡ Improved desktop history cards so they can be copied by right-click double-click
 
 #### MacOS
 
 > Note: updating from version 1.4.2 will cause data loss.
 
 ✨ Added popup windows that remember their size and can be resized  
-🛠️ Fixed incorrect database and storage paths, which previously redirected into the app itself and caused data loss after updating  
-⚡ Improved desktop history cards so they can be copied by right-click double-click  
+🛠️ Fixed incorrect database and storage paths, which previously redirected into the app itself and caused data loss
+after updating  
+⚡ Improved desktop history cards so they can be copied by right-click double-click
 
 ### 🏷️ v1.4.2 - 2026-02-03
 
@@ -76,7 +114,8 @@ aside: "left"
 
 #### Windows
 
-🛠️ Fixed the Windows exclude-format option switch. It is now available but disabled by default. It used to be enabled by default and could prevent clipboard listening in some environments  
+🛠️ Fixed the Windows exclude-format option switch. It is now available but disabled by default. It used to be enabled by
+default and could prevent clipboard listening in some environments  
 ⚡ Improved the desktop file-send popup to support pressing Enter to send  
 ⚡ Improved startup behavior so the security authentication page is not triggered directly when the app starts minimized
 
@@ -105,7 +144,7 @@ aside: "left"
 #### General
 
 🛠️ Fixed updates that could not be downloaded directly  
-🛠️ Fixed the conflict caused by running database migration code repeatedly after downgrading and then upgrading again  
+🛠️ Fixed the conflict caused by running database migration code repeatedly after downgrading and then upgrading again
 
 #### Windows
 
@@ -189,7 +228,8 @@ aside: "left"
 ✨ Added experimental support for using WebDAV/S3 object storage as a relay method  
 ✨ Added a local database query and editor page in the About page  
 🛠️ Fixed cases where popup windows sometimes could not close normally  
-🛠️ Fixed possible path decoding errors during file sending where the operation actually succeeded but was shown as failed  
+🛠️ Fixed possible path decoding errors during file sending where the operation actually succeeded but was shown as
+failed  
 🛠️ Fixed manual single-item sync chains like A->B and B->C losing source info and tag info  
 🛠️ Fixed image sync failures caused by missing folders under certain conditions  
 ⚡ Improved backup and restore so it can be handled module by module  
@@ -261,7 +301,8 @@ aside: "left"
 🛠️ Fixed clipboard source information occasionally not syncing  
 🛠️ Fixed possible incomplete export counts in the Excel export feature  
 🛠️ Fixed new tags not updating in the search filter after creation  
-⚡ Improved sync behavior so data missed during disconnect does not have to be synced automatically after reconnection, while also adding manual sync in the device action popup  
+⚡ Improved sync behavior so data missed during disconnect does not have to be synced automatically after reconnection,
+while also adding manual sync in the device action popup  
 ⚡ Improved source filtering operations in search/data cleanup filters  
 ⚡ Improved some minor UI details
 
@@ -347,12 +388,14 @@ aside: "left"
 
 #### Windows
 
-🛠️ Fixed duplicate shortcuts after updating through the Windows updater causing startup launches to fail to stay minimized  
+🛠️ Fixed duplicate shortcuts after updating through the Windows updater causing startup launches to fail to stay
+minimized  
 🛠️ Fixed slow exit through the Windows tray
 
 #### Android
 
-🛠️ Fixed relay reconnect failures that could happen when switching from WiFi to mobile data because the network state changed too quickly
+🛠️ Fixed relay reconnect failures that could happen when switching from WiFi to mobile data because the network state
+changed too quickly
 
 ---
 

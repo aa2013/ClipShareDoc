@@ -1,23 +1,61 @@
 {
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows-setup.exe",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows-setup.exe",
+      "version": "1.4.4"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-arm64-v8a-release-v1.4.3.apk",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-arm64-v8a-release-v1.4.4.apk",
+      "version": "1.4.4"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.deb",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.deb",
+      "version": "1.4.4"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-macos.dmg",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-macos.dmg",
+      "version": "1.4.4"
     }
   },
   "logs": [
+
+    {
+      "platform": "MacOS",
+      "date": "2026-05-16",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "注意：MacOS版本若是从 1.4.2 版本更新会导致数据丢失\n✨ 新增 历史记录弹窗右键菜单复制/删除/置顶\n🛠️ 修复 系统主题切换不跟随问题\n🛠️ 修复 启动时初始化完成前的全局异常不显示问题\n🛠️ 修复 连接销毁不完善导致在部分环境下端口不释放的问题\n🛠️ 修复 设备手动断连重连无效的问题\n🛠️ 修复 本地备份完成后弹窗无法关闭的问题\n⚡ 优化 设备发现扫描使用指定网卡\n⚡ 优化 无已配对设备连接时托盘显示警告色\n⚡ 优化 中转连接增加版本号显示(不显示说明版本较老)\n⚡ 优化 托盘提示增加设备连接数量信息\n⚡ 优化 图片预览时点击显隐路径等信息"
+    },
+    {
+      "platform": "Linux",
+      "date": "2026-05-16",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "✨ 新增 历史记录弹窗右键菜单复制/删除/置顶 \n🛠️ 修复 系统主题切换不跟随问题 \n🛠️ 修复 启动时初始化完成前的全局异常不显示问题 \n🛠️ 修复 连接销毁不完善导致在部分环境下端口不释放的问题\n🛠️ 修复 设备手动断连重连无效的问题\n🛠️ 修复 本地备份完成后弹窗无法关闭的问题\n⚡ 优化 设备发现扫描使用指定网卡\n⚡ 优化 无已配对设备连接时托盘显示警告色\n⚡ 优化 中转连接增加版本号显示(不显示说明版本较老)\n⚡ 优化 图片预览时点击显隐路径等信息"
+    },
+    {
+      "platform": "Windows",
+      "date": "2026-05-16",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "✨ 新增 历史记录弹窗右键菜单复制/删除/置顶 \n🛠️ 修复 系统主题切换不跟随问题 \n🛠️ 修复 启动时初始化完成前的全局异常不显示问题 \n🛠️ 修复 修改监听逻辑以免与其他剪贴板类软件冲突导致无法监听 \n🛠️ 修复 连接销毁不完善导致在部分环境下端口不释放的问题 \n🛠️ 修复 设备手动断连重连无效的问题 \n🛠️ 修复 本地备份完成后弹窗无法关闭的问题 \n⚡ 优化 设备发现扫描使用指定网卡\n⚡ 优化 无已配对设备连接时托盘显示警告色\n⚡ 优化 中转连接增加版本号显示(不显示说明版本较老) \n⚡ 优化 托盘提示增加设备连接数量信息 \n⚡ 优化 图片预览时点击显隐路径等信息"
+    },
+    {
+      "platform": "Android",
+      "date": "2026-03-21",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "🛠️ 修复 系统主题切换不跟随问题 \n🛠️ 修复 启动时初始化完成前的全局异常不显示问题 \n🛠️ 修复 保存到相册时路径不存在导致失败\n🛠️ 修复 尝试修复部分系统在初始化时对公共文件夹无权限导致启动失败的问题 \n🛠️ 修复 连接销毁不完善导致在部分环境下端口不释放的问题 \n🛠️ 修复 设备手动断连重连无效的问题 \n🛠️ 修复 本地备份完成后弹窗无法关闭的问题 \n🛠️ 修复 进程泄露问题 \n⚡ 优化 设备发现扫描使用指定网卡 \n⚡ 优化 大幅减少 Android 安装包体积 \n⚡ 优化 中转连接增加版本号显示(不显示说明版本较老) \n⚡ 优化 图片预览时点击显隐路径等信息"
+    },
+
     {
       "platform": "MacOS",
       "date": "2026-03-21",

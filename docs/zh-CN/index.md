@@ -11,7 +11,7 @@ hero:
     alt: ClipShare
   actions:
     - theme: brand
-      text: 立即下载 V1.5.0
+      text: 立即下载 V1.4.4
       link: ./download
     - theme: alt
       text: 使用说明

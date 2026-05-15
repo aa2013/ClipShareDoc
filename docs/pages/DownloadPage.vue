@@ -15,7 +15,7 @@ const EN_TEXT = {
   subtitle: "Cross-platform clipboard history and sync",
   updateLogTitle: "Release Notes",
   moreLogs: "More logs >",
-  downloadNow: "Download now",
+  downloadNow: "Download",
 };
 
 const OS_Windows = "Windows";

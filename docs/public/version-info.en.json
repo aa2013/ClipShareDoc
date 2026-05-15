@@ -1,23 +1,59 @@
 ﻿{
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows-setup.exe",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows-setup.exe",
+      "version": "1.4.4"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-arm64-v8a-release-v1.4.3.apk",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-arm64-v8a-release-v1.4.4.apk",
+      "version": "1.4.4"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.deb",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.deb",
+      "version": "1.4.4"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-macos.dmg",
-      "version": "1.4.3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-macos.dmg",
+      "version": "1.4.4"
     }
   },
   "logs": [
+    {
+      "platform": "MacOS",
+      "date": "2026-05-16",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "Note: Updating from version 1.4.2 on MacOS may result in data loss\n✨ Added right-click menu options (copy/delete/pin to top) in the history popup window\n🛠️ Fixed issue where system theme toggle did not follow\n🛠️ Fixed issue where global exceptions before initialization completion were not displayed on startup\n🛠️ Fixed issue where ports were not released in some environments due to incomplete connection destruction\n🛠️ Fixed issue where manual disconnect and reconnect of devices was ineffective\n🛠️ Fixed issue where the popup window could not be closed after local backup completion\n⚡ Improved device discovery scanning to use a specified network card\n⚡ Improved tray icon to show a warning color when no paired devices are connected\n⚡ Improved relay connection to display version number (no display indicates an older version)\n⚡ Improved tray tooltip to show device connection count\n⚡ Improved image preview to show/hide path and other information on click"
+    },
+    {
+      "platform": "Linux",
+      "date": "2026-05-16",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "✨ Added right-click menu options (copy/delete/pin to top) in the history popup window\n🛠️ Fixed issue where system theme toggle did not follow\n🛠️ Fixed issue where global exceptions before initialization completion were not displayed on startup\n🛠️ Fixed issue where ports were not released in some environments due to incomplete connection destruction\n🛠️ Fixed issue where manual disconnect and reconnect of devices was ineffective\n🛠️ Fixed issue where the popup window could not be closed after local backup completion\n⚡ Improved device discovery scanning to use a specified network card\n⚡ Improved tray icon to show a warning color when no paired devices are connected\n⚡ Improved relay connection to display version number (no display indicates an older version)\n⚡ Improved image preview to show/hide path and other information on click"
+    },
+    {
+      "platform": "Windows",
+      "date": "2026-05-16",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "✨ Added right-click menu options (copy/delete/pin to top) in the history popup window\n🛠️ Fixed issue where system theme toggle did not follow\n🛠️ Fixed issue where global exceptions before initialization completion were not displayed on startup\n🛠️ Fixed issue where modifying the monitoring logic conflicted with other clipboard software, causing monitoring failure\n🛠️ Fixed issue where ports were not released in some environments due to incomplete connection destruction\n🛠️ Fixed issue where manual disconnect and reconnect of devices was ineffective\n🛠️ Fixed issue where the popup window could not be closed after local backup completion\n⚡ Improved device discovery scanning to use a specified network card\n⚡ Improved tray icon to show a warning color when no paired devices are connected\n⚡ Improved relay connection to display version number (no display indicates an older version)\n⚡ Improved tray tooltip to show device connection count\n⚡ Improved image preview to show/hide path and other information on click"
+    },
+    {
+      "platform": "Android",
+      "date": "2026-03-21",
+      "version": {
+        "name": "1.4.4",
+        "code": "26"
+      },
+      "desc": "🛠️ Fixed issue where system theme toggle did not follow\n🛠️ Fixed issue where global exceptions before initialization completion were not displayed on startup\n🛠️ Fixed issue where saving to the photo album failed due to a missing path\n🛠️ Fixed issue where some systems lacked permissions for public folders during initialization, causing startup failure\n🛠️ Fixed issue where ports were not released in some environments due to incomplete connection destruction\n🛠️ Fixed issue where manual disconnect and reconnect of devices was ineffective\n🛠️ Fixed issue where the popup window could not be closed after local backup completion\n🛠️ Fixed process leak issue\n⚡ Improved device discovery scanning to use a specified network card\n⚡ Improved to significantly reduce Android installation package size\n⚡ Improved relay connection to display version number (no display indicates an older version)\n⚡ Improved image preview to show/hide path and other information on click"
+    },
     {
       "platform": "MacOS",
       "date": "2026-03-21",

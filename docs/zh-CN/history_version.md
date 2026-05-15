@@ -6,19 +6,56 @@ aside: "left"
 
 | 平台      | 架构          | 格式       | 下载                                                                                                         | 版本    | 备注             |
 |---------|-------------|----------|------------------------------------------------------------------------------------------------------------|-------|----------------|
-| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows-setup.exe) | 1.4.3 | Windows10+，安装版 |
-| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-windows.zip)       | 1.4.3 | Windows10+，便携版 |
-| Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-arm64-v8a-release-v1.4.3.apk)     | 1.4.3 | Android 7.0    |
-| Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-armeabi-v7a-release-v1.4.3.apk)   | 1.4.3 | Android 7.0    |
-| Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/app-x86_64-release-v1.4.3.apk)        | 1.4.3 | Android 7.0    |
-| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.AppImage)    | 1.4.3 | -              |
-| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.deb)         | 1.4.3 | -              |
-| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-linux.rpm)         | 1.4.3 | -              |
-| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.3/clipshare-1.4.3+25-macos.dmg)         | 1.4.3 | MacOS 10.15+   |
+| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows-setup.exe) | 1.4.4 | Windows10+，安装版 |
+| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows.zip)       | 1.4.4 | Windows10+，便携版 |
+| Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-arm64-v8a-release-v1.4.4.apk)     | 1.4.4 | Android 7.0    |
+| Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-armeabi-v7a-release-v1.4.4.apk)   | 1.4.4 | Android 7.0    |
+| Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-x86_64-release-v1.4.4.apk)        | 1.4.4 | Android 7.0    |
+| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.AppImage)    | 1.4.4 | -              |
+| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.deb)         | 1.4.4 | -              |
+| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.rpm)         | 1.4.4 | -              |
+| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-macos.dmg)         | 1.4.4 | MacOS 10.15+   |
 
 > 更多历史版本请前往 [Github Releases](https://github.com/aa2013/ClipShare/releases) 下载。
 
 ## 📌 更新日志
+
+### 🏷️ v1.4.4 - 2026-05-16
+
+#### 通用
+
+🛠️ 修复 系统主题切换不跟随问题  
+🛠️ 修复 启动时初始化完成前的全局异常不显示问题  
+🛠️ 修复 连接销毁不完善导致在部分环境下端口不释放的问题  
+🛠️ 修复 设备手动断连重连无效的问题  
+🛠️ 修复 本地备份完成后弹窗无法关闭的问题  
+⚡ 优化 设备发现扫描使用指定网卡  
+⚡ 优化 中转连接增加版本号显示(不显示说明版本较老)  
+⚡ 优化 图片预览时点击显隐路径等信息  
+
+#### Android
+
+🛠️ 修复 保存到相册时路径不存在导致失败  
+🛠️ 修复 尝试修复部分系统在初始化时对公共文件夹无权限导致启动失败的问题  
+🛠️ 修复 进程泄露问题  
+⚡ 优化 大幅减少 Android 安装包体积  
+
+#### Windows
+
+✨ 新增 历史记录弹窗右键菜单复制/删除/置顶  
+🛠️ 修复 修改监听逻辑以免与其他剪贴板类软件冲突导致无法监听  
+⚡ 优化 桌面端无已配对设备连接时托盘显示警告色  
+
+#### Linux
+
+✨ 新增 历史记录弹窗右键菜单复制/删除/置顶  
+⚡ 优化 桌面端无已配对设备连接时托盘显示警告色  
+
+#### MacOS
+
+✨ 新增 历史记录弹窗右键菜单复制/删除/置顶  
+⚡ 优化 桌面端无已配对设备连接时托盘显示警告色  
+
 
 ### 🏷️ v1.4.3 - 2026-03-21
 

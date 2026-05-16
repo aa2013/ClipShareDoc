@@ -63,13 +63,14 @@ features:
       width: 32
       height: 32
     title: Custom Rules
-    details: >
-        Supports custom rules. You can use regular expressions or Lua scripts to process data under matched conditions.
-        <div class="vp-doc external-link-icon-enabled">
-            Details
-            <a href="./usages/rule/guide" target="_blank">
-              View docs
-            </a>
-        </div>
+    details: Set rules and automatically label records that comply with the rules.
+#    details: >
+#        Supports custom rules. You can use regular expressions or Lua scripts to process data under matched conditions.
+#        <div class="vp-doc external-link-icon-enabled">
+#            Details
+#            <a href="./usages/rule/guide" target="_blank">
+#              View docs
+#            </a>
+#        </div>
 ---
 

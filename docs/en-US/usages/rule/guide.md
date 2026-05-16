@@ -1,7 +1,7 @@
-﻿# ClipShare Rule Lua Script Guide
+﻿# ClipShare Rule Lua Script Guide(Not yet released)
 
 :::tip Tip
-This document applies to ClipShare version 1.5.0 and later.
+This document applies to ClipShare version 1.5.0 and later(Not yet released).
 :::
 
 This document explains how to write Lua scripts for ClipShare rule management, what can and cannot be used, and the input/output format of scripts.

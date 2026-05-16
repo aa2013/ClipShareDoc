@@ -1,7 +1,7 @@
-﻿# ClipShare 规则 Lua 脚本指南
+﻿# ClipShare 规则 Lua 脚本指南(暂未发布)
 
 :::tip 提示
-本文档适用于 1.5.0+ 的 ClipShare 版本
+本文档适用于 1.5.0+(暂未发布) 的 ClipShare 版本
 :::
 
 本文档用于说明 ClipShare 规则管理中的 Lua 脚本怎么写、能用什么、不能用什么，以及脚本的输入输出格式。

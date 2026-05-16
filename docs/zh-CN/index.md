@@ -63,14 +63,15 @@ features:
       width: 32
       height: 32
     title: 自定义规则
-    details: > 
-        支持自定义规则功能，可使用正则或者 Lua 脚本对在触发条件下对数据进行自定义处理
-        <div class="vp-doc external-link-icon-enabled">
-            详细
-            <a href="./usages/rule/guide" target="_blank">
-              查看文档
-            </a>
-        </div>
+    details: 设定规则，自动对符合规则的记录打上标签。
+#    details: > 
+#        支持自定义规则功能，可使用正则或者 Lua 脚本对在触发条件下对数据进行自定义处理
+#        <div class="vp-doc external-link-icon-enabled">
+#            详细
+#            <a href="./usages/rule/guide" target="_blank">
+#              查看文档
+#            </a>
+#        </div>
 ---
 
 

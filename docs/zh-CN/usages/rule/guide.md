@@ -398,51 +398,103 @@ regex.matchGroups(content, pattern, caseSensitive, multiLines, dotAll)
 }
 ```
 
+### 5.13 异步封装
+
+当前在脚本中已经封装好了一个基于 Lua 协程的异步封装： [lua-async-await](https://github.com/aa2013/lua-async-await)
+
+当前在脚本中已经全局暴露了以下方法：
+
+| 方法          | 样例                          | 解释                               |
+| ------------- | ----------------------------- | ---------------------------------- |
+| task.create() | local awaiter = task.create() | 创建一个可被await方法等待的awaiter |
+| async         | async(function() end)         | 将一个方法封装为异步方法           |
+| await         | local result = await(awaiter) | 异步等待一个awaiter获得结果        |
+
+### 5.14 HTTP 网络请求
+
+基于 [Dio](https://pub.dev/packages/dio) 的HTTP方法：
+
+```
+http.getAsync(url, options)
+http.postAsync(url, options, body)
+http.putAsync(url, options, body)
+http.deleteAsync(url, options, body)
+```
+
+
+
+| 参数    | 类型              | 注释           |
+| ------- | ----------------- | -------------- |
+| url     | string            | HTTP请求地址   |
+| options | table             | HTTP请求头参数 |
+| body    | string? or table? | HTTP请求体     |
+
+请求返回值：
+
+| 参数          | 类型    | 注释                                                         |
+| ------------- | ------- | ------------------------------------------------------------ |
+| ok            | bool    | 请求是否成功，成功为true，失败为false                        |
+| statusCode    | number? | 请求状态码，仅在请求成功或者请求失败但是异常类型为 `DioException` 时有值 |
+| statusMessage | string? | 请求状态消息，仅在请求成功或者请求失败但是异常类型为 `DioException` 时有值 |
+| headers       | table?  | 响应头信息，仅在请求成功时有值                               |
+| body          | string? | 响应体信息，仅在请求成功时有值                               |
+| message       | string? | Dart 层 Error 异常信息，仅在请求失败且异常非 `DioException` 时有值 |
+
+请求 HTTP GET 请求方法
+
+```lua
+local function fetchBaiduAsync() 
+  local awaiter = http.getAsync('https://baidu.com', {})
+  local result = await(awaiter)
+  print(result.statusCode) -- 输出 200
+  return result
+end
+local baidu = await(fetchBaiduAsync())
+print(baidu.ok) -- 输出 true
+```
+
+注意：如果是在 `模块` 中返回一个异步方法，在返回时需要使用 `async` 包装：
+
+```lua
+local function fetchBaidu() 
+  local awaiter = http.getAsync('https://baidu.com', {})
+  local result = await(awaiter)
+  print(result.statusCode)
+  return result
+end
+return {
+  fetchBaiduAsync = async(fetchBaidu)
+}
+```
+
+
+
 ## 6. Lua 版本与沙盒限制
 
 当前规则脚本运行时基于 Lua `5.4.8`。
 
-可以默认认为常见的基础语法、流程控制、局部变量、函数、以及大部分常见标准库能力仍然可用，但这里不是完整、无约束的 Lua 环境。
+可以默认认为常见的基础语法、流程控制、局部变量、函数、以及大部分常见标准库能力仍然可用，但这里不是完整、无约束的 Lua 环境，具体可用的 lua 内置库如下：
 
-重点不是“有哪些能用”，而是“哪些不能用、哪些被限制了”。
+- `pcall` / `xpcall` - 保护模式调用
+- `tonumber` / `tostring` - 类型转换
+- `type` - 获取类型
+- `select` - 选择参数
+- `unpack` (兼容 `table.unpack`) - 解包数组
+- `ipairs` / `pairs` - 遍历数组/表
+- `next` - 获取下一个键值对
+- `math` - 完整的数学函数库
+- `table` - 完整的表操作库
+- `string` - 完整的字符串库
+- `coroutine` - 完整的协程库
+- `utf8` - UTF8 支持
+- `os.clock()` - CPU 时间
+- `os.date()` - 日期格式化
+- `os.time()` - 时间戳
+- `os.difftime()` - 时间差计算
+- `_VERSION` - Lua 版本号
+- `print` - 已经重定向到 `log.debug`（日志输出）
 
-### 6.1 `os` 的限制
-
-当前 `os` 不是完整库，只保留了安全子集：
-
-- `os.clock`
-- `os.date`
-- `os.time`
-- `os.difftime`
-
-除此之外，不要假设其他 `os.*` 可用。
-
-## 7. 不可用的函数
-
-以下函数或相关能力不要使用，也不要让 AI 生成这些内容：
-
-- `load`
-- `loadfile`
-- `loadstring`
-- `dofile`
-- `require`
-- `module`
-- `package`
-- `debug`
-- `coroutine`
-- `getmetatable`
-- `setmetatable`
-- `rawget`
-- `rawset`
-- `rawequal`
-- `collectgarbage`
-- `io`
-- 任何文件读写能力
-- 任何执行系统命令的能力
-
-即使 AI 给出了这些内容，也不要直接照抄。
-
-## 8. 编写建议
+## 7. 编写建议
 
 - 优先保留返回结构完整
 - 逻辑复杂时，先把中间结果写入局部变量
@@ -450,15 +502,13 @@ regex.matchGroups(content, pattern, caseSensitive, multiLines, dotAll)
 - 尽量不要修改不存在于本文档中的全局变量
 - 不要依赖本文未明确说明的危险能力
 
-## 9. 示例：提取短信/文本中的验证码并打标签
+## 8. 示例：提取短信/文本中的验证码并打标签
 
 下面是一个常见例子：先判断内容里是否包含“验证码”关键字，如果包含，再提取第一组 4 到 6 位的连续数字，并增加标签 `验证码`。
 
 这里要注意，Lua 使用的是自己的模式匹配语法，不是常见正则，示例脚本里面使用注入的 `regex` 标准正则。
 
 示例内容：
-
-> 这个示例使用正则规则也可完成提取，此处仅作为脚本示例
 
 ```text
 【某服务】您的验证码是 123456，5 分钟内有效，请勿泄露给他人。

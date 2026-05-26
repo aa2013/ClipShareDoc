@@ -398,51 +398,101 @@ Return value examples:
 }
 ```
 
+### 5.13 Async Wrapper
+
+The script environment has already wrapped an async helper based on Lua coroutines: [lua-async-await](https://github.com/aa2013/lua-async-await)
+
+The following methods are globally exposed in scripts:
+
+| Method | Example | Description |
+|---|---|---|
+| `task.create()` | `local awaiter = task.create()` | Create an awaiter that can be waited for by `await` |
+| `async` | `async(function() end)` | Wrap a method as an async method |
+| `await` | `local result = await(awaiter)` | Asynchronously wait for an awaiter and get its result |
+
+### 5.14 HTTP Requests
+
+HTTP methods based on [Dio](https://pub.dev/packages/dio):
+
+```lua
+http.getAsync(url, options)
+http.postAsync(url, options, body)
+http.putAsync(url, options, body)
+http.deleteAsync(url, options, body)
+```
+
+| Parameter | Type | Description |
+|---|---|---|
+| `url` | `string` | HTTP request URL |
+| `options` | `table` | HTTP request header parameters |
+| `body` | `string? or table?` | HTTP request body |
+
+Request return value:
+
+| Parameter | Type | Description |
+|---|---|---|
+| `ok` | `bool` | Whether the request succeeded. `true` means success, `false` means failure |
+| `statusCode` | `number?` | HTTP status code. Present only when the request succeeds, or when it fails with a `DioException` |
+| `statusMessage` | `string?` | HTTP status message. Present only when the request succeeds, or when it fails with a `DioException` |
+| `headers` | `table?` | Response headers. Present only when the request succeeds |
+| `body` | `string?` | Response body. Present only when the request succeeds |
+| `message` | `string?` | Dart-layer Error exception message. Present only when the request fails and the exception is not a `DioException` |
+
+HTTP GET request example:
+
+```lua
+local function fetchBaiduAsync()
+  local awaiter = http.getAsync('https://baidu.com', {})
+  local result = await(awaiter)
+  print(result.statusCode) -- Output 200
+  return result
+end
+local baidu = await(fetchBaiduAsync())
+print(baidu.ok) -- Output true
+```
+
+Note: If you return an async method from a `module`, wrap it with `async` when returning:
+
+```lua
+local function fetchBaidu()
+  local awaiter = http.getAsync('https://baidu.com', {})
+  local result = await(awaiter)
+  print(result.statusCode)
+  return result
+end
+return {
+  fetchBaiduAsync = async(fetchBaidu)
+}
+```
+
 ## 6. Lua Version and Sandbox Restrictions
 
 The current rule script runtime is based on Lua `5.4.8`.
 
 You can generally assume common basic syntax, control flow, local variables, functions, and most common standard-library features are still available, but this is not a complete, unrestricted Lua environment.
 
-The focus is not "what can be used", but rather "what cannot be used and what is restricted".
+The available built-in Lua libraries and capabilities are:
 
-### 6.1 Restrictions on `os`
+- `pcall` / `xpcall` - protected calls
+- `tonumber` / `tostring` - type conversion
+- `type` - get the type
+- `select` - select arguments
+- `unpack` (compatible with `table.unpack`) - unpack arrays
+- `ipairs` / `pairs` - iterate arrays/tables
+- `next` - get the next key-value pair
+- `math` - full math library
+- `table` - full table library
+- `string` - full string library
+- `coroutine` - full coroutine library
+- `utf8` - UTF-8 support
+- `os.clock()` - CPU time
+- `os.date()` - date formatting
+- `os.time()` - timestamp
+- `os.difftime()` - time difference calculation
+- `_VERSION` - Lua version string
+- `print` - already redirected to `log.debug` (log output)
 
-The current `os` library is not complete. Only a safe subset is preserved:
-
-- `os.clock`
-- `os.date`
-- `os.time`
-- `os.difftime`
-
-Apart from these, do not assume that other `os.*` APIs are available.
-
-## 7. Unavailable Functions
-
-Do not use the following functions or related capabilities, and do not let AI generate them:
-
-- `load`
-- `loadfile`
-- `loadstring`
-- `dofile`
-- `require`
-- `module`
-- `package`
-- `debug`
-- `coroutine`
-- `getmetatable`
-- `setmetatable`
-- `rawget`
-- `rawset`
-- `rawequal`
-- `collectgarbage`
-- `io`
-- Any file read/write capability
-- Any ability to execute system commands
-
-Even if AI provides these, do not copy them directly.
-
-## 8. Writing Recommendations
+## 7. Writing Recommendations
 
 - Prefer keeping the returned structure complete
 - When the logic becomes complex, store intermediate results in local variables first
@@ -450,15 +500,13 @@ Even if AI provides these, do not copy them directly.
 - Try not to modify global variables that are not documented here
 - Do not depend on dangerous capabilities that are not explicitly documented here
 
-## 9. Example: Extract Verification Codes from SMS/Text and Add a Tag
+## 8. Example: Extract Verification Codes from SMS/Text and Add a Tag
 
 Here is a common example: first check whether the content contains the `verification code` keyword. If it does, extract the first group of 4 to 6 consecutive digits and add the tag `Verification Code`.
 
 Note that Lua uses its own pattern matching syntax. The example script below uses the injected `regex` standard regex support instead.
 
 Example content:
-
-> The same extraction can also be done with a regex rule. It is shown here only as a script example.
 
 ```text
 [Some Service] Your verification code is 123456. It is valid for 5 minutes. Please do not share it with others.

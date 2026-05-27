@@ -149,3 +149,21 @@ update Device set guid = 'new device id' where guid = 'old device id';
 ```
 
 
+## 8. Delete Excessively Large Data
+
+On Android, query exceptions may occur when the data size is too large. Possible symptoms include: inability to query history records, crashes when dragging the floating window, etc.
+
+You can execute the following SQL to delete the largest data entry (text) in an attempt to fix the issue. Each execution will delete one entry:
+
+`About` -> `Database Version`, click the icon on the right to enter the database editing page, then execute the following SQL:
+
+```sql
+DELETE FROM History
+WHERE id = (
+    SELECT id
+    FROM History
+    WHERE type = 'Text'
+    ORDER BY size DESC
+    LIMIT 1
+);
+```

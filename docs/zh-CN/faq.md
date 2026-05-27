@@ -150,6 +150,24 @@ update AppInfo set devId = '新设备id' where devId = '旧设备id';
 update Device set guid = '新设备id' where guid = '旧设备id';
 ```
 
+## 8. 删除过大的数据
+
+在 Android 上会出现当内容过大时查询异常的情况，可能的表现为：历史记录查询不出、悬浮窗拖拽闪退等
+
+可执行以下 SQL 删除最大的那条数据（文本）以尝试修复，每执行一次会删除一条：
+
+ `关于` -> `数据库版本`, 右侧图标点击进入数据库编辑页面，执行以下SQL：
+
+```sql
+DELETE FROM History
+WHERE id = (
+    SELECT id
+    FROM History
+    WHERE type = 'Text'
+    ORDER BY size DESC
+    LIMIT 1
+    );
+```
 
 
 

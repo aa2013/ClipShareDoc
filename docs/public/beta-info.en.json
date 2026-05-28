@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "version": "1.5.0-beta",
+  "date": "2026-05-28",
+  "githubUrl": "https://github.com/aa2013/ClipShare/releases",
+  "description": "A major architecture overhaul with improved transfer performance and connection stability, plus more custom rule options. This is an experimental release with significant changes and may contain unknown issues. Not recommended for production use.",
+  "downloads": {
+    "Windows": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/clipshare-1.5.0-beta-windows-setup.exe",
+      "version": "1.5.0-beta"
+    },
+    "Android": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/app-arm64-v8a-release-v1.5.0-beta.apk",
+      "version": "1.5.0-beta"
+    },
+    "Linux": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/clipshare-1.5.0-beta-linux.deb",
+      "version": "1.5.0-beta"
+    },
+    "MacOS": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/clipshare-1.5.0-beta-macos.dmg",
+      "version": "1.5.0-beta"
+    }
+  }
+}

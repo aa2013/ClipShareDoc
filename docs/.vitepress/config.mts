@@ -120,6 +120,10 @@ const enThemeConfig = {
 export default defineConfig({
     title: "ClipShare",
     description: "跨平台剪贴板历史记录与同步工具",
+    rewrites: {
+        'docs/zh-CN/:rest*': 'zh-CN/:rest*',
+        'docs/en-US/:rest*': 'en-US/:rest*',
+    },
     head: [
         ["link", { rel: "icon", href: "/favicon.ico" }],
         ["link", { rel: "stylesheet", href: "/css/fancybox.css" }],

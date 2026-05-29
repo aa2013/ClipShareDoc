@@ -48,3 +48,17 @@ npm install
 npm run docs:dev
 npm run docs:build
 ```
+
+## Adding a Language
+
+1. Create a new language directory under `docs/docs/`, e.g. `docs/docs/ja-JP/`
+2. Add locale config in `docs/.vitepress/config.mts` under `locales`
+3. Add the rewrite rule:
+
+```ts
+rewrites: {
+    'docs/zh-CN/:rest*': 'zh-CN/:rest*',
+    'docs/en-US/:rest*': 'en-US/:rest*',
+    'docs/ja-JP/:rest*': 'ja-JP/:rest*',  // new language
+},
+```

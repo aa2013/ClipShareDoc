@@ -48,3 +48,17 @@ npm install
 npm run docs:dev
 npm run docs:build
 ```
+
+## 新增语言
+
+1. 在 `docs/docs/` 下创建新语言目录，如 `docs/docs/ja-JP/`
+2. 在 `docs/.vitepress/config.mts` 的 `locales` 中添加该语言配置
+3. 在 `rewrites` 中添加路径映射：
+
+```ts
+rewrites: {
+    'docs/zh-CN/:rest*': 'zh-CN/:rest*',
+    'docs/en-US/:rest*': 'en-US/:rest*',
+    'docs/ja-JP/:rest*': 'ja-JP/:rest*',  // 新增语言
+},
+```

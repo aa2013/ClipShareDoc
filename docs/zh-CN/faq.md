@@ -166,7 +166,7 @@ WHERE id = (
     WHERE type = 'Text'
     ORDER BY size DESC
     LIMIT 1
-    );
+);
 ```
 
 

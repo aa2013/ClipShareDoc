@@ -7,6 +7,10 @@ const HomeBetaSection = defineClientComponent(() =>
   import('../../components/HomeBetaSection.vue')
 )
 
+const HomeScreenshots = defineClientComponent(() =>
+  import('../../components/HomeScreenshots.vue')
+)
+
 const { isDark } = useData()
 
 const enableTransitions = () =>
@@ -48,6 +52,9 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   <DefaultTheme.Layout>
     <template #home-hero-after>
       <HomeBetaSection />
+    </template>
+    <template #home-features-after>
+      <HomeScreenshots />
     </template>
   </DefaultTheme.Layout>
 </template>

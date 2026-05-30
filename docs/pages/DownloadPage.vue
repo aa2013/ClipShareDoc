@@ -47,7 +47,7 @@ const logsRefreshing = ref(false);
 const isEnglish = computed(() => lang.value?.toLowerCase().startsWith("en"));
 const messages = computed(() => (isEnglish.value ? EN_TEXT : ZH_TEXT));
 const pageBgClass = computed(() => (isDark.value ? "download-page-bg-dark" : "download-page-bg-light"));
-const moreLogsHref = computed(() => (isEnglish.value ? "/en-US/history_version" : "/zh-CN/history_version"));
+const moreLogsHref = computed(() => (isEnglish.value ? "/en-US/history_version.html" : "/zh-CN/history_version.html"));
 const versionInfoPath = computed(() => (isEnglish.value ? "/version-info.en.json" : "/version-info.json"));
 
 function switchShowPlatform(platform) {

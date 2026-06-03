@@ -1,25 +1,29 @@
 {
   "enabled": false,
-  "version": "1.5.0-beta",
-  "date": "2026-05-28",
+  "version": "1.5.0-beta1",
+  "date": "2026-06-03",
   "githubUrl": "https://github.com/aa2013/ClipShare/releases",
-  "description": "全新架构重构，优化传输性能与连接稳定性，新增更多自定义规则选项。此版本改动较大，目前为实验性版本，可能存在未知问题，不建议在生产环境中使用。",
+  "description": "新增自定义规则脚本，支持内容提取。优化Android悬浮窗交互和UI。iOS适配等",
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/clipshare-1.5.0-beta-windows-setup.exe",
-      "version": "1.5.0-beta"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta1/clipshare-1.5.0-beta1-windows-setup.exe",
+      "version": "1.5.0-beta1"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/app-arm64-v8a-release-v1.5.0-beta.apk",
-      "version": "1.5.0-beta"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta1/app-arm64-v8a-release-v1.5.0-beta11.apk",
+      "version": "1.5.0-beta1"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/clipshare-1.5.0-beta-linux.deb",
-      "version": "1.5.0-beta"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta1/clipshare-1.5.0-beta1-linux.deb",
+      "version": "1.5.0-beta1"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta/clipshare-1.5.0-beta-macos.dmg",
-      "version": "1.5.0-beta"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta1/clipshare-1.5.0-beta1-macos.dmg",
+      "version": "1.5.0-beta11"
+    },
+    "IOS": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta1/clipshare-1.5.0-beta1-no_sign.ipa",
+      "version": "1.5.0-beta11"
     }
   }
 }

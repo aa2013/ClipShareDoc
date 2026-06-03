@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Android, MicrosoftWindows, Apple, Linux, Github, OpenInNew } from 'mdue'
-import { computed, onMounted, ref } from 'vue'
+import { Android, MicrosoftWindows, Apple, Linux, Github, OpenInNew, AppleIos } from 'mdue'
+import { computed, ref, watch } from 'vue'
 import { useData } from 'vitepress'
 import { UAParser } from 'ua-parser-js'
 
@@ -20,7 +20,7 @@ const EN_TEXT = {
   collapse: 'Collapse',
 }
 
-const OS_LIST = ['Windows', 'Android', 'Linux', 'MacOS'] as const
+const OS_LIST = ['Windows', 'Android', 'Linux', 'MacOS', 'IOS'] as const
 type OS = (typeof OS_LIST)[number]
 
 const downloadIcons: Record<OS, any> = {
@@ -28,6 +28,7 @@ const downloadIcons: Record<OS, any> = {
   MacOS: Apple,
   Linux: Linux,
   Android: Android,
+  IOS: AppleIos
 }
 
 const { frontmatter, lang } = useData()
@@ -41,6 +42,7 @@ const selectedPlatform = ref<OS>('Windows')
 const loaded = ref(false)
 const githubUrl = ref('')
 const showDownload = ref(false)
+let loadRequestId = 0
 
 const isEnglish = computed(() => lang.value?.toLowerCase().startsWith('en'))
 const messages = computed(() => (isEnglish.value ? EN_TEXT : ZH_TEXT))
@@ -77,15 +79,30 @@ function detectPlatform() {
   if (first) selectedPlatform.value = first
 }
 
-async function loadBetaInfo() {
+function resetBetaInfo() {
+  enabled.value = false
+  version.value = ''
+  date.value = ''
+  description.value = ''
+  downloads.value = {}
+  githubUrl.value = ''
+}
+
+async function loadBetaInfo(path: string) {
+  const requestId = ++loadRequestId
+  loaded.value = false
+
   try {
-    const response = await fetch(`${betaInfoPath.value}?t=${Date.now()}`)
+    const response = await fetch(`${path}?t=${Date.now()}`)
     if (!response.ok) throw new Error('not found')
     const json = await response.json()
+    if (requestId !== loadRequestId) return
+
     if (json.enabled !== true) {
-      enabled.value = false
+      resetBetaInfo()
       return
     }
+
     enabled.value = true
     version.value = json.version || ''
     date.value = json.date || ''
@@ -94,17 +111,28 @@ async function loadBetaInfo() {
     githubUrl.value = json.githubUrl || ''
     detectPlatform()
   } catch {
-    enabled.value = false
+    if (requestId !== loadRequestId) return
+    resetBetaInfo()
   } finally {
+    if (requestId !== loadRequestId) return
     loaded.value = true
   }
 }
 
-onMounted(async () => {
-  if (isHomePage.value) {
-    await loadBetaInfo()
-  }
-})
+watch(
+  [isHomePage, betaInfoPath],
+  async ([home, path]) => {
+    if (!home) {
+      ++loadRequestId
+      loaded.value = false
+      resetBetaInfo()
+      return
+    }
+
+    await loadBetaInfo(path)
+  },
+  { immediate: true }
+)
 </script>
 
 <template>

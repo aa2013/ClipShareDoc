@@ -8,13 +8,9 @@ With Shizuku, users can grant certain apps elevated system privileges while bala
 
 ## Installation
 
-If Shizuku is not installed yet, you can download the latest version from [Github](https://github.com/RikkaApps/Shizuku/releases) or [Google Play](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api).
+We recommend using the [`thedjchi/Shizuku`](https://github.com/thedjchi/Shizuku) branch first. This branch includes fixes for several known issues.
 
-Because of network restrictions in some regions, if Github and Google Play are not accessible, you can install it from the [download link](https://download.clipshare.coclyun.top/others/shizuku-v13.5.4.r1049.0e53409-release.apk) provided on this site, though it may not be the latest version.
-
-::: tip Tip
-If keeping Shizuku alive in the background is difficult, [see here](./shizuku-background-alive).
-:::
+If you still run into background keepalive issues, please refer to the [keepalive guidance](./shizuku-background-alive).
 
 ## Start
 

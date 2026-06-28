@@ -7,13 +7,13 @@
 
 
 ## 安装
-若还未安装 Shizuku，可以前往 [Github](https://github.com/RikkaApps/Shizuku/releases) 或 [Google Play](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api) 下载最新版本
+建议优先使用 `thedjchi/Shizuku` 分支。该分支包含对若干已知问题的修复。
 
-鉴于国内特殊网络环境，若无法访问 Github 和 Google Play，可通过本站提供的 [下载地址](https://download.clipshare.coclyun.top/others/shizuku-v13.5.4.r1049.0e53409-release.apk) 安装，但无法保证是最新版本
+若无法访问 GitHub，也可直接下载本站提供的 [`thedjchi/Shizuku` 安装包](https://download.clipshare.coclyun.top/others/shizuku-v13.6.0.r1290-thedjchi.apk)，但可能不是最新版本。
 
-::: tip
-若Shizuku后台保活困难[查看此处](./shizuku-background-alive)
-:::
+如需获取最新版本，请以 [GitHub 仓库](https://github.com/thedjchi/Shizuku) 发布内容为准。
+
+如仍遇到后台保活问题，可参考 [保活优化说明](./shizuku-background-alive)。
 
 ## 启动
 ::: tip 提示

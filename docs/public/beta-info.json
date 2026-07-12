@@ -1,29 +1,29 @@
 {
   "enabled": true,
-  "version": "1.5.0-beta2",
-  "date": "2026-06-07",
+  "version": "1.5.0-beta3",
+  "date": "2026-07-12",
   "githubUrl": "https://github.com/aa2013/ClipShare/releases",
-  "description": "新增自定义规则脚本，支持内容提取。优化Android悬浮窗交互和UI。iOS适配等",
+  "description": "新增自定义规则脚本，支持内容提取。优化Android悬浮窗交互和UI，提升中转存储稳定性。iOS适配等",
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta2/clipshare-1.5.2026060701+26-windows-setup.exe",
-      "version": "1.5.0-beta2"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-windows-setup.exe",
+      "version": "1.5.0-beta3"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta2/app-arm64-v8a-release-v1.5.2026060701.apk",
-      "version": "1.5.0-beta2"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/app-arm64-v8a-release-v1.5.2026071201.apk",
+      "version": "1.5.0-beta3"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta2/clipshare-1.5.2026060701+26-linux.deb",
-      "version": "1.5.0-beta2"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-linux.deb",
+      "version": "1.5.0-beta3"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta2/clipshare-1.5.2026060701+26-macos.dmg",
-      "version": "1.5.0-beta2"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-macos.dmg",
+      "version": "1.5.0-beta3"
     },
     "IOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta2/clipshare-1.5.2026060701-26-nosign.ipa",
-      "version": "1.5.0-beta2"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201-26-nosign.ipa",
+      "version": "1.5.0-beta3"
     }
   }
 }

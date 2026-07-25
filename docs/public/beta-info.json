@@ -1,29 +1,29 @@
 {
   "enabled": true,
-  "version": "1.5.0-beta3",
-  "date": "2026-07-12",
+  "version": "1.5.0-beta4",
+  "date": "2026-07-25",
   "githubUrl": "https://github.com/aa2013/ClipShare/releases",
-  "description": "新增自定义规则脚本，支持内容提取。优化Android悬浮窗交互和UI，提升中转存储稳定性。iOS适配等",
+  "description": "新增自定义规则脚本，支持内容提取。优化Android悬浮窗交互和UI，提升中转存储、连接稳定性。iOS适配等",
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-windows-setup.exe",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501+26-windows-setup.exe",
+      "version": "1.5.0-beta4"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/app-arm64-v8a-release-v1.5.2026071201.apk",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/app-arm64-v8a-release-v1.5.2026072501.apk",
+      "version": "1.5.0-beta4"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-linux.deb",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501+26-linux.deb",
+      "version": "1.5.0-beta4"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-macos.dmg",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501+26-macos.dmg",
+      "version": "1.5.0-beta4"
     },
     "IOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201-26-nosign.ipa",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501-26-nosign.ipa",
+      "version": "1.5.0-beta4"
     }
   }
 }

@@ -1,29 +1,29 @@
 {
   "enabled": true,
-  "version": "1.5.0-beta3",
-  "date": "2026-06-07",
+  "version": "1.5.0-beta4",
+  "date": "2026-07-25",
   "githubUrl": "https://github.com/aa2013/ClipShare/releases",
   "description": "Add custom rule scripts that support content extraction. Optimize Android floating window interaction and UI. iOS adaptation, Improve the stability of storage service,etc",
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-windows-setup.exe",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501+26-windows-setup.exe",
+      "version": "1.5.0-beta4"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/app-arm64-v8a-release-v1.5.2026071201.apk",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/app-arm64-v8a-release-v1.5.2026072501.apk",
+      "version": "1.5.0-beta4"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-linux.deb",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501+26-linux.deb",
+      "version": "1.5.0-beta4"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201+26-macos.dmg",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501+26-macos.dmg",
+      "version": "1.5.0-beta4"
     },
     "IOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta3/clipshare-1.5.2026071201-26-nosign.ipa",
-      "version": "1.5.0-beta3"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0-beta4/clipshare-1.5.2026072501-26-nosign.ipa",
+      "version": "1.5.0-beta4"
     }
   }
 }

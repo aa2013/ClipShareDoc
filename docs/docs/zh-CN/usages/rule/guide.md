@@ -309,7 +309,6 @@ app.versionNumber
 Android 平台专用能力：
 
 ```lua
-android.notifyMediaScan(imagePath)
 android.toast(content)
 android.sendHistoryChangedBroadcast(type, content, from_dev_id, from_dev_name)
 ```
@@ -318,7 +317,6 @@ android.sendHistoryChangedBroadcast(type, content, from_dev_id, from_dev_name)
 
 | 函数 | 参数 | 作用 |
 |---|---|---|
-| `android.notifyMediaScan(imagePath)` | `imagePath: string` | 通知 Android 媒体库扫描指定文件，通常用于图片或媒体文件 |
 | `android.toast(content)` | `content: string` | 在 Android 上弹出一条 Toast 提示 |
 | `android.sendHistoryChangedBroadcast(type, content, from_dev_id, from_dev_name)` | `type: ContentType`, `content: string`, `from_dev_id: string`, `from_dev_name: string` | 发送历史记录变更广播 |
 
@@ -503,6 +501,10 @@ return {
 - 不要依赖本文未明确说明的危险能力
 
 ## 8. 示例：提取短信/文本中的验证码并打标签
+
+:::tip 提示
+这个功能使用当前的正则模式提取也能做到，此处仅是脚本示例
+:::
 
 下面是一个常见例子：先判断内容里是否包含“验证码”关键字，如果包含，再提取第一组 4 到 6 位的连续数字，并增加标签 `验证码`。
 

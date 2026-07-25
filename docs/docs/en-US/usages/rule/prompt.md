@@ -167,12 +167,10 @@ app.versionNumber
 ### 9. `android` Android Extension Capabilities
 
 ```lua
-android.notifyMediaScan(imagePath)
 android.toast(content)
 android.sendHistoryChangedBroadcast(type, content, from_dev_id, from_dev_name)
 ```
 
-- `android.notifyMediaScan(imagePath: string)`: notify the Android media library to scan the specified file, usually for images or media files
 - `android.toast(content: string)`: show a Toast on Android
 - `android.sendHistoryChangedBroadcast(type: ContentType, content: string, from_dev_id: string, from_dev_name: string)`: send a history-changed broadcast
 

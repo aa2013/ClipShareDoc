@@ -309,7 +309,6 @@ Represents extension capabilities available on the Android platform.
 Android-only capabilities:
 
 ```lua
-android.notifyMediaScan(imagePath)
 android.toast(content)
 android.sendHistoryChangedBroadcast(type, content, from_dev_id, from_dev_name)
 ```
@@ -318,7 +317,6 @@ Parameter description:
 
 | Function | Parameters | Purpose |
 |---|---|---|
-| `android.notifyMediaScan(imagePath)` | `imagePath: string` | Notify the Android media library to scan the specified file, usually for images or media files |
 | `android.toast(content)` | `content: string` | Show a Toast on Android |
 | `android.sendHistoryChangedBroadcast(type, content, from_dev_id, from_dev_name)` | `type: ContentType`, `content: string`, `from_dev_id: string`, `from_dev_name: string` | Send a history-changed broadcast |
 
@@ -501,6 +499,10 @@ The available built-in Lua libraries and capabilities are:
 - Do not depend on dangerous capabilities that are not explicitly documented here
 
 ## 8. Example: Extract Verification Codes from SMS/Text and Add a Tag
+
+:::tip Tip
+This requirement can also be fulfilled by using the current regular expression pattern for extraction; this is merely a script example.
+:::
 
 Here is a common example: first check whether the content contains the `verification code` keyword. If it does, extract the first group of 4 to 6 consecutive digits and add the tag `Verification Code`.
 

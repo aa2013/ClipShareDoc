@@ -167,12 +167,10 @@ app.versionNumber
 ### 9. `android` Android 扩展能力
 
 ```lua
-android.notifyMediaScan(imagePath)
 android.toast(content)
 android.sendHistoryChangedBroadcast(type, content, from_dev_id, from_dev_name)
 ```
 
-- `android.notifyMediaScan(imagePath: string)`：通知 Android 媒体库扫描指定文件，通常用于图片或媒体文件
 - `android.toast(content: string)`：在 Android 上弹出一条 Toast 提示
 - `android.sendHistoryChangedBroadcast(type: ContentType, content: string, from_dev_id: string, from_dev_name: string)`：发送历史记录变更广播
 

@@ -52,12 +52,13 @@ features:
     title: Public Network Sync
     details: >
         Supports wider network environments. You can build your own forward server to sync the clipboard over the public internet.
-        <div class="vp-doc external-link-icon-enabled">
+        <br/>
+        <span class="vp-doc external-link-icon-enabled">
             Details
             <a href="./usages/forward" target="_blank">
               View docs
             </a>
-        </div>
+        </span>
   - icon:
       src: /images/icons/tag.svg
       width: 32
@@ -65,11 +66,12 @@ features:
     title: Custom Rules
     details: >
         Supports custom rules. You can use regular expressions or Lua scripts to process data under matched conditions.
-        <div class="vp-doc external-link-icon-enabled">
+        <br/>
+        <span class="vp-doc external-link-icon-enabled">
             Details
             <a href="./usages/rule/guide" target="_blank">
               View docs
             </a>
-        </div>
+        </span>
 ---
 

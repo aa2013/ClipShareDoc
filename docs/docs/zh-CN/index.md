@@ -52,12 +52,13 @@ features:
     title: 公网同步
     details: >
         更广的网络环境支持，可自行搭建中转服务器以在公网环境下同步剪贴板。
-        <div class="vp-doc external-link-icon-enabled">
+        <br/>
+        <span class="vp-doc external-link-icon-enabled">
             详细
             <a href="./usages/forward" target="_blank">
               查看文档
             </a>
-        </div>
+        </span>
   - icon:
       src: /images/icons/tag.svg
       width: 32
@@ -65,12 +66,13 @@ features:
     title: 自定义规则
     details: > 
         支持自定义规则功能，可使用正则或者 Lua 脚本对在触发条件下对数据进行自定义处理
-        <div class="vp-doc external-link-icon-enabled">
+        <br/>
+        <span class="vp-doc external-link-icon-enabled">
             详细
             <a href="./usages/rule/guide" target="_blank">
               查看文档
             </a>
-        </div>
+        </span>
 ---
 
 

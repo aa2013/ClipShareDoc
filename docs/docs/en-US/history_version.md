@@ -6,19 +6,78 @@ aside: "left"
 
 | Platform | Architecture | Format   | Download                                                                                                         | Version | Notes                  |
 |----------|--------------|----------|------------------------------------------------------------------------------------------------------------------|---------|------------------------|
-| Windows  | x86_64       | exe      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows-setup.exe) | 1.4.4   | Windows 10+, Installer |
-| Windows  | x86_64       | zip      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows.zip)       | 1.4.4   | Windows 10+, Portable  |
-| Android  | arm64-v8a    | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-arm64-v8a-release-v1.4.4.apk)     | 1.4.4   | Android 7.0            |
-| Android  | armeabi-v7a  | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-armeabi-v7a-release-v1.4.4.apk)   | 1.4.4   | Android 7.0            |
-| Android  | x86_64       | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-x86_64-release-v1.4.4.apk)        | 1.4.4   | Android 7.0            |
-| Linux    | x86_64       | AppImage | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.AppImage)    | 1.4.4   | -                      |
-| Linux    | x86_64       | deb      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.deb)         | 1.4.4   | -                      |
-| Linux    | x86_64       | rpm      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.rpm)         | 1.4.4   | -                      |
-| MacOS    | Universal    | dmg      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-macos.dmg)         | 1.4.4   | MacOS 10.15+           |
+| Windows  | x86_64       | exe      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows-setup.exe) | 1.5.0   | Windows 10+, Installer |
+| Windows  | x86_64       | zip      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows.zip)       | 1.5.0   | Windows 10+, Portable  |
+| Android  | arm64-v8a    | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk)     | 1.5.0   | Android 7.0            |
+| Android  | armeabi-v7a  | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-armeabi-v7a-release-v1.5.0.apk)   | 1.5.0   | Android 7.0            |
+| Android  | x86_64       | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-x86_64-release-v1.5.0.apk)        | 1.5.0   | Android 7.0            |
+| Linux    | x86_64       | AppImage | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.AppImage)    | 1.5.0   | -                      |
+| Linux    | x86_64       | deb      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.deb)         | 1.5.0   | -                      |
+| Linux    | x86_64       | rpm      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.rpm)         | 1.5.0   | -                      |
+| MacOS    | Universal    | dmg      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-macos.dmg)         | 1.5.0   | MacOS 10.15+           |
+| IOS      | arm64        | ipa      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0-27-nosign.ipa)        | 1.5.0   | IOS14+                 |
 
 > For more historical versions, please visit [Github Releases](https://github.com/aa2013/ClipShare/releases).
 
 ## 📌 Release Notes
+
+### 🏷️ v1.5.0 - 2026-08-01
+
+> Note: this version is not very compatible with connections to older devices.
+
+#### General
+
+✨ Added custom rule scripts<br/>
+✨ Added a maximum record length setting; content beyond the limit will be dropped<br/>
+✨ Added a keep-connection-on-network-switch setting, enabled by default<br/>
+✨ Added optional desktop notifications after receiving files<br/>
+✨ Added multi-select merge support in desktop popups<br/>
+✨ Added desktop support for dragging history items as files<br/>
+✨ Added desktop support for defining file/database storage paths via files or environment variables<br/>
+🛠️ Fixed desktop tray text not updating after switching languages<br/>
+🛠️ Fixed desktop touchpad scrolling not working<br/>
+⚡ Improved desktop popups with optional hide-on-focus-loss; when enabled, popups also close after double-click
+paste<br/>
+⚡ Improved desktop Esc behavior to exit multi-select and drawers<br/>
+⚡ Improved storage forwarding and device connection stability through refactoring<br/>
+⚡ Improved storage forwarding so the root path can be used for storage but cannot be used to start forward service<br/>
+⚡ Improved S3/WebDAV with configurable User-Agent support<br/>
+⚡ Improved multi-select merge copy to follow selection order instead of time order<br/>
+⚡ Improved network adapter filtering by excluding mobile data network `rmnet_data`<br/>
+⚡ Improved subnet-only scanning to be enabled by default<br/>
+⚡ Improved settings pages with search-based navigation<br/>
+⚡ Improved future release notes to be fetched by language<br/>
+⚡ Improved some translations<br/>
+⚡ Removed the search page<br/>
+⚡ Improved themes, settings, and other UI details
+
+#### Android
+
+✨ Added Android 1px floating window switch to improve keepalive on some systems<br/>
+🛠️ Fixed occasional Android crashes caused by Flutter JNI errors<br/>
+⚡ Improved Android screen-off disconnect default to disabled<br/>
+⚡ Improved Android `Open File` action to support jumping to file sending<br/>
+⚡ Improved Android with customizable image save directory<br/>
+⚡ Improved Android with automatic accessibility authorization support<br/>
+⚡ Improved Shizuku to automatically request permission and start clipboard listening when available<br/>
+⚡ Improved Android floating window visibility behavior<br/>
+⚡ Improved Android floating window trigger experience
+
+#### Windows
+
+✨ Added support for taking over Win+V on Windows
+
+#### Linux
+
+✨ Added clipboard listening support for Linux Wayland (`ext-data-control`)
+
+#### MacOS
+
+⚡ Improved macOS response to Command + W
+
+#### iOS
+
+✨ Initial release
 
 ### 🏷️ v1.4.4 - 2026-05-16
 
@@ -30,7 +89,7 @@ aside: "left"
 🛠️ Fixed manual disconnect and reconnect of devices was ineffective  
 🛠️ Fixed the popup window could not be closed after local backup completion  
 ⚡ Improved device discovery scanning to use a specified network card  
-⚡ Improved relay connection to display version number (no display indicates an older version)  
+⚡ Improved forward connection to display version number (no display indicates an older version)<br/>
 ⚡ Improved image preview to show/hide path and other information on click
 
 #### Android
@@ -72,7 +131,7 @@ failure
 ⚡ Improved the additional left-swipe action buttons  
 ⚡ Improved history cards by adding a copy button  
 ⚡ Improved device discovery logic  
-⚡ Improved relay mode support for IPv6 addresses  
+⚡ Improved forward mode support for IPv6 addresses<br/>
 ⚡ Improved data cleanup by allowing cleanup while retaining a specified number of days  
 ⚡ Improved delete behavior so data can be removed locally only instead of from all devices  
 ⚡ Improved reconnect logic
@@ -225,7 +284,7 @@ default and could prevent clipboard listening in some environments
 
 #### General
 
-✨ Added experimental support for using WebDAV/S3 object storage as a relay method  
+✨ Added experimental support for using WebDAV/S3 object storage as a forward method<br/>
 ✨ Added a local database query and editor page in the About page  
 🛠️ Fixed cases where popup windows sometimes could not close normally  
 🛠️ Fixed possible path decoding errors during file sending where the operation actually succeeded but was shown as
@@ -234,8 +293,8 @@ failed
 🛠️ Fixed image sync failures caused by missing folders under certain conditions  
 ⚡ Improved backup and restore so it can be handled module by module  
 ⚡ Improved deletion performance for cases that used to take a long time  
-⚡ Improved relay configuration to support QR-code import  
-⚡ Improved relay service status by adding `Connecting`  
+⚡ Improved forward configuration to support QR-code import<br/>
+⚡ Improved forward service status by adding `Connecting`<br/>
 ⚡ Improved log output
 
 #### Windows
@@ -310,7 +369,7 @@ while also adding manual sync in the device action popup
 
 ✨ Added desktop hotkey settings for showing the main window and exiting the program  
 🛠️ Fixed custom hotkeys containing number keys being displayed as `Unknown`  
-🛠️ Fixed very rare cases where enabling auto-start could not reconnect the relay automatically  
+🛠️ Fixed very rare cases where enabling auto-start could not reconnect to the forward service automatically<br/>
 🛠️ Fixed the desktop popup being unable to reopen the second time when the same hotkey was used to close it  
 ⚡ Improved storage by separating screenshots and received files (`Screenshots/files`)
 
@@ -368,7 +427,7 @@ while also adding manual sync in the device action popup
 
 #### Android
 
-🛠️ Fixed relay connections being disconnected after the screen lights up again  
+🛠️ Fixed forward connections being disconnected after the screen lights up again<br/>
 ⚡ Improved mobile devices so they do not scan the network or use broadcast discovery on mobile data
 
 ---
@@ -394,7 +453,7 @@ minimized
 
 #### Android
 
-🛠️ Fixed relay reconnect failures that could happen when switching from WiFi to mobile data because the network state
+🛠️ Fixed forward reconnect failures that could happen when switching from WiFi to mobile data because the network state
 changed too quickly
 
 ---
@@ -404,7 +463,7 @@ changed too quickly
 #### General
 
 🛠️ Fixed incomplete theme switching  
-🛠️ Fixed relay disconnection not reconnecting automatically  
+🛠️ Fixed forward disconnection not reconnecting automatically<br/>
 ⚡ Improved file transfer history so all items can be selected  
 ⚡ Improved device connection logic  
 ⚡ Improved some UI details  

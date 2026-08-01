@@ -14,25 +14,22 @@ const EN_LABELS: Record<string, string> = {
 
 const { frontmatter, lang } = useData()
 
-const versionInfoPath = computed(() =>
-  isEnglish.value ? '/version-info.en.json' : '/version-info.json'
-)
 const isEnglish = computed(() => lang.value?.toLowerCase().startsWith('en'))
 const labels = computed(() => (isEnglish.value ? EN_LABELS : ZH_LABELS))
 const isHomePage = computed(() => frontmatter.value.layout === 'home')
 
 const screenshots = ref<{ platform: string; items: { name: string; url: string; width?: number }[] }[]>([])
 
+/** 从公共截图数据文件加载首页展示所需的平台截图。 */
 async function loadScreenshots() {
   try {
-    const response = await fetch(`${versionInfoPath.value}?t=${Date.now()}`)
+    const response = await fetch(`/screenshots.json?t=${Date.now()}`)
     if (!response.ok) return
-    const json = await response.json()
-    const images = json.images || {}
+    const screenshotsByPlatform = await response.json()
     const targets = ['Windows', 'Android']
     screenshots.value = targets
-      .filter((p) => images[p]?.length)
-      .map((p) => ({ platform: p, items: images[p] }))
+      .filter((platform) => screenshotsByPlatform[platform]?.length)
+      .map((platform) => ({ platform, items: screenshotsByPlatform[platform] }))
   } catch {
     screenshots.value = []
   }

@@ -8,15 +8,31 @@ aside: "left"
 
 ::: tip 提示
 1.4.0 版本开始极大增强了保活能力，在此前版本的请升级尝试
+1.5.0+ 还增加了1像素悬浮窗保活，需要手动开启
 :::
 
 若仍然无法保留后台，[查看此处](./usages/shizuku-background-alive)
+
+另外若仍然无法保活，大概率可能是因为一些底层错误导致app闪退，请在 `日志` 中导出原生日志，或者执行命令导出：
+```shell
+adb shell "logcat -T '$(date +'%m-%d 00:00:00.000')' -v long top.coclyun.clipshare:V" > logcat_output.txt
+```
 
 ### 关于自启和开机启动
 
 当前暂未直接开发该功能，但是可以通过启用 `剪贴板来源记录` 或者 `通知历史记录` 功能让系统在开机后拉起程序，若为非 Root 设备，启动后仍然需要手动授权 Shizuku 权限方可监听。
 
-## 2. 无线调试
+## 2. Android 监听无效
+
+若在 Android 中复制后但是历史记录后未记录，请考虑切换 `监听模式`，部分设备（如vivo、OriginOS）是不支持日志模式的
+
+## 3. 复制后输入法的历史记录没有？
+
+ClipShare的记录和输入法的历史记录是两套存储逻辑不要搞混了。
+
+输入法的剪贴板记录是输入法自己维护的，如果输入法处于后台那么输入法也拿不到剪贴板数据
+
+## 4. 无线调试
 
 经用户使用一些系统如鸿蒙3中开发者选项设置可能无 `无线调试`
 开关，需要 [使用电脑](https://blog.csdn.net/qq_24683975/article/details/121490565?spm=1011.2415.3001.5331)
@@ -26,7 +42,7 @@ aside: "left"
 
 <img src="/images/faq/ohos_wireless_debug_toast.png" alt="backend_history_float_window" width="300" data-fancybox="faq">
 
-## 3. 开机启动最小化失败
+## 5. 开机启动最小化失败
 
 使用安装器更新程序时（新安装没问题）不要勾选【自动启动】，使用应用内设置的【开机自启】去设置。
 
@@ -37,7 +53,7 @@ ClipShare，并删除
 安装程序中勾选【自动启动】后会将程序快捷方式放入开机启动文件夹，开机后会自动启动，但是程序本身也配置了开机自启，这样开机会执行两次启动，第二次启动会让程序显示到前台，所以表现为最小化失败
 :::
 
-## 4. 同型号 Android 手机无法连接
+## 6. 同型号 Android 手机无法连接
 
 基本上是 `设备id`(不是设备名称) 重复的原因。
 解决方案：卸载并重新安装 `1.3.0` 以上版本
@@ -61,7 +77,11 @@ where key = 'mobileDevIdGenerateWay'
 通过修改数据库的形式修改id生成方式后等价于变为新的设备，需要重新配对
 :::
 
-## 5. 飞牛OS WebDAV 同步失败
+## 7. 飞牛OS WebDAV 同步失败
+
+::: tip 提示
+1.5.0+ 版本换了 WebDAV 实现，已修复该问题
+:::
 
 如果使用飞牛的 WebDAV 功能进行中转，当前可能会出现无法同步的问题，原因是似乎不支持直接创建多级文件夹导致失败
 
@@ -69,13 +89,13 @@ where key = 'mobileDevIdGenerateWay'
 
 步骤：
 
-### 5.1 飞牛商店安装 1Panel
+### 7.1 飞牛商店安装 1Panel
 
 安装的时候记住账号密码和安全入口，然后打开 1Panel，注意使用安全入口访问
 
 <img src="/images/faq/fn_webdav_1.png" alt="fn_os_webdav_1panel_address" width="300" data-fancybox="faq">
 
-### 5.2 创建定时脚本
+### 7.2 创建定时脚本
 
 添加一个计划任务，时间自定
 <img src="/images/faq/fn_webdav_2.png" alt="fn_os_webdav_1panel_add_task" data-fancybox="faq">
@@ -101,7 +121,7 @@ mkdir -p $clipshare_path/$today/files
 mkdir -p $clipshare_path/$tomorrow/files
 ```
 
-## 6. Android 同步后未自动复制
+## 8. Android 同步后未自动复制
 
 通常是未授予剪贴板写入权限，或部分系统默认是使用时允许，请检查权限设置手动授予，若系统中无该设置，请下载 `App Ops` 后进行授权
 
@@ -113,7 +133,7 @@ mkdir -p $clipshare_path/$tomorrow/files
 
 <img src="/images/faq/write_clipboard_permission2.png" alt="write_clipboard_permission2" data-fancybox="faq" width="300">
 
-## 7. 修改设备Id后的数据迁移
+## 9. 修改设备Id后的数据迁移
 
 当修改设备Id后，会出现本机自身的记录的设备显示变为 Unknown，并且设备需要重新配对的情况（会导致同步大量数据），需要手动更新数据库中对应记录的设备id
 
@@ -150,9 +170,9 @@ update AppInfo set devId = '新设备id' where devId = '旧设备id';
 update Device set guid = '新设备id' where guid = '旧设备id';
 ```
 
-## 8. 删除过大的数据
+## 10. 删除过大的数据
 
-在 Android 上会出现当内容过大时查询异常的情况，可能的表现为：历史记录查询不出、悬浮窗拖拽闪退等
+在 Android 上会出现当内容过大时（超过2MB）查询异常的情况，可能的表现为：历史记录查询不出、悬浮窗拖拽闪退等
 
 可执行以下 SQL 删除最大的那条数据（文本）以尝试修复，每执行一次会删除一条：
 

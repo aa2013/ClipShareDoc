@@ -8,6 +8,7 @@ Background keepalive mainly depends on setting `Battery Optimization` to unrestr
 
 ::: tip Tip
 Starting from version 1.4.0, background keepalive has been significantly improved. If you are on an older version, please try upgrading first.
+Version 1.5.0+ also adds a 1px floating window keepalive option, which needs to be enabled manually.
 :::
 
 If the app still cannot stay alive in the background, [see here](./usages/shizuku-background-alive).
@@ -16,7 +17,17 @@ If the app still cannot stay alive in the background, [see here](./usages/shizuk
 
 This feature is not directly implemented yet, but you can enable `Clipboard Source History` or `Notification History` so the system can bring up the app after boot. On non-Root devices, you still need to manually grant Shizuku permission after startup before clipboard listening can work.
 
-## 2. Wireless Debugging
+## 2. Android Listening Does Not Work
+
+If copied content on Android does not appear in history, try switching the `Listening Mode`. Some devices, such as vivo or OriginOS devices, do not support log mode.
+
+## 3. Why Is There No IME Clipboard History After Copying?
+
+ClipShare history and the input method's clipboard history use two separate storage mechanisms. Do not mix them up.
+
+The input method's clipboard history is maintained by the input method itself. If the input method is running in the background, it may not receive clipboard data either.
+
+## 4. Wireless Debugging
 
 On some systems such as HarmonyOS 3, the developer options may not include a `Wireless debugging` toggle.
 You may need to [use a computer](https://blog.csdn.net/qq_24683975/article/details/121490565?spm=1011.2415.3001.5331)
@@ -26,7 +37,7 @@ If the following message appears when enabling wireless debugging on HarmonyOS, 
 
 <img src="/images/faq/ohos_wireless_debug_toast.png" alt="backend_history_float_window" width="300" data-fancybox="faq">
 
-## 3. Minimized Startup Fails at Boot
+## 5. Minimized Startup Fails at Boot
 
 When updating the program with the installer, do not check `Auto Start` during installation. Use the in-app `Launch at Startup` setting instead. Fresh installs are fine.
 
@@ -36,7 +47,7 @@ If you already checked it by mistake, try turning the in-app `Launch at Startup`
 If `Auto Start` is checked in the installer, a shortcut is added to the startup folder so the program starts after boot. The app itself also has its own launch-at-startup setting, which causes the app to start twice. The second launch brings the program window to the foreground, so it looks like minimized startup failed.
 :::
 
-## 4. Android Phones of the Same Model Cannot Connect
+## 6. Android Phones of the Same Model Cannot Connect
 
 This is basically caused by duplicate `device id` values, not duplicate device names.
 Solution: uninstall and reinstall version `1.3.0` or above.
@@ -59,21 +70,25 @@ where key = 'mobileDevIdGenerateWay'
 Changing the id generation method by editing the database is equivalent to becoming a new device, so re-pairing is required.
 :::
 
-## 5. FeiniuOS WebDAV Sync Failure
+## 7. FeiniuOS WebDAV Sync Failure
 
-If you use Feiniu's WebDAV feature as the relay method, sync may currently fail because it seems not to support directly creating nested folders.
+::: tip Tip
+Version 1.5.0+ switched to a new WebDAV implementation and has fixed this issue.
+:::
+
+If you use Feiniu's WebDAV feature as the forward method, sync may currently fail because it seems not to support directly creating nested folders.
 
 Solution: use a scheduled task to automatically create the required folders every day.
 
 Steps:
 
-### 5.1 Install 1Panel from the Feiniu Store
+### 7.1 Install 1Panel from the Feiniu Store
 
 Remember the account, password, and secure entry during installation, then open 1Panel and make sure you access it through the secure entry.
 
 <img src="/images/faq/fn_webdav_1.png" alt="fn_os_webdav_1panel_address" width="300" data-fancybox="faq">
 
-### 5.2 Create a Scheduled Script
+### 7.2 Create a Scheduled Script
 
 Add a scheduled task and set the time as you like.
 <img src="/images/faq/fn_webdav_2.png" alt="fn_os_webdav_1panel_add_task" data-fancybox="faq">
@@ -99,7 +114,7 @@ mkdir -p $clipshare_path/$today/files
 mkdir -p $clipshare_path/$tomorrow/files
 ```
 
-## 6. No Automatic Copy After Android Sync
+## 8. No Automatic Copy After Android Sync
 
 Usually this happens because clipboard write permission was not granted, or because some systems grant it only while in use by default. Please check the permission settings and grant it manually. If the system has no such setting, install `App Ops` and grant the permission there.
 
@@ -111,7 +126,7 @@ Usually this happens because clipboard write permission was not granted, or beca
 
 <img src="/images/faq/write_clipboard_permission2.png" alt="write_clipboard_permission2" data-fancybox="faq" width="300">
 
-## 7. Data Migration After Changing Device ID
+## 9. Data Migration After Changing Device ID
 
 After changing the device ID, the records created by the current device may show the device as `Unknown`, and the devices may need to be paired again, which can trigger a large amount of sync data. You need to manually update the device id in the corresponding database records.
 
@@ -149,7 +164,7 @@ update Device set guid = 'new device id' where guid = 'old device id';
 ```
 
 
-## 8. Delete Excessively Large Data
+## 10. Delete Excessively Large Data
 
 On Android, query exceptions may occur when the data size is too large. Possible symptoms include: inability to query history records, crashes when dragging the floating window, etc.
 

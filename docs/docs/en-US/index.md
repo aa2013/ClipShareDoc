@@ -11,7 +11,7 @@ hero:
     alt: ClipShare
   actions:
     - theme: brand
-      text: Download V1.4.4 Now
+      text: Download V1.5.0 Now
       link: ./download
     - theme: alt
       text: Guides
@@ -32,7 +32,7 @@ features:
       width: 32
       height: 32
     title: Cross-platform Support
-    details: "Built with Flutter and currently available on Android, Windows, Linux, and MacOS.<br/>The iOS version is under testing..."
+    details: "Built with Flutter and currently available on Windows, Linux, MacOS, Android, and iOS (unsigned build)."
   - icon:
       src: /images/icons/category.svg
       width: 32
@@ -51,7 +51,7 @@ features:
       height: 32
     title: Public Network Sync
     details: >
-        Supports wider network environments. You can build your own relay server to sync the clipboard over the public internet.
+        Supports wider network environments. You can build your own forward server to sync the clipboard over the public internet.
         <div class="vp-doc external-link-icon-enabled">
             Details
             <a href="./usages/forward" target="_blank">
@@ -63,14 +63,13 @@ features:
       width: 32
       height: 32
     title: Custom Rules
-    details: Set rules and automatically label records that comply with the rules.
-#    details: >
-#        Supports custom rules. You can use regular expressions or Lua scripts to process data under matched conditions.
-#        <div class="vp-doc external-link-icon-enabled">
-#            Details
-#            <a href="./usages/rule/guide" target="_blank">
-#              View docs
-#            </a>
-#        </div>
+    details: >
+        Supports custom rules. You can use regular expressions or Lua scripts to process data under matched conditions.
+        <div class="vp-doc external-link-icon-enabled">
+            Details
+            <a href="./usages/rule/guide" target="_blank">
+              View docs
+            </a>
+        </div>
 ---
 

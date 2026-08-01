@@ -1,19 +1,19 @@
-﻿# Relay Mode Usage Guide
+﻿# Forward Mode Usage Guide
 
-By default, the app only supports data sync within a local network. To use it over the public internet, you need either the relay program for forwarding or WebDAV/S3 object storage as the relay method. S3 object storage is generally more recommended.
+By default, the app only supports data sync within a local network. To use it over the public internet, you need either the forward program for forwarding or WebDAV/S3 object storage as the forward method. S3 object storage is generally more recommended.
 
-When using storage as the relay method, changes cannot be detected automatically, so it is usually used together with a [notification service](./notify-server).
+When using storage as the forward method, changes cannot be detected automatically, so it is usually used together with a [notification service](./notify-server).
 
 ::: tip Note
-The current storage-based relay method is still experimental, and its stability may be lower than the relay program.
+The current storage-based forward method is still experimental, and its stability may be lower than the forward program.
 :::
 
-This relay program is developed in Go and comes with a Web admin panel. It supports both key mode and public mode. In public mode, file sync speed limits can be applied. In key mode, device count and sync speed can be limited.
+This forward program is developed in Go and comes with a Web admin panel. It supports both key mode and public mode. In public mode, file sync speed limits can be applied. In key mode, device count and sync speed can be limited.
 
 Source code: [Github](https://github.com/aa2013/ClipShareForwardServer)
 
 ::: tip Tip
-The relay program does not retain any transmitted data. It only forwards traffic.
+The forward program does not retain any transmitted data. It only forwards traffic.
 
 After a successful bidirectional connection is established, all data except file sync is transmitted in encrypted form.
 :::
@@ -24,10 +24,10 @@ After a successful bidirectional connection is established, all data except file
 
 <br/>
 
-#### 1.1.1 Relay Program Download
+#### 1.1.1 Forward Program Download
 
 ::: tip Tip
-Starting from version 1.1.1, the web application has been embedded into the relay program, so the web page no longer needs to be deployed separately.
+Starting from version 1.1.1, the web application has been embedded into the forward program, so the web page no longer needs to be deployed separately.
 :::
 
 | Platform | Architecture | Version | Download |
@@ -42,12 +42,12 @@ Starting from version 1.1.1, the web application has been embedded into the rela
 > About container mappings
 
 ::: tip Tip
-Starting from version 1.1.1, the path inside the relay container changed from `/data` to `/app/data`.
+Starting from version 1.1.1, the path inside the forward container changed from `/data` to `/app/data`.
 :::
 
 | Description | Container Path | Container Port |
 |---|---|---|
-| Relay Program | /app/data | 9283 |
+| Forward Program | /app/data | 9283 |
 | Admin Web Page | - | 80 |
 
 #### 1.2.1 `docker run`
@@ -103,11 +103,11 @@ The admin panel mainly provides the following features:
 
 ## 3. File Overview
 
-All relay program files are located in the `./data` folder next to the program, including configuration files, database files, log files, and so on.
+All forward program files are located in the `./data` folder next to the program, including configuration files, database files, log files, and so on.
 
 ### 3.1 Configuration File `config.yaml`
 
-The configuration file stores the basic settings of the relay program.
+The configuration file stores the basic settings of the forward program.
 
 ::: tip Note
 Settings marked with `*` in the comments take effect immediately after modification.
@@ -130,9 +130,9 @@ web:
     # *Admin password. Recommended to change it. This is only the default value.
     password: "1234567"
 
-# Relay program settings
+# Forward program settings
 forward:
-  # Relay program port
+  # Forward program port
   port: 9283
   # *Whitelisted devices. Devices in this list are not subject to any resource limits. This item can be removed if not needed. Both id and name are required. For multiple items, start each with "-".
   unlimited-devices:
@@ -211,7 +211,7 @@ After the build finishes, visit `ip:8180`. The default username is `admin`, and 
 
 ::: tip Tip
 If you have a Github account and it was registered more than 180 days ago, you can get a free $5/month credit from [Claw Cloud](https://console.run.claw.cloud/signin?link=N02FJIL1286E).
-You can use it to build the relay service. The limits are 10 GB storage/month and 10 GB traffic/month.
+You can use it to build the forward service. The limits are 10 GB storage/month and 10 GB traffic/month.
 :::
 
 #### 4.2.1 Build
@@ -245,7 +245,7 @@ On the application page, you can see the access addresses. The HTTPS address for
 
 ![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_access_address.png)
 
-The TCP address is the relay address. Copy its domain name, without the `tcp://` prefix, into ClipShare for testing.
+The TCP address is the forward address. Copy its domain name, without the `tcp://` prefix, into ClipShare for testing.
 
 ![img.png](http://download.clipshare.coclyun.top/images/usages/clawcloud/claw_access_address_forward_test.png)
 

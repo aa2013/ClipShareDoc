@@ -92,7 +92,7 @@ const enThemeConfig = {
                     { text: "2. MacOS", link: "/en-US/usages/macos" },
                     { text: "3. Shizuku Authorization", link: "/en-US/usages/shizuku" },
                     { text: "4. Shizuku Background Keepalive", link: "/en-US/usages/shizuku-background-alive" },
-                    { text: "5. Relay Mode", link: "/en-US/usages/forward" },
+                    { text: "5. Forward Mode", link: "/en-US/usages/forward" },
                     { text: "6. Notification Service", link: "/en-US/usages/notify-server" },
                     { text: "7. Broadcast Data", link: "/en-US/usages/broadcast" },
                     { text: "8. Rule Script Guide", link: "/en-US/usages/rule/guide" },

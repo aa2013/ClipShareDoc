@@ -1,23 +1,73 @@
 {
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows-setup.exe",
-      "version": "1.4.4"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows-setup.exe",
+      "version": "1.5.0"
     },
     "Android": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-arm64-v8a-release-v1.4.4.apk",
-      "version": "1.4.4"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk",
+      "version": "1.5.0"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.deb",
-      "version": "1.4.4"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.deb",
+      "version": "1.5.0"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-macos.dmg",
-      "version": "1.4.4"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-macos.dmg",
+      "version": "1.5.0"
+    },
+    "IOS": {
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0-27-nosign.ipa",
+      "version": "1.5.0"
     }
   },
   "logs": [
+
+    {
+      "platform": "MacOS",
+      "date": "2026-08-01",
+      "version": {
+        "name": "1.5.0",
+        "code": "27"
+      },
+      "desc": "✨ 新增 自定义规则脚本\n✨ 新增 记录最大长度限制设置，超出将会丢弃\n✨ 新增 增加切网保持连接设置，默认开启\n✨ 新增 桌面端 接收文件后可选发起通知\n✨ 新增 桌面端 弹窗多选合并\n✨ 新增 桌面端 支持历史拖拽为文件\n✨ 新增 桌面端 支持使用文件/环境变量定义文件/数据库存储路径\n🛠️ 修复 桌面端 切换语言后托盘文案不更新\n🛠️ 修复 桌面端 触摸板滚动失效问题\n⚡ 优化 macOS响应Command + W\n⚡ 优化 桌面端 支持弹窗失焦隐藏，启用时同时支持双击粘贴后也关闭弹窗\n⚡ 优化 桌面端 Esc退出多选和抽屉\n⚡ 优化 重构存储中转、设备连接，增强稳定性\n⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转\n⚡ 优化 S3/WebDAV支持配置User-Agent\n⚡ 优化 多选合并复制时按选择顺序而不是时间\n⚡ 优化 网卡过滤掉移动数据网络rmnet_data\n⚡ 优化 仅子网扫描改为默认\n⚡ 优化 设置页面支持搜索跳转\n⚡ 优化 后续版本更新日志按语言获取\n⚡ 优化 修改部分翻译内容\n⚡ 优化 移除搜索页面\n⚡ 优化 主题、设置项、其他UI优化"
+    },
+    {
+      "platform": "Linux",
+      "date": "2026-08-01",
+      "version": {
+        "name": "1.5.0",
+        "code": "27"
+      },
+      "desc": "✨ 新增 自定义规则脚本\n✨ 新增 记录最大长度限制设置，超出将会丢弃\n✨ 新增 增加切网保持连接设置，默认开启\n✨ 新增 桌面端 接收文件后可选发起通知\n✨ 新增 桌面端 弹窗多选合并\n✨ 新增 桌面端 支持历史拖拽为文件\n✨ 新增 桌面端 支持使用文件/环境变量定义文件/数据库存储路径\n✨ 新增 实现 Linux Wayland(ext-data-control)环境的剪贴板监听\n🛠️ 修复 桌面端 切换语言后托盘文案不更新\n🛠️ 修复 桌面端 触摸板滚动失效问题\n⚡ 优化 桌面端 支持弹窗失焦隐藏，启用时同时支持双击粘贴后也关闭弹窗\n⚡ 优化 桌面端 Esc退出多选和抽屉\n⚡ 优化 重构存储中转、设备连接，增强稳定性\n⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转\n⚡ 优化 S3/WebDAV支持配置User-Agent\n⚡ 优化 多选合并复制时按选择顺序而不是时间\n⚡ 优化 网卡过滤掉移动数据网络rmnet_data\n⚡ 优化 仅子网扫描改为默认\n⚡ 优化 设置页面支持搜索跳转\n⚡ 优化 后续版本更新日志按语言获取\n⚡ 优化 修改部分翻译内容\n⚡ 优化 移除搜索页面\n⚡ 优化 主题、设置项、其他UI优化"
+    },
+    {
+      "platform": "Windows",
+      "date": "2026-08-01",
+      "version": {
+        "name": "1.5.0",
+        "code": "27"
+      },
+      "desc": "✨ 新增 自定义规则脚本\n✨ 新增 记录最大长度限制设置，超出将会丢弃\n✨ 新增 增加切网保持连接设置，默认开启\n✨ 新增 桌面端 接收文件后可选发起通知\n✨ 新增 桌面端 弹窗多选合并\n✨ 新增 桌面端 支持历史拖拽为文件\n✨ 新增 桌面端 支持使用文件/环境变量定义文件/数据库存储路径\n✨ 新增 Windows 上支持接管Win+V\n🛠️ 修复 桌面端 切换语言后托盘文案不更新\n🛠️ 修复 桌面端 触摸板滚动失效问题\n⚡ 优化 桌面端 支持弹窗失焦隐藏，启用时同时支持双击粘贴后也关闭弹窗\n⚡ 优化 桌面端 Esc退出多选和抽屉\n⚡ 优化 重构存储中转、设备连接，增强稳定性\n⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转\n⚡ 优化 S3/WebDAV支持配置User-Agent\n⚡ 优化 多选合并复制时按选择顺序而不是时间\n⚡ 优化 网卡过滤掉移动数据网络rmnet_data\n⚡ 优化 仅子网扫描改为默认\n⚡ 优化 设置页面支持搜索跳转\n⚡ 优化 后续版本更新日志按语言获取\n⚡ 优化 修改部分翻译内容\n⚡ 优化 移除搜索页面\n⚡ 优化 主题、设置项、其他UI优化"
+    },
+    {
+      "platform": "Android",
+      "date": "2026-08-01",
+      "version": {
+        "name": "1.5.0",
+        "code": "27"
+      },
+      "desc": "✨ 新增 自定义规则脚本\n✨ 新增 记录最大长度限制设置，超出将会丢弃\n✨ 新增 增加切网保持连接设置，默认开启\n✨ 新增 Android 1px悬浮窗开关以在某些系统增强保活\n🛠️ 修复 Android 偶发现象的Flutter JNI错误导致的闪退\n⚡ 优化 Android 息屏断连默认改为关闭\n⚡ 优化 Android “文件打开”动作支持跳转到文件发送\n⚡ 优化 Android 可自定义图片保存目录\n⚡ 优化 Android 支持自动无障碍授权\n⚡ 优化 Shizuku 可用后自动请求并启动剪贴板监听\n⚡ 优化 Android 悬浮窗显隐问题\n⚡ 优化 Android 悬浮窗触发体验\n⚡ 优化 重构存储中转、设备连接，增强稳定性\n⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转\n⚡ 优化 S3/WebDAV支持配置User-Agent\n⚡ 优化 多选合并复制时按选择顺序而不是时间\n⚡ 优化 网卡过滤掉移动数据网络rmnet_data\n⚡ 优化 仅子网扫描改为默认\n⚡ 优化 设置页面支持搜索跳转\n⚡ 优化 后续版本更新日志按语言获取\n⚡ 优化 修改部分翻译内容\n⚡ 优化 移除搜索页面\n⚡ 优化 主题、设置项、其他UI优化"
+    },
+    {
+      "platform": "IOS",
+      "date": "2026-08-01",
+      "version": {
+        "name": "1.5.0",
+        "code": "27"
+      },
+      "desc": "✨ 初始版本"
+    },
 
     {
       "platform": "MacOS",
@@ -323,155 +373,6 @@
         "code": "14"
       },
       "desc": "🛠️ 修复 中转状态下亮起屏幕后连接断开的问题\n⚡ 优化 仅在设备异常断开时弹出断连通知\n✨ 优化  移动设备在数据网络下不扫描网络和广播发现\n✨ 优化 有更新时发起系统通知"
-    },
-    {
-      "platform": "all",
-      "date": "2025-06-07",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "13"
-      },
-      "desc": "✨ 新增 导出 Excel 功能（搜索页面）\n✨ 新增 数据编辑功能，可修改历史数据（时间不会变化）\n✨ 新增 设备连接断开后通知提示\n🛠️ 修复 搜索过滤器的一些问题\n🛠️ 修复 标签管理中无法搜索的问题\n🛠️ 修复 Windows 端通过更新程序更新后重复快捷方式导致的开启启动无法最小化的问题\n🛠️ 修复 移动端从WiFi切换到数据网络后中转重连可能失败的问题（网络状态变化过快）\n🛠️ 修复 Windows 端通过托盘退出缓慢的问题\n⚡ 优化 有更新时可以直接下载文件并打开\n⚡ 优化 清理数据时若该设备已无数据且未配对则自动移除设备信息\n⚡ 优化 优化一些 UI显示"
-    },
-    {
-      "platform": "all",
-      "date": "2025-05-10",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "12"
-      },
-      "desc": "✨ 新增 Android剪贴板隐藏api监听模式，解决OriginOS等系统的监听问题\n🛠️ 修复 主题切换不完全的问题\n🛠️ 修复 中转断开无法自动重连的问题\n🛠️ 修复 Android 端Shizuku服务进程不退出的问题\n⚡ 优化 Windows弹窗允许以相同快捷键关闭\n⚡ 优化 文件传输历史记录可以全选\n⚡ 优化 设备连接逻辑\n⚡ 优化 Android端允许在屏幕从关闭到亮起时不进行设备扫描\n⚡ 优化一些 UI 显示\n⚡ 优化一些操作逻辑"
-    },
-    {
-      "platform": "all",
-      "date": "2025-04-09",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "11"
-      },
-      "desc": "✨ 新增 桌面端历史弹窗搜索\n✨ 新增 文件拖拽同步\n⚡ 优化一些 UI 显示\n⚡ 优化一些操作逻辑"
-    },
-    {
-      "platform": "all",
-      "date": "2025-03-09",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "10"
-      },
-      "desc": "✨ 新增 二维码扫码连接（手动添加时）\n✨ 新增 Windows端历史记录弹窗记录上次位置\n✨ 新增 Android端支持截屏检测自动复制\n✨ 新增 数据清理功能\n⚡ 优化一些 UI 显示"
-    },
-    {
-      "platform": "all",
-      "date": "2025-01-19",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "9"
-      },
-      "desc": "✨ 新增 Android端最近任务显示/隐藏选项\n✨ 修复 Windows端弹窗中未应用多语言翻译的问题\n🛠️ 修复 Windows端弹窗中无法预览图片的问题\n⚡ 优化一些 UI 显示"
-    },
-    {
-      "platform": "all",
-      "date": "2025-01-14",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "8"
-      },
-      "desc": "✨新增语言选项\n🛠️修复Android下同步图片后自动跳转app的问题"
-    },
-    {
-      "platform": "all",
-      "date": "2025-01-05",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "7"
-      },
-      "desc": "✨新增断连重连机制"
-    },
-    {
-      "platform": "all",
-      "date": "2024-12-24",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "6"
-      },
-      "desc": "🛠️修复息屏断连问题\n⚡️️优化Android13 存储权限请求"
-    },
-    {
-      "platform": "all",
-      "date": "2024-12-22",
-      "version": {
-        "name": "1.0.0-beta",
-        "code": "5"
-      },
-      "desc": "1.0.0-beta 测试版本"
     }
-  ],
-  "images": {
-    "Windows": [
-      {
-        "name": "device",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/Windows/device.png"
-      },
-      {
-        "name": "history",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/Windows/history.png"
-      },
-      {
-        "name": "search",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/Windows/search.png"
-      },
-      {
-        "name": "setting",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/Windows/setting.png"
-      }
-    ],
-    "Android": [
-      {
-        "name": "device",
-        "url": "https://download.clipshare.coclyun.top/images/Android/device.png"
-      },
-      {
-        "name": "history",
-        "url": "https://download.clipshare.coclyun.top/images/Android/history.png"
-      },
-      {
-        "name": "statistic",
-        "url": "https://download.clipshare.coclyun.top/images/Android/statistic.png"
-      },
-      {
-        "name": "setting",
-        "url": "https://download.clipshare.coclyun.top/images/Android/setting.png"
-      },
-      {
-        "name": "transmission",
-        "url": "https://download.clipshare.coclyun.top/images/Android/transmission.png"
-      }
-    ],
-    "MacOS": [
-      {
-        "name": "device",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/MacOS/device.png"
-      },
-      {
-        "name": "history",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/MacOS/history.png"
-      },
-      {
-        "name": "search",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/MacOS/search.png"
-      },
-      {
-        "name": "setting",
-        "width": 500,
-        "url": "https://download.clipshare.coclyun.top/images/MacOS/setting.png"
-      }
-    ]
-  }
+  ]
 }

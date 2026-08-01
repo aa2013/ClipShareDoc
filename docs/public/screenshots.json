@@ -1,0 +1,46 @@
+{
+  "Windows": [
+    {
+      "name": "device",
+      "width": 500,
+      "url": "https://download.clipshare.coclyun.top/images/Windows/device.png"
+    },
+    {
+      "name": "history",
+      "width": 500,
+      "url": "https://download.clipshare.coclyun.top/images/Windows/history.png"
+    },
+    {
+      "name": "rule",
+      "width": 500,
+      "url": "https://download.clipshare.coclyun.top/images/Windows/rule.png"
+    },
+    {
+      "name": "setting",
+      "width": 500,
+      "url": "https://download.clipshare.coclyun.top/images/Windows/setting.png"
+    }
+  ],
+  "Android": [
+    {
+      "name": "device",
+      "url": "https://download.clipshare.coclyun.top/images/Android/device.png"
+    },
+    {
+      "name": "history",
+      "url": "https://download.clipshare.coclyun.top/images/Android/history.png"
+    },
+    {
+      "name": "statistic",
+      "url": "https://download.clipshare.coclyun.top/images/Android/statistic.png"
+    },
+    {
+      "name": "setting",
+      "url": "https://download.clipshare.coclyun.top/images/Android/setting.png"
+    },
+    {
+      "name": "transmission",
+      "url": "https://download.clipshare.coclyun.top/images/Android/transmission.png"
+    }
+  ]
+}

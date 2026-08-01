@@ -6,19 +6,77 @@ aside: "left"
 
 | 平台      | 架构          | 格式       | 下载                                                                                                         | 版本    | 备注             |
 |---------|-------------|----------|------------------------------------------------------------------------------------------------------------|-------|----------------|
-| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows-setup.exe) | 1.4.4 | Windows10+，安装版 |
-| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-windows.zip)       | 1.4.4 | Windows10+，便携版 |
-| Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-arm64-v8a-release-v1.4.4.apk)     | 1.4.4 | Android 7.0    |
-| Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-armeabi-v7a-release-v1.4.4.apk)   | 1.4.4 | Android 7.0    |
-| Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/app-x86_64-release-v1.4.4.apk)        | 1.4.4 | Android 7.0    |
-| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.AppImage)    | 1.4.4 | -              |
-| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.deb)         | 1.4.4 | -              |
-| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-linux.rpm)         | 1.4.4 | -              |
-| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.4.4/clipshare-1.4.4+26-macos.dmg)         | 1.4.4 | MacOS 10.15+   |
+| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows-setup.exe) | 1.5.0 | Windows10+，安装版 |
+| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows.zip)       | 1.5.0 | Windows10+，便携版 |
+| Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk)     | 1.5.0 | Android 7.0    |
+| Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-armeabi-v7a-release-v1.5.0.apk)   | 1.5.0 | Android 7.0    |
+| Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-x86_64-release-v1.5.0.apk)        | 1.5.0 | Android 7.0    |
+| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.AppImage)    | 1.5.0 | -              |
+| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.deb)         | 1.5.0 | -              |
+| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.rpm)         | 1.5.0 | -              |
+| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-macos.dmg)         | 1.5.0 | MacOS 10.15+   |
+| IOS     | arm64        | ipa      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0-27-nosign.ipa)        | 1.5.0 | IOS14+         |
 
 > 更多历史版本请前往 [Github Releases](https://github.com/aa2013/ClipShare/releases) 下载。
 
 ## 📌 更新日志
+
+### 🏷️ v1.5.0 - 2026-08-01
+
+> 注意，此版本不太兼容旧版本设备连接
+
+#### 通用
+
+✨ 新增 自定义规则脚本  
+✨ 新增 记录最大长度限制设置，超出将会丢弃  
+✨ 新增 增加切网保持连接设置，默认开启  
+✨ 新增 桌面端 接收文件后可选发起通知  
+✨ 新增 桌面端 弹窗多选合并  
+✨ 新增 桌面端 支持历史拖拽为文件  
+✨ 新增 桌面端 支持使用文件/环境变量定义文件/数据库存储路径  
+🛠️ 修复 桌面端 切换语言后托盘文案不更新  
+🛠️ 修复 桌面端 触摸板滚动失效问题  
+⚡ 优化 桌面端 支持弹窗失焦隐藏，启用时同时支持双击粘贴后也关闭弹窗  
+⚡ 优化 桌面端 Esc退出多选和抽屉  
+⚡ 优化 重构存储中转、设备连接，增强稳定性  
+⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转  
+⚡ 优化 S3/WebDAV支持配置User-Agent  
+⚡ 优化 多选合并复制时按选择顺序而不是时间  
+⚡ 优化 网卡过滤掉移动数据网络rmnet_data  
+⚡ 优化 仅子网扫描改为默认  
+⚡ 优化 设置页面支持搜索跳转  
+⚡ 优化 后续版本更新日志按语言获取  
+⚡ 优化 修改部分翻译内容  
+⚡ 优化 移除搜索页面  
+⚡ 优化 主题、设置项、其他UI优化
+
+#### Android
+
+✨ 新增 Android 1px悬浮窗开关以在某些系统增强保活  
+🛠️ 修复 Android 偶发现象的Flutter JNI错误导致的闪退  
+⚡ 优化 Android 息屏断连默认改为关闭  
+⚡ 优化 Android “文件打开”动作支持跳转到文件发送  
+⚡ 优化 Android 可自定义图片保存目录  
+⚡ 优化 Android 支持自动无障碍授权  
+⚡ 优化 Shizuku 可用后自动请求并启动剪贴板监听  
+⚡ 优化 Android 悬浮窗显隐问题  
+⚡ 优化 Android 悬浮窗触发体验
+
+#### Windows
+
+✨ 新增 Windows 上支持接管Win+V
+
+#### Linux
+
+✨ 新增 实现 Linux Wayland(ext-data-control)环境的剪贴板监听
+
+#### MacOS
+
+⚡ 优化 macOS响应Command + W
+
+#### iOS
+
+✨ 初始版本
 
 ### 🏷️ v1.4.4 - 2026-05-16
 
@@ -40,11 +98,11 @@ aside: "left"
 🛠️ 修复 保存到相册时路径不存在导致失败  
 🛠️ 修复 尝试修复部分系统在初始化时对公共文件夹无权限导致启动失败的问题  
 🛠️ 修复 进程泄露问题  
-⚡ 优化 大幅减少 Android 安装包体积  
+⚡ 优化 大幅减少 Android 安装包体积
 
 #### Windows
 
-🛠️ 修复 修改监听逻辑以免与其他剪贴板类软件冲突导致无法监听  
+🛠️ 修复 修改监听逻辑以免与其他剪贴板类软件冲突导致无法监听
 
 #### Linux
 
@@ -53,7 +111,6 @@ aside: "left"
 #### MacOS
 
 --
-
 
 ### 🏷️ v1.4.3 - 2026-03-21
 
@@ -73,13 +130,13 @@ aside: "left"
 ⚡ 优化 中转支持 IPv6 地址  
 ⚡ 优化 数据清理允许保留指定天数清理  
 ⚡ 优化 删除数据时允许只删除本地而不是所有设备都删除  
-⚡ 优化 断连重连逻辑  
+⚡ 优化 断连重连逻辑
 
 #### Android
 
 🛠️ 修复 部分设备截图因权限问题无法获取，尝试使用特权命令  
 🛠️ 修复 复制后无法在QQ/微信等界面粘贴的情况  
-⚡ 优化 悬浮窗中不显示通知内容  
+⚡ 优化 悬浮窗中不显示通知内容
 
 #### Windows
 
@@ -87,14 +144,13 @@ aside: "left"
 🛠️ 修复 通知左上角图标有时候不显示的问题  
 🛠️ 修复 抽屉背景模糊掉标题栏的问题  
 ⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制  
-⚡ 优化 后续版本更新弹窗 zip 便携版支持自动更新  
+⚡ 优化 后续版本更新弹窗 zip 便携版支持自动更新
 
 #### Linux
 
 ✨ 新增 弹窗支持记住大小，可改变弹窗尺寸  
 🛠️ 修复 抽屉背景模糊掉标题栏的问题  
-⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制    
-
+⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制
 
 #### MacOS
 
@@ -102,8 +158,7 @@ aside: "left"
 
 ✨ 新增 弹窗支持记住大小，可改变弹窗尺寸  
 🛠️ 修复 数据库和存储路径不正确的原因（误定向到app自身下，导致更新版本后数据丢失）  
-⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制  
-
+⚡ 优化 桌面端主窗体历史记录卡片可右键双击复制
 
 ### 🏷️ v1.4.2 - 2026-02-03
 

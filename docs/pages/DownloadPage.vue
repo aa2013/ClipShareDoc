@@ -36,7 +36,6 @@ const downloadElements = {
 const { isDark, lang } = useData();
 const route = useRoute();
 
-const images = ref({});
 const showPlatform = ref(OS_Windows);
 const logs = ref([]);
 const logsLoading = ref(true);
@@ -95,7 +94,6 @@ async function loadVersionInfo() {
       .filter((item) => item.platform === showPlatform.value || item.platform.toLowerCase() === "all")
       .slice(0, 5);
     downloads.value = json.downloads || {};
-    images.value = json.images || {};
   } finally {
     setTimeout(() => {
       logsLoading.value = false;
@@ -195,19 +193,6 @@ watch(showPlatform, async () => {
         </div>
       </div>
     </transition>
-    <div class="stack-container" v-if="false">
-      <div v-for="platform in Object.keys(images)" class="stack-item">
-        <transition name="fade">
-          <div class="flex justify-center gap-8 mt-10 flex-wrap relative" v-if="platform===showPlatform"
-               :key="platform">
-            <img v-for="item in images[platform]"
-                 :src="item.url" :alt="item.name" :width="item.width??300"
-                 class="rounded-[20px] cursor-pointer hover:scale-[1.05] duration-200"
-                 :data-fancybox="`${showPlatform}-img`" loading="eager"/>
-          </div>
-        </transition>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -394,15 +379,5 @@ watch(showPlatform, async () => {
   height: 16px;
 }
 
-.stack-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-}
-
-.stack-item {
-  grid-column: 1 / 2; /* 所有子元素放在同一列 */
-  grid-row: 1 / 2; /* 所有子元素放在同一行 */
-}
 </style>
 

@@ -55,7 +55,7 @@ features:
         <br/>
         <span class="vp-doc external-link-icon-enabled">
             Details
-            <a href="./usages/forward" target="_blank">
+            <a href="./usages/forward.html" target="_blank">
               View docs
             </a>
         </span>
@@ -69,7 +69,7 @@ features:
         <br/>
         <span class="vp-doc external-link-icon-enabled">
             Details
-            <a href="./usages/rule/guide" target="_blank">
+            <a href="./usages/rule/guide.html" target="_blank">
               View docs
             </a>
         </span>

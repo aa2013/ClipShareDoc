@@ -6,15 +6,15 @@ aside: "left"
 
 | 平台      | 架构          | 格式       | 下载                                                                                                         | 版本    | 备注             |
 |---------|-------------|----------|------------------------------------------------------------------------------------------------------------|-------|----------------|
-| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-windows-setup.exe) | 1.5.1 | Windows10+，安装版 |
-| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-windows.zip)       | 1.5.1 | Windows10+，便携版 |
+| Windows | x86_64      | exe      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-windows-setup.exe) | 1.5.1 | Windows10+，安装版 |
+| Windows | x86_64      | zip      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-windows.zip)       | 1.5.1 | Windows10+，便携版 |
 | Android | arm64-v8a   | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk)     | 1.5.0 | Android 7.0    |
 | Android | armeabi-v7a | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-armeabi-v7a-release-v1.5.0.apk)   | 1.5.0 | Android 7.0    |
 | Android | x86_64      | apk      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-x86_64-release-v1.5.0.apk)        | 1.5.0 | Android 7.0    |
-| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.AppImage)    | 1.5.1 | -              |
-| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.deb)         | 1.5.1 | -              |
-| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.rpm)         | 1.5.1 | -              |
-| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-macos.dmg)         | 1.5.1 | MacOS 10.15+   |
+| Linux   | x86_64      | AppImage | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-linux.AppImage)    | 1.5.1 | -              |
+| Linux   | x86_64      | deb      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-linux.deb)         | 1.5.1 | -              |
+| Linux   | x86_64      | rpm      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-linux.rpm)         | 1.5.1 | -              |
+| MacOS   | 通用架构        | dmg      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-macos.dmg)         | 1.5.1 | MacOS 10.15+   |
 | IOS     | arm64        | ipa      | [下载](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0-27-nosign.ipa)        | 1.5.0 | IOS14+         |
 
 > 更多历史版本请前往 [Github Releases](https://github.com/aa2013/ClipShare/releases) 下载。

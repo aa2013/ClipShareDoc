@@ -1,7 +1,7 @@
 {
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-windows-setup.exe",
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-windows-setup.exe",
       "version": "1.5.1"
     },
     "Android": {
@@ -9,11 +9,11 @@
       "version": "1.5.0"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.deb",
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-linux.deb",
       "version": "1.5.1"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-macos.dmg",
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-macos.dmg",
       "version": "1.5.1"
     },
     "IOS": {

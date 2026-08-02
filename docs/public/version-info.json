@@ -1,20 +1,20 @@
 {
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows-setup.exe",
-      "version": "1.5.0"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-windows-setup.exe",
+      "version": "1.5.1"
     },
     "Android": {
       "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk",
       "version": "1.5.0"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.deb",
-      "version": "1.5.0"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.deb",
+      "version": "1.5.1"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-macos.dmg",
-      "version": "1.5.0"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-macos.dmg",
+      "version": "1.5.1"
     },
     "IOS": {
       "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0-27-nosign.ipa",
@@ -25,30 +25,30 @@
 
     {
       "platform": "MacOS",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "version": {
-        "name": "1.5.0",
-        "code": "27"
+        "name": "1.5.1",
+        "code": "28"
       },
-      "desc": "注意，此版本不太兼容旧版本设备连接\n✨ 新增 自定义规则脚本\n✨ 新增 记录最大长度限制设置，超出将会丢弃\n✨ 新增 增加切网保持连接设置，默认开启\n✨ 新增 桌面端 接收文件后可选发起通知\n✨ 新增 桌面端 弹窗多选合并\n✨ 新增 桌面端 支持历史拖拽为文件\n✨ 新增 桌面端 支持使用文件/环境变量定义文件/数据库存储路径\n🛠️ 修复 桌面端 切换语言后托盘文案不更新\n🛠️ 修复 桌面端 触摸板滚动失效问题\n⚡ 优化 macOS响应Command + W\n⚡ 优化 桌面端 支持弹窗失焦隐藏，启用时同时支持双击粘贴后也关闭弹窗\n⚡ 优化 桌面端 Esc退出多选和抽屉\n⚡ 优化 重构存储中转、设备连接，增强稳定性\n⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转\n⚡ 优化 S3/WebDAV支持配置User-Agent\n⚡ 优化 多选合并复制时按选择顺序而不是时间\n⚡ 优化 网卡过滤掉移动数据网络rmnet_data\n⚡ 优化 仅子网扫描改为默认\n⚡ 优化 设置页面支持搜索跳转\n⚡ 优化 后续版本更新日志按语言获取\n⚡ 优化 修改部分翻译内容\n⚡ 优化 移除搜索页面\n⚡ 优化 主题、设置项、其他UI优化"
+      "desc": "注意，此版本不太兼容旧版本设备连接(<1.5.0)\n🛠️ 修复 桌面端 文件拖拽发送冲突问题"
     },
     {
       "platform": "Linux",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "version": {
-        "name": "1.5.0",
-        "code": "27"
+        "name": "1.5.1",
+        "code": "28"
       },
-      "desc": "注意，此版本不太兼容旧版本设备连接\n✨ 新增 自定义规则脚本\n✨ 新增 记录最大长度限制设置，超出将会丢弃\n✨ 新增 增加切网保持连接设置，默认开启\n✨ 新增 桌面端 接收文件后可选发起通知\n✨ 新增 桌面端 弹窗多选合并\n✨ 新增 桌面端 支持历史拖拽为文件\n✨ 新增 桌面端 支持使用文件/环境变量定义文件/数据库存储路径\n✨ 新增 实现 Linux Wayland(ext-data-control)环境的剪贴板监听\n🛠️ 修复 桌面端 切换语言后托盘文案不更新\n🛠️ 修复 桌面端 触摸板滚动失效问题\n⚡ 优化 桌面端 支持弹窗失焦隐藏，启用时同时支持双击粘贴后也关闭弹窗\n⚡ 优化 桌面端 Esc退出多选和抽屉\n⚡ 优化 重构存储中转、设备连接，增强稳定性\n⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转\n⚡ 优化 S3/WebDAV支持配置User-Agent\n⚡ 优化 多选合并复制时按选择顺序而不是时间\n⚡ 优化 网卡过滤掉移动数据网络rmnet_data\n⚡ 优化 仅子网扫描改为默认\n⚡ 优化 设置页面支持搜索跳转\n⚡ 优化 后续版本更新日志按语言获取\n⚡ 优化 修改部分翻译内容\n⚡ 优化 移除搜索页面\n⚡ 优化 主题、设置项、其他UI优化"
+      "desc": "注意，此版本不太兼容旧版本设备连接(<1.5.0)\n🛠️ 修复 桌面端 文件拖拽发送冲突问题"
     },
     {
       "platform": "Windows",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "version": {
-        "name": "1.5.0",
-        "code": "27"
+        "name": "1.5.1",
+        "code": "28"
       },
-      "desc": "注意，此版本不太兼容旧版本设备连接\n✨ 新增 自定义规则脚本\n✨ 新增 记录最大长度限制设置，超出将会丢弃\n✨ 新增 增加切网保持连接设置，默认开启\n✨ 新增 桌面端 接收文件后可选发起通知\n✨ 新增 桌面端 弹窗多选合并\n✨ 新增 桌面端 支持历史拖拽为文件\n✨ 新增 桌面端 支持使用文件/环境变量定义文件/数据库存储路径\n✨ 新增 Windows 上支持接管Win+V\n🛠️ 修复 桌面端 切换语言后托盘文案不更新\n🛠️ 修复 桌面端 触摸板滚动失效问题\n⚡ 优化 桌面端 支持弹窗失焦隐藏，启用时同时支持双击粘贴后也关闭弹窗\n⚡ 优化 桌面端 Esc退出多选和抽屉\n⚡ 优化 重构存储中转、设备连接，增强稳定性\n⚡ 优化 存储中转允许根路径保存，但是不允许以根路径启动中转\n⚡ 优化 S3/WebDAV支持配置User-Agent\n⚡ 优化 多选合并复制时按选择顺序而不是时间\n⚡ 优化 网卡过滤掉移动数据网络rmnet_data\n⚡ 优化 仅子网扫描改为默认\n⚡ 优化 设置页面支持搜索跳转\n⚡ 优化 后续版本更新日志按语言获取\n⚡ 优化 修改部分翻译内容\n⚡ 优化 移除搜索页面\n⚡ 优化 主题、设置项、其他UI优化"
+      "desc": "注意，此版本不太兼容旧版本设备连接(<1.5.0)\n🛠️ 修复 桌面端 文件拖拽发送冲突问题"
     },
     {
       "platform": "Android",

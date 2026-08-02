@@ -1,20 +1,20 @@
 {
   "downloads": {
     "Windows": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows-setup.exe",
-      "version": "1.5.0"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-windows-setup.exe",
+      "version": "1.5.1"
     },
     "Android": {
       "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk",
       "version": "1.5.0"
     },
     "Linux": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.deb",
-      "version": "1.5.0"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.deb",
+      "version": "1.5.1"
     },
     "MacOS": {
-      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-macos.dmg",
-      "version": "1.5.0"
+      "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-macos.dmg",
+      "version": "1.5.1"
     },
     "IOS": {
       "url": "https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0-27-nosign.ipa",
@@ -24,30 +24,30 @@
   "logs": [
     {
       "platform": "MacOS",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "version": {
-        "name": "1.5.0",
-        "code": "27"
+        "name": "1.5.1",
+        "code": "28"
       },
-      "desc": "Note: This version is not very compatible with connections from older devices.\\n✨ Added custom rule scripts\n✨ Added a maximum record length setting; content beyond the limit will be dropped\n✨ Added a keep-connection-on-network-switch setting, enabled by default\n✨ Added optional desktop notifications after receiving files\n✨ Added multi-select merge support in desktop popups\n✨ Added desktop support for dragging history items as files\n✨ Added desktop support for defining file/database storage paths via files or environment variables\n🛠️ Fixed desktop tray text not updating after switching languages\n🛠️ Fixed desktop touchpad scrolling not working\n⚡ Improved macOS response to Command + W\n⚡ Improved desktop popups with optional hide-on-focus-loss; when enabled, popups also close after double-click paste\n⚡ Improved desktop Esc behavior to exit multi-select and drawers\n⚡ Improved storage forwarding and device connection stability through refactoring\n⚡ Improved storage forwarding so the root path can be used for storage but cannot be used to start forward service\n⚡ Improved S3/WebDAV with configurable User-Agent support\n⚡ Improved multi-select merge copy to follow selection order instead of time order\n⚡ Improved network adapter filtering by excluding mobile data network rmnet_data\n⚡ Improved subnet-only scanning to be enabled by default\n⚡ Improved settings pages with search-based navigation\n⚡ Improved future release notes to be fetched by language\n⚡ Improved some translations\n⚡ Removed the search page\n⚡ Improved themes, settings, and other UI details"
+      "desc": "Note: This version is not very compatible with connections from older devices.(<1.5.0)\n🛠️ Fix desktop file drag and drop sending conflict"
     },
     {
       "platform": "Linux",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "version": {
-        "name": "1.5.0",
-        "code": "27"
+        "name": "1.5.1",
+        "code": "28"
       },
-      "desc": "Note: This version is not very compatible with connections from older devices.\\n✨ Added custom rule scripts\n✨ Added a maximum record length setting; content beyond the limit will be dropped\n✨ Added a keep-connection-on-network-switch setting, enabled by default\n✨ Added optional desktop notifications after receiving files\n✨ Added multi-select merge support in desktop popups\n✨ Added desktop support for dragging history items as files\n✨ Added desktop support for defining file/database storage paths via files or environment variables\n✨ Added clipboard listening support for Linux Wayland (ext-data-control)\n🛠️ Fixed desktop tray text not updating after switching languages\n🛠️ Fixed desktop touchpad scrolling not working\n⚡ Improved desktop popups with optional hide-on-focus-loss; when enabled, popups also close after double-click paste\n⚡ Improved desktop Esc behavior to exit multi-select and drawers\n⚡ Improved storage forwarding and device connection stability through refactoring\n⚡ Improved storage forwarding so the root path can be used for storage but cannot be used to start forward service\n⚡ Improved S3/WebDAV with configurable User-Agent support\n⚡ Improved multi-select merge copy to follow selection order instead of time order\n⚡ Improved network adapter filtering by excluding mobile data network rmnet_data\n⚡ Improved subnet-only scanning to be enabled by default\n⚡ Improved settings pages with search-based navigation\n⚡ Improved future release notes to be fetched by language\n⚡ Improved some translations\n⚡ Removed the search page\n⚡ Improved themes, settings, and other UI details"
+      "desc": "Note: This version is not very compatible with connections from older devices.(<1.5.0)\n🛠️ Fix desktop file drag and drop sending conflict"
     },
     {
       "platform": "Windows",
-      "date": "2026-08-01",
+      "date": "2026-08-02",
       "version": {
-        "name": "1.5.0",
-        "code": "27"
+        "name": "1.5.1",
+        "code": "28"
       },
-      "desc": "Note: This version is not very compatible with connections from older devices.\\n✨ Added custom rule scripts\n✨ Added a maximum record length setting; content beyond the limit will be dropped\n✨ Added a keep-connection-on-network-switch setting, enabled by default\n✨ Added optional desktop notifications after receiving files\n✨ Added multi-select merge support in desktop popups\n✨ Added desktop support for dragging history items as files\n✨ Added desktop support for defining file/database storage paths via files or environment variables\n✨ Added support for taking over Win+V on Windows\n🛠️ Fixed desktop tray text not updating after switching languages\n🛠️ Fixed desktop touchpad scrolling not working\n⚡ Improved desktop popups with optional hide-on-focus-loss; when enabled, popups also close after double-click paste\n⚡ Improved desktop Esc behavior to exit multi-select and drawers\n⚡ Improved storage forwarding and device connection stability through refactoring\n⚡ Improved storage forwarding so the root path can be used for storage but cannot be used to start forward service\n⚡ Improved S3/WebDAV with configurable User-Agent support\n⚡ Improved multi-select merge copy to follow selection order instead of time order\n⚡ Improved network adapter filtering by excluding mobile data network rmnet_data\n⚡ Improved subnet-only scanning to be enabled by default\n⚡ Improved settings pages with search-based navigation\n⚡ Improved future release notes to be fetched by language\n⚡ Improved some translations\n⚡ Removed the search page\n⚡ Improved themes, settings, and other UI details"
+      "desc": "Note: This version is not very compatible with connections from older devices.(<1.5.0)\n🛠️ Fix desktop file drag and drop sending conflict"
     },
     {
       "platform": "Android",

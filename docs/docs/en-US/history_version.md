@@ -6,24 +6,32 @@ aside: "left"
 
 | Platform | Architecture | Format   | Download                                                                                                         | Version | Notes                  |
 |----------|--------------|----------|------------------------------------------------------------------------------------------------------------------|---------|------------------------|
-| Windows  | x86_64       | exe      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows-setup.exe) | 1.5.0   | Windows 10+, Installer |
-| Windows  | x86_64       | zip      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-windows.zip)       | 1.5.0   | Windows 10+, Portable  |
+| Windows  | x86_64       | exe      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-windows-setup.exe) | 1.5.1   | Windows 10+, Installer |
+| Windows  | x86_64       | zip      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-windows.zip)       | 1.5.1   | Windows 10+, Portable  |
 | Android  | arm64-v8a    | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk)     | 1.5.0   | Android 7.0            |
 | Android  | armeabi-v7a  | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-armeabi-v7a-release-v1.5.0.apk)   | 1.5.0   | Android 7.0            |
 | Android  | x86_64       | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-x86_64-release-v1.5.0.apk)        | 1.5.0   | Android 7.0            |
-| Linux    | x86_64       | AppImage | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.AppImage)    | 1.5.0   | -                      |
-| Linux    | x86_64       | deb      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.deb)         | 1.5.0   | -                      |
-| Linux    | x86_64       | rpm      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-linux.rpm)         | 1.5.0   | -                      |
-| MacOS    | Universal    | dmg      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0+27-macos.dmg)         | 1.5.0   | MacOS 10.15+           |
+| Linux    | x86_64       | AppImage | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.AppImage)    | 1.5.1   | -                      |
+| Linux    | x86_64       | deb      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.deb)         | 1.5.1   | -                      |
+| Linux    | x86_64       | rpm      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-linux.rpm)         | 1.5.1   | -                      |
+| MacOS    | Universal    | dmg      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.1+28-macos.dmg)         | 1.5.1   | MacOS 10.15+           |
 | IOS      | arm64        | ipa      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/clipshare-1.5.0-27-nosign.ipa)        | 1.5.0   | IOS14+                 |
 
 > For more historical versions, please visit [Github Releases](https://github.com/aa2013/ClipShare/releases).
 
 ## 📌 Release Notes
 
+### 🏷️ v1.5.1 - 2026-08-02
+
+#### Desktop
+
+> Note: this version is not very compatible with connections to older devices(<1.5.0).
+
+🛠️ Fix desktop file drag and drop sending conflict
+
 ### 🏷️ v1.5.0 - 2026-08-01
 
-> Note: this version is not very compatible with connections to older devices.
+> Note: this version is not very compatible with connections to older devices(<1.5.0).
 
 #### General
 

@@ -11,7 +11,7 @@ hero:
     alt: ClipShare
   actions:
     - theme: brand
-      text: Download V1.5.0 Now
+      text: Download V1.5.1 Now
       link: ./download
     - theme: alt
       text: Guides

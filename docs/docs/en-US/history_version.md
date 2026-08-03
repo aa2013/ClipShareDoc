@@ -7,7 +7,7 @@ aside: "left"
 | Platform | Architecture | Format   | Download                                                                                                         | Version | Notes                  |
 |----------|--------------|----------|------------------------------------------------------------------------------------------------------------------|---------|------------------------|
 | Windows  | x86_64       | exe      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-windows-setup.exe) | 1.5.1   | Windows 10+, Installer |
-| Windows  | x86_64       | zip      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-windows.zip)       | 1.5.1   | Windows 10+, Portable  |
+| Windows  | x86_64       | zip      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.1/clipshare-1.5.1+28-windows-setup.zip)       | 1.5.1   | Windows 10+, Portable  |
 | Android  | arm64-v8a    | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-arm64-v8a-release-v1.5.0.apk)     | 1.5.0   | Android 7.0            |
 | Android  | armeabi-v7a  | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-armeabi-v7a-release-v1.5.0.apk)   | 1.5.0   | Android 7.0            |
 | Android  | x86_64       | apk      | [Download](https://download.clipshare.coclyun.top/releases/clipshare/1.5.0/app-x86_64-release-v1.5.0.apk)        | 1.5.0   | Android 7.0            |
